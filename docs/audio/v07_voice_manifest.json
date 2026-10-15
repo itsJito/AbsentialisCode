@@ -1,0 +1,275 @@
+[
+ {
+  "sound": "bite",
+  "file": "bite.ogg",
+  "from": "eat_04.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 24596
+ },
+ {
+  "sound": "death",
+  "file": "death.wav",
+  "from": "grunt_00.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 125288
+ },
+ {
+  "sound": "death_2",
+  "file": "death_2.wav",
+  "from": "grunt_13.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 121760
+ },
+ {
+  "sound": "death_3",
+  "file": "death_3.wav",
+  "from": "grunt_18.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 132344
+ },
+ {
+  "sound": "death_4",
+  "file": "death_4.wav",
+  "from": "grunt_05.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 148220
+ },
+ {
+  "sound": "death_5",
+  "file": "death_5.wav",
+  "from": "grunt_08.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 160568
+ },
+ {
+  "sound": "gladiator_roar",
+  "file": "gladiator_roar.ogg",
+  "from": "roar_03.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 24977
+ },
+ {
+  "sound": "groan",
+  "file": "groan.wav",
+  "from": "zombie-17.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 420242
+ },
+ {
+  "sound": "groan2",
+  "file": "groan2.wav",
+  "from": "zombie-15.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 232570
+ },
+ {
+  "sound": "groan_2",
+  "file": "groan_2.wav",
+  "from": "zombie-16.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 381606
+ },
+ {
+  "sound": "groan_3",
+  "file": "groan_3.wav",
+  "from": "zombie-18.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 293286
+ },
+ {
+  "sound": "groan_4",
+  "file": "groan_4.wav",
+  "from": "zombie-21.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 287770
+ },
+ {
+  "sound": "growl",
+  "file": "growl.wav",
+  "from": "zombie-4.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 193940
+ },
+ {
+  "sound": "growl_2",
+  "file": "growl_2.wav",
+  "from": "zombie-7.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 155298
+ },
+ {
+  "sound": "growl_3",
+  "file": "growl_3.wav",
+  "from": "zombie-3.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 155298
+ },
+ {
+  "sound": "growl_4",
+  "file": "growl_4.wav",
+  "from": "zombie-22.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 177376
+ },
+ {
+  "sound": "gurgle",
+  "file": "gurgle.ogg",
+  "from": "burble_01.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 48655
+ },
+ {
+  "sound": "gurgle_2",
+  "file": "gurgle_2.ogg",
+  "from": "burble_02.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 43100
+ },
+ {
+  "sound": "hurt",
+  "file": "hurt.wav",
+  "from": "grunt_10.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 42380
+ },
+ {
+  "sound": "hurt_2",
+  "file": "hurt_2.wav",
+  "from": "grunt_02.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 40616
+ },
+ {
+  "sound": "hurt_3",
+  "file": "hurt_3.wav",
+  "from": "grunt_09.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 82952
+ },
+ {
+  "sound": "hurt_4",
+  "file": "hurt_4.wav",
+  "from": "grunt_15.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 58256
+ },
+ {
+  "sound": "hurt_5",
+  "file": "hurt_5.wav",
+  "from": "grunt_03.wav",
+  "pack": "grunts-male-death-and-pain",
+  "bytes": 70604
+ },
+ {
+  "sound": "inf_death",
+  "file": "inf_death.wav",
+  "from": "zombie-9.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 232570
+ },
+ {
+  "sound": "inf_death_2",
+  "file": "inf_death_2.wav",
+  "from": "zombie-19.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 260170
+ },
+ {
+  "sound": "inf_death_3",
+  "file": "inf_death_3.wav",
+  "from": "zombie-1.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 227056
+ },
+ {
+  "sound": "inf_death_4",
+  "file": "inf_death_4.wav",
+  "from": "zombie-23.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 216012
+ },
+ {
+  "sound": "inf_feed",
+  "file": "inf_feed.ogg",
+  "from": "eat_01.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 32639
+ },
+ {
+  "sound": "inf_feed_2",
+  "file": "inf_feed_2.ogg",
+  "from": "eat_02.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 21480
+ },
+ {
+  "sound": "inf_feed_3",
+  "file": "inf_feed_3.ogg",
+  "from": "eat_03.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 12484
+ },
+ {
+  "sound": "infected_turn",
+  "file": "infected_turn.ogg",
+  "from": "monster_03.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 17484
+ },
+ {
+  "sound": "retch",
+  "file": "retch.ogg",
+  "from": "cough_02.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 17739
+ },
+ {
+  "sound": "retch_2",
+  "file": "retch_2.ogg",
+  "from": "burp_01.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 25902
+ },
+ {
+  "sound": "roar",
+  "file": "roar.ogg",
+  "from": "roar_01.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 15863
+ },
+ {
+  "sound": "roar_2",
+  "file": "roar_2.ogg",
+  "from": "roar_02.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 28522
+ },
+ {
+  "sound": "screech",
+  "file": "screech.ogg",
+  "from": "scream_02.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 37049
+ },
+ {
+  "sound": "shriek",
+  "file": "shriek.ogg",
+  "from": "scream_01.ogg",
+  "pack": "80-cc0-creature-sfx",
+  "bytes": 38406
+ },
+ {
+  "sound": "shriek_2",
+  "file": "shriek_2.wav",
+  "from": "zombie-12.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 210492
+ },
+ {
+  "sound": "shriek_3",
+  "file": "shriek_3.wav",
+  "from": "zombie-10.wav",
+  "pack": "zombies-sound-pack",
+  "bytes": 182898
+ }
+]

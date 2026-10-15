@@ -1,0 +1,44 @@
+ABSENTIALIS 0.8 crash on Java 21.0.12.1 at 2026-10-12T08:09:01
+java.lang.NullPointerException: Cannot invoke "String.isEmpty()" because "this.ambienceName" is null
+	at absentialis.scene.RaidScreen.update(RaidScreen.java:384)
+	at absentialis.scene.GameApp.raidFrame(GameApp.java:571)
+	at absentialis.scene.GameApp.frame(GameApp.java:260)
+	at absentialis.scene.GameApp.run(GameApp.java:91)
+	at absentialis.Main.main(Main.java:67)
+
+------------------------------------------------------------------------
+ABSENTIALIS 0.8 crash on Java 21.0.12.1 at 2026-10-12T08:10:05
+java.util.IllegalFormatConversionException: d != java.util.ArrayList
+	at java.base/java.util.Formatter$FormatSpecifier.failConversion(Formatter.java:4515)
+	at java.base/java.util.Formatter$FormatSpecifier.printInteger(Formatter.java:3066)
+	at java.base/java.util.Formatter$FormatSpecifier.print(Formatter.java:3021)
+	at java.base/java.util.Formatter.format(Formatter.java:2791)
+	at java.base/java.util.Formatter.format(Formatter.java:2728)
+	at java.base/java.lang.String.format(String.java:4379)
+	at absentialis.scene.DevMode.draw(DevMode.java:210)
+	at absentialis.scene.RaidScreen.render(RaidScreen.java:1675)
+	at absentialis.scene.GameApp.raidFrame(GameApp.java:572)
+	at absentialis.scene.GameApp.frame(GameApp.java:260)
+	at absentialis.scene.GameApp.run(GameApp.java:91)
+	at absentialis.Main.main(Main.java:67)
+
+------------------------------------------------------------------------
+ABSENTIALIS 0.9 crash on Java 21.0.12.1 at 2026-10-13T02:37:21
+java.lang.NullPointerException: Cannot assign field "hostileToPlayer" because "v" is null
+	at absentialis.scene.ScenarioScripts.lambda$infected10$92(ScenarioScripts.java:301)
+	at absentialis.scene.Scenarios.step(Scenarios.java:151)
+	at absentialis.scene.GameApp.run(GameApp.java:93)
+	at absentialis.Main.main(Main.java:67)
+
+------------------------------------------------------------------------
+ABSENTIALIS 0.9 crash on Java 21.0.12.1 at 2026-10-13T05:22:05
+java.lang.NullPointerException: Cannot read field "x" because "raid.insertion" is null
+	at absentialis.scene.ChainDirector.<init>(ChainDirector.java:48)
+	at absentialis.scene.Raid.<init>(Raid.java:359)
+	at absentialis.scene.GameApp.startRaid(GameApp.java:609)
+	at absentialis.scene.GameApp.loadingFrame(GameApp.java:603)
+	at absentialis.scene.GameApp.frame(GameApp.java:296)
+	at absentialis.scene.GameApp.run(GameApp.java:91)
+	at absentialis.Main.main(Main.java:67)
+
+------------------------------------------------------------------------

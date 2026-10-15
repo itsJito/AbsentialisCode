@@ -1,0 +1,107 @@
+{
+  // Loot is placed by location logic (GDD 14.3): table = container type + room/building bias.
+  // entries: [itemId, weight, minQty, maxQty]; rolls: [min, max]; empty: chance the container is already picked clean.
+  "tables": {
+    "residential": {"rolls": [1, 3], "empty": 0.25, "entries": [
+      ["mat.plank", 5, 1, 2], ["helmet.baseball", 3, 1, 1], ["face.sunglasses", 3, 1, 1], ["treasure.ring", 2, 1, 1], ["treasure.spinel_pink", 2, 1, 1], ["mat.gunpowder_m", 2, 1, 1], ["helmet.bike", 2, 1, 1],
+      ["food.canned", 10, 1, 1], ["food.crackers", 8, 1, 1], ["drink.soda", 6, 1, 1], ["drink.water", 5, 1, 1], ["mat.cloth", 8, 1, 3],
+      ["med.bandage", 5, 1, 1], ["med.antiviral", 4, 1, 1], ["med.painkillers", 4, 1, 2], ["val.watch", 2, 1, 1], ["val.lighter", 4, 1, 1], ["val.cigarettes", 6, 1, 4],
+      ["doc.note", 3, 1, 1], ["mat.duct_tape", 3, 1, 1], ["ammo.handgun", 2, 6, 18], ["tool.noisemaker", 3, 1, 1], ["drink.coffee", 3, 1, 1], ["val.chain", 1, 1, 1], ["herb.green", 4, 1, 2], ["treasure.map_a", 1, 1, 1], ["herb.green", 6, 1, 1], ["key.small", 2, 1, 1], ["mat.scrap_small", 5, 1, 3], ["mat.gunpowder_s", 4, 1, 2], ["food.beans", 4, 1, 1], ["ammo.shells", 2, 2, 6]]},
+    "food": {"rolls": [1, 3], "empty": 0.3, "entries": [
+      ["food.canned", 12, 1, 1], ["food.crackers", 8, 1, 1], ["drink.soda", 8, 1, 1], ["drink.water", 8, 1, 1], ["drink.dirty", 4, 1, 1], ["food.meat", 4, 1, 1], ["food.mre", 2, 1, 1], ["food.beans", 8, 1, 1], ["herb.green", 3, 1, 1]]},
+    "medical_home": {"rolls": [1, 2], "empty": 0.35, "entries": [
+      ["med.bandage", 10, 1, 1], ["med.antiviral", 9, 1, 1], ["med.painkillers", 8, 1, 3], ["mat.antiseptic", 5, 1, 1], ["med.antibiotics", 2, 1, 1], ["med.spray", 2, 1, 1], ["herb.green", 8, 1, 1], ["herb.red", 3, 1, 1]]},
+    "medical": {"rolls": [1, 3], "empty": 0.25, "entries": [
+      ["med.bandage", 10, 1, 1], ["med.antiviral", 9, 1, 1], ["med.painkillers", 8, 1, 4], ["med.spray", 6, 1, 1], ["med.splint", 5, 1, 1], ["med.tourniquet", 5, 1, 1],
+      ["med.antibiotics", 4, 1, 1], ["mat.antiseptic", 6, 1, 1], ["med.medkit", 2, 1, 1], ["med.antirad", 2, 1, 1], ["herb.green", 8, 1, 1], ["herb.red", 4, 1, 1], ["herb.mixed_gg", 2, 1, 1]]},
+    "medical_rare": {"rolls": [1, 3], "empty": 0.2, "entries": [
+      ["herb.yellow", 1, 1, 1],
+      ["med.medkit", 5, 1, 1], ["med.antirad", 5, 1, 1], ["med.antibiotics", 5, 1, 1], ["mat.chemicals", 5, 1, 1], ["med.spray", 4, 1, 1], ["quest.sample", 1, 1, 1], ["val.artifact", 1, 1, 1], ["herb.mixed_gg", 4, 1, 1], ["herb.mixed_gr", 2, 1, 1], ["herb.red", 5, 1, 1]]},
+    "store": {"rolls": [1, 3], "empty": 0.35, "entries": [
+      ["helmet.baseball", 4, 1, 1], ["face.sunglasses", 4, 1, 1], ["helmet.bike", 2, 1, 1], ["mat.plank", 3, 1, 2],
+      ["food.canned", 8, 1, 1], ["food.crackers", 8, 1, 1], ["drink.water", 6, 1, 1], ["drink.soda", 8, 1, 1], ["val.cigarettes", 6, 1, 5],
+      ["mat.duct_tape", 4, 1, 1], ["mat.cloth", 4, 1, 3], ["mat.wires", 3, 1, 2], ["tool.noisemaker", 3, 1, 1], ["val.lighter", 3, 1, 1], ["drink.coffee", 4, 1, 1], ["food.beans", 6, 1, 1], ["key.small", 2, 1, 1], ["mat.scrap_small", 3, 1, 2], ["ammo.handgun", 4, 6, 15]]},
+    "market": {"rolls": [1, 2], "empty": 0.3, "entries": [
+      ["treasure.spinel_pink", 2, 1, 1], ["treasure.spinel_blue", 2, 1, 1], ["treasure.ring", 2, 1, 1], ["face.balaclava", 2, 1, 1], ["helmet.cap", 2, 1, 1], ["mat.gunpowder_m", 3, 1, 2],
+      ["food.canned", 6, 1, 1], ["val.cigarettes", 6, 1, 5], ["mat.cloth", 6, 1, 3], ["mat.scrap", 4, 1, 2], ["drink.water", 5, 1, 1], ["val.watch", 2, 1, 1],
+      ["med.bandage", 3, 1, 1], ["med.antiviral", 3, 1, 1], ["mat.bolts", 4, 2, 6], ["val.chain", 1, 1, 1], ["mat.electronics", 2, 1, 1], ["herb.green", 4, 1, 2], ["herb.red", 2, 1, 1], ["treasure.ruby", 1, 1, 1], ["treasure.ruby", 2, 1, 1], ["key.small", 2, 1, 1], ["mat.scrap_small", 5, 1, 3], ["ammo.handgun", 4, 6, 15], ["ammo.shells", 3, 2, 6]]},
+    "office": {"rolls": [1, 2], "empty": 0.35, "entries": [
+      ["treasure.spinel_blue", 1, 1, 1], ["treasure.ring", 1, 1, 1], ["face.sunglasses", 2, 1, 1],
+      ["doc.report", 5, 1, 1], ["doc.drive", 3, 1, 1], ["val.hdd", 4, 1, 1], ["mat.electronics", 5, 1, 1], ["mat.wires", 4, 1, 2], ["drink.coffee", 6, 1, 1],
+      ["val.lighter", 3, 1, 1], ["mat.duct_tape", 3, 1, 1], ["val.watch", 2, 1, 1], ["val.ledger_cash", 1, 1, 2], ["val.gpu", 1, 1, 1], ["key.small", 3, 1, 1], ["ammo.handgun", 4, 6, 14], ["treasure.emerald", 1, 1, 1]]},
+    "safe": {"rolls": [2, 3], "empty": 0.1, "entries": [
+      ["treasure.spinel_red", 3, 1, 1], ["treasure.sapphire", 3, 1, 1], ["treasure.yellow_diamond", 2, 1, 1], ["treasure.amethyst", 2, 1, 1], ["treasure.ring", 4, 1, 1], ["treasure.spinel_pink", 3, 1, 1], ["treasure.spinel_blue", 3, 1, 1],
+      ["herb.yellow", 1, 1, 1],
+      ["val.ledger_cash", 8, 1, 3], ["val.chain", 6, 1, 1], ["val.watch", 5, 1, 1], ["doc.report", 4, 1, 1], ["val.hdd", 3, 1, 1], ["key.crypt", 1, 1, 1], ["key.lab", 1, 1, 1], ["treasure.ruby", 3, 1, 1], ["charm.rabbit", 1, 1, 1], ["treasure.map_b", 2, 1, 1], ["treasure.emerald", 3, 1, 1], ["treasure.ruby", 4, 1, 1], ["treasure.diamond", 1, 1, 1], ["treasure.crown", 1, 1, 1], ["ammo.magnum", 3, 2, 5], ["acc.wolf_tail", 1, 1, 1]]},
+    "industrial": {"rolls": [1, 3], "empty": 0.3, "entries": [
+      ["mat.plank", 8, 1, 3], ["mat.gunpowder_m", 6, 1, 2], ["mat.grenade_casing", 3, 1, 1],
+      ["mat.scrap", 10, 1, 3], ["mat.bolts", 10, 2, 8], ["mat.wires", 7, 1, 3], ["mat.duct_tape", 5, 1, 1], ["mat.fuel", 3, 1, 1], ["mat.electrical", 2, 1, 1],
+      ["mat.electronics", 3, 1, 1], ["mat.weapon_parts", 2, 1, 1], ["kit.repair", 1, 1, 1], ["mat.filter", 1, 1, 1], ["mat.gunpowder_s", 2, 1, 1], ["mat.gun_oil", 6, 1, 2], ["mat.gunpowder_s", 1, 1, 2], ["mat.scrap_small", 10, 1, 4], ["mat.gunpowder_s", 6, 1, 3], ["mat.gunpowder_l", 5, 1, 2], ["ammo.shells", 3, 2, 8]]},
+    "military": {"rolls": [1, 3], "empty": 0.25, "entries": [
+      ["ammo.assault", 8, 6, 20], ["ammo.assault", 6, 6, 20], ["mat.gunpowder_m", 4, 1, 2], ["mat.grenade_casing", 4, 1, 2], ["face.balaclava", 2, 1, 1], ["armor.heavy", 1, 1, 1],
+      ["ammo.rifle", 8, 4, 14], ["ammo.rifle", 8, 4, 14], ["ammo.rifle", 5, 4, 14], ["ammo.rifle", 5, 4, 14], ["food.mre", 6, 1, 1], ["med.tourniquet", 4, 1, 1],
+      ["grenade.frag", 2, 1, 1], ["signal.flare", 3, 1, 1], ["armor.vest_soft", 1, 1, 1], ["helmet.ssh", 1, 1, 1], ["med.spray", 3, 1, 1], ["ammo.smg", 2, 20, 40], ["mat.gunpowder_l", 1, 1, 2], ["face.gasmask", 1, 1, 1], ["mat.gunpowder_l", 1, 1, 2], ["mat.gunpowder_s", 2, 1, 2], ["mat.gun_oil", 3, 1, 2], ["charm.tags", 1, 1, 1], ["mat.gunpowder_s", 1, 1, 2], ["ammo.handgun", 6, 10, 25], ["ammo.shells", 5, 4, 10], ["ammo.smg", 6, 20, 50], ["ammo.magnum", 2, 2, 4], ["mat.gunpowder_l", 4, 1, 3], ["grenade.flash", 2, 1, 1], ["grenade.incendiary", 2, 1, 1], ["armor.body", 1, 1, 1], ["ammo.bolt", 2, 2, 5]]},
+    "military_personal": {"rolls": [1, 2], "empty": 0.3, "entries": [
+      ["ammo.assault", 4, 5, 15], ["face.balaclava", 2, 1, 1], ["face.sunglasses", 2, 1, 1],
+      ["food.mre", 6, 1, 1], ["val.cigarettes", 6, 1, 4], ["ammo.rifle", 4, 4, 14], ["doc.note", 3, 1, 1], ["med.bandage", 4, 1, 1], ["med.antiviral", 3, 1, 1], ["val.watch", 2, 1, 1], ["helmet.cap", 2, 1, 1], ["ammo.handgun", 5, 6, 15], ["herb.green", 3, 1, 1], ["food.beans", 4, 1, 1], ["key.small", 1, 1, 1]]},
+    "weapons": {"rolls": [1, 2], "empty": 0.2, "entries": [
+      ["ammo.assault", 6, 6, 20], ["mat.gunpowder_m", 4, 1, 2], ["mat.grenade_casing", 3, 1, 2], ["armor.heavy", 1, 1, 1],
+      ["weapon.akr", 4, 1, 1], ["weapon.sr16", 2, 1, 1], ["weapon.pm9", 5, 1, 1], ["weapon.pump12", 3, 1, 1], ["weapon.mosin", 1, 1, 1], ["ammo.rifle", 4, 4, 14],
+      ["ammo.rifle", 4, 4, 14], ["ammo.shells", 4, 3, 10], ["mat.gunpowder_s", 1, 1, 2], ["mat.gunpowder_s", 1, 1, 2], ["mat.gunpowder_l", 2, 1, 2], ["ammo.rifle", 1, 4, 14], ["mat.gunpowder_s", 2, 1, 2], ["mat.gunpowder_l", 2, 1, 2], ["mat.gunpowder_s", 2, 1, 2], ["mat.gunpowder_s", 2, 1, 2], ["mat.gun_oil", 4, 1, 2], ["mat.gunpowder_s", 1, 1, 2], ["ammo.handgun", 6, 10, 25], ["ammo.shells", 5, 4, 10], ["ammo.rifle", 5, 5, 15], ["ammo.smg", 5, 20, 50], ["ammo.magnum", 2, 2, 5], ["ammo.bolt", 3, 2, 6], ["weapon.smg", 2, 1, 1], ["weapon.crossbow", 1, 1, 1], ["melee.knife", 4, 1, 1], ["armor.body", 1, 1, 1], ["acc.deer_antlers", 1, 1, 1]]},
+    "raider": {"rolls": [1, 3], "empty": 0.25, "entries": [
+      ["ammo.assault", 2, 4, 12], ["face.balaclava", 3, 1, 1], ["mat.gunpowder_m", 3, 1, 2], ["treasure.ring", 1, 1, 1], ["mat.grenade_casing", 1, 1, 1],
+      ["ammo.rifle", 6, 4, 14], ["ammo.shells", 5, 3, 10], ["val.cigarettes", 6, 1, 6], ["food.canned", 4, 1, 1], ["mat.fuel", 2, 1, 1], ["val.chain", 2, 1, 1],
+      ["med.bandage", 3, 1, 1], ["med.antiviral", 3, 1, 1], ["grenade.pipe", 2, 1, 1], ["ammo.rifle", 2, 4, 14], ["val.ledger_cash", 2, 1, 2], ["mat.gunpowder_s", 2, 1, 1], ["ammo.handgun", 6, 6, 18], ["ammo.shells", 4, 3, 8], ["melee.knife", 3, 1, 1], ["mat.gunpowder_s", 4, 1, 2], ["herb.green", 3, 1, 1], ["treasure.ruby", 1, 1, 1], ["grenade.incendiary", 1, 1, 1]]},
+    "raider_boss": {"rolls": [2, 4], "empty": 0.0, "entries": [
+      ["treasure.spinel_red", 3, 1, 1], ["treasure.sapphire", 3, 1, 1], ["treasure.amethyst", 1, 1, 1], ["treasure.ring", 3, 1, 2], ["armor.heavy", 1, 1, 1],
+      ["val.ledger_cash", 8, 2, 5], ["val.chain", 5, 1, 2], ["weapon.sr16", 2, 1, 1], ["ammo.rifle", 3, 4, 14], ["grenade.frag", 2, 1, 1], ["key.crypt", 2, 1, 1], ["mat.gunpowder_s", 1, 1, 2], ["treasure.ruby", 4, 1, 2], ["treasure.emerald", 3, 1, 1], ["treasure.diamond", 1, 1, 1], ["ammo.magnum", 3, 3, 6], ["armor.body", 1, 1, 1], ["acc.chicken_hat", 1, 1, 1]]},
+    "cult": {"rolls": [1, 2], "empty": 0.3, "entries": [
+      ["treasure.amethyst", 1, 1, 1], ["treasure.spinel_red", 1, 1, 1], ["treasure.ring", 2, 1, 1],
+      ["val.icon", 1, 1, 1], ["doc.note", 5, 1, 1], ["med.antibiotics", 3, 1, 1], ["mat.cloth", 5, 1, 3], ["food.meat", 4, 1, 1], ["val.chain", 2, 1, 1], ["key.crypt", 1, 1, 1], ["mat.chemicals", 2, 1, 1], ["herb.red", 4, 1, 1], ["treasure.ruby", 2, 1, 1], ["herb.green", 4, 1, 1]]},
+    "crypt": {"rolls": [1, 2], "empty": 0.2, "entries": [
+      ["treasure.amethyst", 2, 1, 1], ["treasure.sapphire", 3, 1, 1], ["treasure.yellow_diamond", 2, 1, 1], ["treasure.ring", 4, 1, 1], ["treasure.spinel_red", 3, 1, 1],
+      ["val.icon", 2, 1, 1], ["val.chain", 4, 1, 1], ["doc.note", 4, 1, 1], ["val.watch", 3, 1, 1], ["val.artifact", 1, 1, 1], ["treasure.chalice", 4, 1, 1], ["charm.bell", 1, 1, 1], ["treasure.ruby", 4, 1, 1], ["treasure.emerald", 3, 1, 1], ["treasure.crown", 2, 1, 1], ["treasure.diamond", 1, 1, 1], ["acc.cat_ears", 1, 1, 1]]},
+    "antique": {"rolls": [1, 2], "empty": 0.35, "entries": [
+      ["treasure.spinel_pink", 3, 1, 1], ["treasure.spinel_blue", 3, 1, 1], ["treasure.sapphire", 2, 1, 1], ["treasure.ring", 3, 1, 1], ["treasure.yellow_diamond", 1, 1, 1],
+      ["val.icon", 1, 1, 1], ["val.chain", 3, 1, 1], ["val.watch", 4, 1, 1], ["doc.note", 4, 1, 1], ["val.lighter", 4, 1, 1], ["mat.cloth", 4, 1, 2], ["treasure.chalice", 4, 1, 1], ["treasure.map_a", 2, 1, 1], ["treasure.map_b", 2, 1, 1], ["treasure.ruby", 3, 1, 1], ["treasure.emerald", 2, 1, 1], ["treasure.crown", 1, 1, 1], ["key.small", 3, 1, 1]]},
+    "tech": {"rolls": [1, 2], "empty": 0.25, "entries": [
+      ["mat.electronics", 6, 1, 2], ["val.hdd", 4, 1, 1], ["val.gpu", 2, 1, 1], ["mat.wires", 5, 1, 3], ["doc.drive", 4, 1, 1], ["mat.electrical", 2, 1, 1], ["key.small", 2, 1, 1], ["mat.gunpowder_s", 3, 1, 2]]},
+    "lab": {"rolls": [1, 3], "empty": 0.2, "entries": [
+      ["mat.chemicals", 6, 1, 1], ["doc.report", 5, 1, 1], ["doc.drive", 4, 1, 1], ["quest.sample", 3, 1, 1], ["med.antirad", 4, 1, 1], ["key.lab", 1, 1, 1], ["val.artifact", 1, 1, 1], ["face.gasmask", 2, 1, 1], ["herb.mixed_gg", 3, 1, 1], ["herb.red", 3, 1, 1], ["ammo.magnum", 2, 2, 4], ["treasure.emerald", 1, 1, 1]]},
+    "trash": {"rolls": [0, 2], "empty": 0.4, "entries": [
+      ["mat.plank", 6, 1, 2], ["helmet.baseball", 1, 1, 1],
+      ["mat.scrap", 6, 1, 1], ["mat.cloth", 5, 1, 1], ["drink.dirty", 4, 1, 1], ["food.meat", 2, 1, 1], ["mat.bolts", 4, 1, 3], ["val.cigarettes", 3, 1, 2], ["mat.duct_tape", 1, 1, 1], ["doc.note", 2, 1, 1], ["mat.scrap_small", 8, 1, 2], ["herb.green", 2, 1, 1], ["ammo.handgun", 3, 3, 8]]},
+    "body": {"rolls": [1, 2], "empty": 0.3, "entries": [
+      ["treasure.ring", 1, 1, 1], ["face.sunglasses", 1, 1, 1], ["helmet.baseball", 1, 1, 1], ["mat.gunpowder_m", 2, 1, 1],
+      ["med.bandage", 4, 1, 1], ["med.antiviral", 3, 1, 1], ["val.watch", 3, 1, 1], ["val.cigarettes", 4, 1, 3], ["ammo.handgun", 3, 5, 15], ["doc.note", 4, 1, 1], ["food.crackers", 3, 1, 1], ["val.chain", 1, 1, 1], ["ammo.handgun", 6, 5, 15], ["ammo.shells", 3, 2, 5], ["herb.green", 4, 1, 1], ["melee.knife", 2, 1, 1], ["key.small", 2, 1, 1], ["mat.gunpowder_s", 3, 1, 2]]},
+    "cache": {"rolls": [2, 4], "empty": 0.05, "entries": [
+      ["ammo.assault", 5, 6, 20], ["mat.gunpowder_m", 4, 1, 3], ["mat.grenade_casing", 3, 1, 2], ["treasure.spinel_blue", 2, 1, 1],
+      ["ammo.rifle", 5, 4, 14], ["ammo.rifle", 4, 4, 14], ["med.spray", 4, 1, 1], ["food.mre", 4, 1, 1], ["val.ledger_cash", 4, 1, 3], ["ammo.rifle", 3, 4, 14],
+      ["grenade.frag", 2, 1, 1], ["signal.flare", 2, 1, 1], ["weapon.akr", 1, 1, 1], ["med.antirad", 2, 1, 1], ["val.gpu", 1, 1, 1], ["herb.red", 3, 1, 1], ["mat.gun_oil", 3, 1, 1], ["treasure.map_b", 1, 1, 1], ["ammo.handgun", 6, 15, 30], ["ammo.shells", 5, 5, 12], ["ammo.smg", 4, 25, 60], ["herb.mixed_gg", 3, 1, 1], ["treasure.ruby", 2, 1, 1], ["mat.gunpowder_l", 4, 1, 3], ["armor.body", 1, 1, 1]]},
+    "cache_rare": {"rolls": [3, 4], "empty": 0.0, "entries": [
+      ["treasure.yellow_diamond", 3, 1, 1], ["treasure.amethyst", 3, 1, 1], ["treasure.sapphire", 4, 1, 1], ["armor.heavy", 2, 1, 1], ["helmet.ssh", 3, 1, 1],
+      ["herb.yellow", 2, 1, 1],
+      ["val.icon", 3, 1, 1], ["weapon.sr16", 2, 1, 1], ["armor.military", 2, 1, 1], ["mat.gunpowder_s", 2, 1, 2], ["val.ledger_cash", 4, 2, 5], ["med.medkit", 3, 1, 1], ["key.crypt", 2, 1, 1], ["charm.saint", 2, 1, 1], ["charm.rabbit", 2, 1, 1], ["treasure.ruby", 3, 1, 1], ["mat.gunpowder_s", 2, 1, 2], ["treasure.diamond", 2, 1, 1], ["treasure.emerald", 4, 1, 1], ["ammo.magnum", 4, 3, 7], ["armor.body", 3, 1, 1], ["herb.mixed_gr", 3, 1, 1], ["acc.cat_ears", 1, 1, 1], ["acc.chicken_hat", 1, 1, 1], ["acc.deer_antlers", 1, 1, 1], ["acc.wolf_tail", 1, 1, 1]]},
+    "cache_sewer": {"rolls": [1, 3], "empty": 0.15, "entries": [
+      ["mat.gunpowder_m", 3, 1, 2], ["mat.plank", 3, 1, 2],
+      ["ammo.handgun", 5, 12, 40], ["med.bandage", 4, 1, 1], ["med.antiviral", 3, 1, 1], ["drink.water", 4, 1, 1], ["val.cigarettes", 4, 1, 5], ["mat.fuel", 2, 1, 1], ["signal.flare", 2, 1, 1], ["tool.noisemaker", 3, 1, 1], ["herb.green", 4, 1, 1], ["mat.gunpowder_s", 4, 1, 2], ["key.small", 2, 1, 1], ["ammo.shells", 3, 3, 8]]},
+    "farm": {"rolls": [1, 3], "empty": 0.3, "entries": [
+      ["mat.plank", 6, 1, 3], ["helmet.baseball", 2, 1, 1],
+      ["food.canned", 6, 1, 1], ["food.meat", 6, 1, 1], ["drink.dirty", 5, 1, 1], ["mat.fuel", 3, 1, 1], ["mat.scrap", 4, 1, 2], ["ammo.shells", 4, 3, 10], ["weapon.pump12", 1, 1, 1], ["herb.green", 8, 1, 3], ["herb.red", 3, 1, 1], ["herb.green", 10, 1, 2], ["herb.red", 4, 1, 1], ["food.beans", 5, 1, 1], ["mat.scrap_small", 4, 1, 2]]},
+    "locked": {"rolls": [2, 3], "empty": 0.0, "entries": [
+      ["treasure.spinel_red", 6, 1, 1], ["treasure.sapphire", 6, 1, 1], ["treasure.yellow_diamond", 3, 1, 1], ["treasure.amethyst", 3, 1, 1], ["treasure.ring", 6, 1, 1], ["treasure.spinel_pink", 6, 1, 1], ["treasure.spinel_blue", 6, 1, 1],
+      ["treasure.ruby", 8, 1, 1], ["treasure.emerald", 6, 1, 1], ["treasure.diamond", 1, 1, 1], ["treasure.crown", 2, 1, 1], ["val.ledger_cash", 8, 1, 3], ["val.chain", 6, 1, 1],
+      ["ammo.magnum", 5, 2, 5], ["herb.mixed_gr", 3, 1, 1], ["armor.body", 2, 1, 1], ["val.watch", 6, 1, 1], ["acc.wolf_tail", 1, 1, 1], ["acc.deer_antlers", 1, 1, 1]]},
+    "crate": {"rolls": [1, 2], "empty": 0.35, "entries": [
+      ["mat.plank", 6, 1, 2], ["mat.gunpowder_m", 4, 1, 2], ["ammo.assault", 3, 4, 12], ["mat.grenade_casing", 2, 1, 1],
+      ["mat.scrap", 6, 1, 2], ["mat.bolts", 6, 2, 6], ["food.canned", 4, 1, 1], ["mat.cloth", 4, 1, 2], ["drink.water", 3, 1, 1], ["ammo.handgun", 3, 6, 20], ["mat.wires", 3, 1, 2], ["tool.noisemaker", 2, 1, 1], ["ammo.handgun", 6, 6, 18], ["ammo.shells", 4, 3, 8], ["herb.green", 5, 1, 1], ["mat.scrap_small", 6, 1, 3], ["mat.gunpowder_s", 5, 1, 2], ["mat.gunpowder_l", 3, 1, 1], ["key.small", 2, 1, 1], ["ammo.rifle", 3, 3, 8], ["ammo.smg", 3, 15, 30]]}
+  },
+  // Kits worn by spawned NPCs by faction/tier
+  "npcKits": {
+    "military": {"primary": ["weapon.akr", "weapon.sr16", "weapon.riot", "weapon.smg"], "sidearm": ["weapon.pm9"], "armor": ["armor.military", "armor.vest_soft"], "head": ["helmet.ssh"], "loot": "military"},
+    "raiders": {"primary": ["weapon.smg", "weapon.pump12", "weapon.mosin", "weapon.yellow9", "weapon.pm9"], "sidearm": ["weapon.pm9"], "armor": ["armor.vest_soft", ""], "head": ["helmet.cap", ""], "loot": "raider"},
+    "survivors": {"primary": ["weapon.pump12", "weapon.mosin", "weapon.pm9", "weapon.pm9"], "sidearm": ["weapon.pm9"], "armor": ["", "armor.vest_soft"], "head": ["helmet.cap", ""], "loot": "residential"},
+    "mercenaries": {"primary": ["weapon.akr", "weapon.sr16", "weapon.tommy", "weapon.striker"], "sidearm": ["weapon.punisher"], "armor": ["armor.plate", "armor.military"], "head": ["helmet.ssh", ""], "loot": "military"},
+    "player": {"primary": ["weapon.smg", "weapon.pump12", "weapon.mosin", "weapon.akr"], "sidearm": ["weapon.pm9"], "armor": ["armor.vest_soft"], "head": ["helmet.cap"], "loot": "military"}
+  }
+}

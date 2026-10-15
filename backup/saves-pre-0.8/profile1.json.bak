@@ -1,0 +1,278 @@
+{
+  "version": 7,
+  "game": "0.7",
+  "slot": 1,
+  "name": "aaa",
+  "armVariant": 4,
+  "skin": 1,
+  "outfit": 0,
+  "tagColor": 0,
+  "appearance": {
+    "head": "head.plain",
+    "hair": "hair.crew",
+    "facial_hair": "facial_hair.none",
+    "torso": "torso.field",
+    "sleeves": "sleeves.long",
+    "legs": "legs.cargo",
+    "hands": "hands.bare",
+    "feet": "feet.combat",
+    "skin": "skin.tone3",
+    "hair_color": "hair_color.tone1",
+    "sex": "male"
+  },
+  "ironman": false,
+  "garage": [],
+  "deployVehicle": "",
+  "build": "0.7",
+  "facePaint": true,
+  "scrip": "1500",
+  "seed": "1337",
+  "nextUid": "4446",
+  "stashH": 24,
+  "stash": [],
+  "loadout": {
+    "caseW": 10,
+    "caseH": 6,
+    "slots": {
+      "sidearm": {
+        "uid": "4442",
+        "def": "weapon.pm9",
+        "rounds": 10,
+        "ammo": "ammo.handgun",
+        "origin": "starter",
+        "x": 0,
+        "y": 0
+      },
+      "melee": {
+        "uid": "4443",
+        "def": "melee.knife",
+        "origin": "starter",
+        "x": 0,
+        "y": 0
+      }
+    },
+    "case": [
+      {
+        "uid": "4444",
+        "def": "ammo.handgun",
+        "qty": 30,
+        "origin": "starter",
+        "x": 0,
+        "y": 0
+      },
+      {
+        "uid": "4445",
+        "def": "med.spray",
+        "origin": "starter",
+        "x": 2,
+        "y": 0
+      }
+    ],
+    "charms": [null, null, null],
+    "quick": ["0", "0", "0", "0"],
+    "treasures": [],
+    "keys": [],
+    "craft": [],
+    "documents": []
+  },
+  "progression": {
+    "cycleXp": "0",
+    "lifetimeXp": "0",
+    "prestige": 0,
+    "bestRank": 1,
+    "unlockTokens": 0,
+    "tokenSpent": [],
+    "lastCycleSpent": 0,
+    "permTokens": 0,
+    "permanent": [],
+    "awardPending": false,
+    "extraClasses": 0,
+    "cosmetics": [],
+    "mastery": {},
+    "weaponPrestige": {}
+  },
+  "rep": {
+    "military": 0,
+    "raiders": -20,
+    "survivors": 0,
+    "mercenaries": -10
+  },
+  "hideout": {
+    "workbench": 1,
+    "medical": 1,
+    "kitchen": 1,
+    "radio": 0,
+    "case": 0,
+    "stash": 0
+  },
+  "contracts": {
+    "board": [
+      {
+        "id": "c1",
+        "title": "Thin the herd: Outskirts",
+        "desc": "Kill 9 infected in the Outskirts. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "REDLINE",
+        "kind": "CULL",
+        "need": 9,
+        "have": 0,
+        "scrip": 696,
+        "xp": 8291,
+        "rep": 4
+      },
+      {
+        "id": "c2",
+        "title": "Paper trail",
+        "desc": "Recover and read 2 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "INDUSTRIAL",
+        "kind": "INTEL",
+        "need": 2,
+        "have": 0,
+        "scrip": 540,
+        "xp": 4507,
+        "rep": 3
+      },
+      {
+        "id": "c3",
+        "title": "Paper trail",
+        "desc": "Recover and read 1 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "CIVIC",
+        "kind": "INTEL",
+        "need": 1,
+        "have": 0,
+        "scrip": 350,
+        "xp": 3985,
+        "rep": 5
+      },
+      {
+        "id": "c4",
+        "title": "Thin the herd: Industrial",
+        "desc": "Kill 4 infected in the Industrial. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "INDUSTRIAL",
+        "kind": "CULL",
+        "need": 4,
+        "have": 0,
+        "scrip": 458,
+        "xp": 5703,
+        "rep": 4
+      },
+      {
+        "id": "c5",
+        "title": "Paper trail",
+        "desc": "Recover and read 2 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "MARKET",
+        "kind": "INTEL",
+        "need": 2,
+        "have": 0,
+        "scrip": 473,
+        "xp": 4924,
+        "rep": 5
+      }
+    ],
+    "active": [],
+    "completed": [],
+    "serial": 5
+  },
+  "zone": {
+    "influence": {
+      "WILDERNESS": [0.10000000149011612, 0.10000000149011612, 0.11999999731779099, 0.03999999910593033],
+      "OLD_QUARTER": [0.20000000298023224, 0.10000000149011612, 0.11999999731779099, 0.46000000834465027],
+      "INDUSTRIAL": [0.07999999821186066, 0.46000000834465027, 0.07999999821186066, 0.30000001192092896],
+      "MARKET": [0.10000000149011612, 0.1599999964237213, 0.5, 0.05999999865889549],
+      "REDLINE": [0.05999999865889549, 0.41999998688697815, 0.30000001192092896, 0.03999999910593033],
+      "CIVIC": [0.6600000262260437, 0.03999999910593033, 0.05999999865889549, 0.11999999731779099]
+    },
+    "supply": {
+      "WILDERNESS": [1, 1, 1, 1, 1, 1, 1],
+      "OLD_QUARTER": [1, 1, 1, 1, 1, 1, 1],
+      "INDUSTRIAL": [1, 1, 1, 1, 1, 1, 1],
+      "MARKET": [1, 1, 1, 1, 1, 1, 1],
+      "REDLINE": [1, 1, 1, 1, 1, 1, 1],
+      "CIVIC": [1, 1, 1, 1, 1, 1, 1]
+    },
+    "infected": {
+      "WILDERNESS": 0.30000001192092896,
+      "OLD_QUARTER": 0.4000000059604645,
+      "INDUSTRIAL": 0.41999998688697815,
+      "MARKET": 0.3799999952316284,
+      "REDLINE": 0.550000011920929,
+      "CIVIC": 0.2800000011920929
+    },
+    "power": {
+      "WILDERNESS": false,
+      "OLD_QUARTER": false,
+      "INDUSTRIAL": false,
+      "MARKET": false,
+      "REDLINE": false,
+      "CIVIC": true
+    },
+    "hour": 9,
+    "day": 1,
+    "rain": 0,
+    "news": [],
+    "contamination": [0, 0, 0, 0, 0, 0],
+    "corpses": [0, 0, 0, 0, 0, 0],
+    "squads": [],
+    "log": [],
+    "nextSquadId": "1"
+  },
+  "discovered": "",
+  "stats": {},
+  "recentSales": {},
+  "presets": [],
+  "health": 100,
+  "herbs": 0,
+  "energy": 80,
+  "hydration": 80,
+  "lastFallbackDay": "-10",
+  "lastDebrief": "",
+  "builds": {},
+  "squad": {
+    "nextId": "1",
+    "mates": [],
+    "granted": 0,
+    "hired": [],
+    "fallen": []
+  },
+  "agents": {
+    "nextId": "1",
+    "deaths": 0,
+    "encounters": 0,
+    "hours": 0,
+    "baseline": [0, 0, 0, 0, 0],
+    "agents": []
+  },
+  "alliance": "",
+  "cardBackground": "field",
+  "population": {},
+  "rivalry": {
+    "format": 1,
+    "tick": "0",
+    "seed": "0",
+    "rolls": "0",
+    "seeded": false,
+    "nextGroup": 1,
+    "nextLeader": 1,
+    "nextEvent": 1,
+    "nextTreaty": 1,
+    "nextJob": 1,
+    "groups": [],
+    "leaders": [],
+    "treaties": [],
+    "factionReputation": {},
+    "log": [],
+    "seen": [],
+    "rumours": [],
+    "lastEncounter": {},
+    "notices": []
+  }
+}

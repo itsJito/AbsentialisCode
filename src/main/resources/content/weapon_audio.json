@@ -1,0 +1,46 @@
+{
+  "_doc": "Per-weapon audio profiles (0.5, brief 17). A profile names the recorded set a weapon fires (assets/audio/weapons/<set>, built by gradlew prepareAudio), how its layers are balanced, and what its action does after each round. Firing code never chooses a sound: it posts a shot and this table decides. Gains are linear. rate is the playback rate applied to every layer of the set (1 = as recorded). tailMakeupDb lifts every recorded tail by that much before the per-weapon tail gain (the library was recorded close and dry: its decays sit about 40 dB under the report). variation: per-shot bounds for playback rate (+-) and level in dB (+-). mech: events relative to the shot in seconds, each a handling sample (assets/audio/handling). suppressed: how the same recordings are rendered through a suppressor (no separately recorded suppressed sets exist in the library - see the manifest).",
+  "defaults": {"tailMakeupDb": 14, "gain": 1.0, "transient": 1.0, "body": 1.0, "tail": 0.85, "distant": 1.0, "rate": 1.0, "reverbSend": 1.0, "variation": {"rate": 0.015, "db": 1.0}, "refDistance": 9, "maxDistance": 420},
+  "suppressed": {"transient": 0.22, "body": 0.38, "tail": 0.12, "lowpassHz": 2600, "rate": 0.94, "reverbSend": 0.25, "mechBoost": 2.2},
+  "actions": {
+    "pistol_slide": [{"sample": "pistol_reload_2", "at": 0.030, "gain": 0.10, "rate": 1.7}],
+    "pistol_light": [{"sample": "mag_b_1", "at": 0.028, "gain": 0.07, "rate": 1.9}],
+    "revolver": [],
+    "gas_rifle": [{"sample": "rifle_reload_3", "at": 0.040, "gain": 0.09, "rate": 1.5}],
+    "piston_rifle": [{"sample": "rifle_reload_3", "at": 0.046, "gain": 0.12, "rate": 1.25}],
+    "open_bolt": [{"sample": "rifle_reload_2", "at": 0.035, "gain": 0.10, "rate": 1.6}],
+    "semi_shotgun": [{"sample": "pump_3", "at": 0.060, "gain": 0.16, "rate": 1.3}],
+    "pump": [{"sample": "pump_1", "at": 0.33, "gain": 0.55, "rate": 1.0}, {"sample": "pump_3", "at": 0.52, "gain": 0.6, "rate": 1.0}],
+    "bolt": [{"sample": "rifle_reload_1", "at": 0.50, "gain": 0.5, "rate": 0.9}, {"sample": "rifle_reload_3", "at": 0.86, "gain": 0.55, "rate": 0.85}]
+  },
+  "loudness": {
+    "_doc": "0.6. Every profile is measured as the mixer sums it (loudest 100 ms of transient + body + tail at the profile's gains) and scaled to targetRms times its class factor; minNorm and maxNorm bound the correction. Raise or lower targetRms to move every gun together; change a class factor to move a class. heardRms closes the loop: after loading, each weapon is fired once through a private copy of the bus and trimmed until the loudest 100 ms out of the limiter is heardRms times its class factor (0 turns the pass off).",
+    "targetRms": 0.18, "minNorm": 0.4, "maxNorm": 6.0, "heardRms": 0.104,
+    "class": {"handgun": 0.92, "smg": 0.86, "rifle": 1.08, "magnum": 1.22, "bolt": 1.30, "shotgun": 1.50}
+  },
+  "weapons": {
+    "weapon.pm9": {"class": "handgun", "set": "ppq_9mm", "analogue": "Walther PPQ, 9x19 mm", "match": "close", "action": "pistol_slide", "gain": 0.86, "tail": 0.7},
+    "weapon.punisher": {"class": "handgun", "set": "mk3_22", "analogue": "Ruger Mark III, .22 LR", "match": "substitute", "action": "pistol_light", "gain": 0.78, "body": 1.25, "rate": 0.92, "tail": 0.6},
+    "weapon.yellow9": {"class": "handgun", "set": "sw642_38", "analogue": "Smith & Wesson 642, .38 Special", "match": "close", "action": "revolver", "gain": 0.9, "tail": 0.8},
+    "weapon.whitetail": {"class": "handgun", "set": "m1911_45", "analogue": "M1911, .45 ACP", "match": "close", "action": "pistol_slide", "gain": 0.92, "body": 1.1, "tail": 0.75},
+    "weapon.matilda": {"class": "handgun", "set": "bersa_380", "analogue": "Bersa Thunder, .380 ACP", "match": "substitute", "action": "pistol_light", "gain": 0.8, "tail": 0.55, "rate": 1.03},
+    "weapon.pump12": {"class": "shotgun", "set": "cd_12", "analogue": "Charles Daly pump-action, 12 gauge", "match": "exact-type", "action": "pump", "gain": 1.08, "body": 1.9, "tail": 1.0},
+    "weapon.riot": {"class": "shotgun", "set": "nova_12", "analogue": "Benelli Nova pump-action, 12 gauge", "match": "substitute", "action": "semi_shotgun", "gain": 1.05, "body": 1.9, "tail": 1.0},
+    "weapon.striker": {"class": "shotgun", "set": "model12_12", "analogue": "Winchester Model 12, 12 gauge", "match": "substitute", "action": "semi_shotgun", "gain": 1.05, "body": 1.9, "rate": 0.97, "tail": 1.0},
+    "weapon.mosin": {"class": "bolt", "set": "mosin_762r", "analogue": "Mosin-Nagant, 7.62x54 mmR", "match": "exact", "action": "bolt", "gain": 1.12, "tail": 1.0},
+    "weapon.sr16": {"class": "rifle", "set": "ar15_556", "analogue": "AR-15, 5.56x45 mm", "match": "exact-type", "action": "gas_rifle", "gain": 1.0, "tail": 0.9},
+    "weapon.akr": {"class": "rifle", "set": "ak47_762", "analogue": "AK-47, 7.62x39 mm", "match": "exact-type", "action": "piston_rifle", "gain": 1.0, "body": 1.1, "tail": 0.85},
+    "weapon.deagle": {"class": "magnum", "set": "m1894", "analogue": "Winchester Model 1894 lever-action, .32 Winchester Special", "match": "substitute", "action": "pistol_slide", "gain": 1.05, "body": 1.15, "rate": 1.04},
+    "weapon.killer9": {"class": "magnum", "set": "marlin336", "analogue": "Marlin 336 lever-action, .30-30", "match": "substitute", "action": "pistol_slide", "gain": 1.02, "rate": 1.06},
+    "weapon.r45": {"class": "magnum", "set": "m1917", "analogue": "Springfield 1917 bolt-action, .30-06", "match": "substitute", "action": "revolver", "gain": 1.1, "body": 1.2, "rate": 0.97},
+    "weapon.smg": {"class": "smg", "set": "m45_9mm", "analogue": "Carl Gustav m/45, 9x19 mm", "match": "exact-type", "action": "open_bolt", "gain": 0.88, "tail": 0.65},
+    "weapon.tommy": {"class": "smg", "set": "ppsh_762t", "analogue": "PPSh-41, 7.62x25 mm", "match": "substitute", "action": "open_bolt", "gain": 0.94, "body": 1.2, "rate": 0.95, "tail": 0.7}
+  },
+  "fallback": {"set": "ar15_556", "action": "gas_rifle"},
+  "handling": {
+    "_doc": "Reload and action cues by name -> recorded handling sample, chosen by weapon family. Cues are fired by the reload animation's own clock (see scene.RaidScreen.reloadFoley).",
+    "rifle": {"mag_out": "rifle_reload_1", "mag_in": "rifle_reload_2", "bolt_back": "rifle_reload_3", "bolt_release": "pump_3", "shell_in": "round_1"},
+    "pistol": {"mag_out": "pistol_reload_1", "mag_in": "mag_a_1", "bolt_back": "pistol_reload_2", "bolt_release": "mag_b_1", "shell_in": "round_1"},
+    "shotgun": {"mag_out": "rifle_reload_1", "mag_in": "rifle_reload_2", "bolt_back": "pump_1", "bolt_release": "pump_3", "shell_in": "round_1"}
+  }
+}

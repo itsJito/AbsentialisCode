@@ -1,0 +1,54 @@
+{
+  "_doc": "District hotspots and random events (0.9). Every district has hotspots of its own - one of them is in progress in any operation (which one turns over with the day) - and a list of smaller things that can happen near the survivor while they are there. A hotspot is a situation between people, at a place: 'holdout' (count of faction based in a building of type 'place', besieged in waves by 'against'), 'raid' (count of faction come to strip the building or landmark 'place', which 'against' is trying to keep), 'standoff' (faction and 'against' dug in across a street from each other at 'place'), 'horde' (count infected gathered at 'place'; 'against' are whoever is pinned down nearby). 'place' is a building type from buildings.json or a landmark id from districts.json. Nothing here is spawned until the survivor is within 'activate' metres of it; 'announce' is said once on entering the district. Random events: 'gunfight' (two sides shooting it out a street away), 'scavengers' (loners working through a building), 'pack' (infected on the move), 'patrol' (the district's own side passing), 'looters' (bandits at a shop), 'survivor' (someone alone, hurt and in need).",
+  "activate": 125,
+  "randomEvery": [150, 260],
+  "randomCap": 14,
+  "xp": 900,
+  "districts": {
+    "OLD_QUARTER": {
+      "hotspots": [
+        {"id": "dt_holdout", "name": "The Apartment Holdout", "kind": "holdout", "faction": "survivors", "place": "apartment_block", "count": 5, "against": "infected", "againstCount": 7,
+         "text": "Loners have barricaded themselves into an apartment block downtown and are holding it floor by floor. The dead keep coming to the noise."},
+        {"id": "dt_market_run", "name": "The Run on the Fresh Market", "kind": "raid", "faction": "raiders", "place": "grocery", "count": 5, "against": "mercenaries", "againstCount": 4,
+         "text": "A bandit crew is stripping the Meridian Fresh Market. The contractors who guard the district mean to stop them."}
+      ],
+      "random": ["gunfight", "patrol", "looters", "pack"]
+    },
+    "MARKET": {
+      "hotspots": [
+        {"id": "res_pharmacy", "name": "The Pharmacy Run", "kind": "raid", "faction": "survivors", "place": "pharmacy", "count": 4, "against": "raiders", "againstCount": 4,
+         "text": "The loners of the residential streets are emptying the pharmacy before winter. Bandits have had the same idea."},
+        {"id": "res_cul_de_sac", "name": "The House on the Close", "kind": "holdout", "faction": "survivors", "place": "house_medium", "count": 4, "against": "infected", "againstCount": 6,
+         "text": "A family and their neighbours have boarded up a house and will not leave it. Something on the street has noticed."}
+      ],
+      "random": ["scavengers", "survivor", "pack", "looters"]
+    },
+    "INDUSTRIAL": {
+      "hotspots": [
+        {"id": "ind_fuel", "name": "The Fuel Fight", "kind": "standoff", "faction": "raiders", "place": "warehouse", "count": 5, "against": "mercenaries", "againstCount": 5,
+         "text": "Bandits hold a warehouse full of fuel. Contractors have a crew dug in across the yard, and neither side is leaving."},
+        {"id": "ind_workshop", "name": "The Workshop Strip", "kind": "raid", "faction": "raiders", "place": "workshop", "count": 5, "against": "survivors", "againstCount": 3,
+         "text": "A crew is cutting a workshop apart for parts. The mechanics who kept it running are still inside."}
+      ],
+      "random": ["gunfight", "looters", "patrol", "pack"]
+    },
+    "CIVIC": {
+      "hotspots": [
+        {"id": "civ_depot", "name": "The Depot Break-in", "kind": "raid", "faction": "raiders", "place": "storage_depot", "count": 5, "against": "military", "againstCount": 5,
+         "text": "Somebody has cut the fence at a cordon storage depot. The garrison knows, and is on its way."},
+        {"id": "civ_admin", "name": "The Records Office", "kind": "holdout", "faction": "military", "place": "admin_building", "count": 5, "against": "infected", "againstCount": 8,
+         "text": "A section of the 3rd Cordon is holding the administration building against the dead while the files inside are burned."}
+      ],
+      "random": ["patrol", "gunfight", "pack", "survivor"]
+    },
+    "REDLINE": {
+      "hotspots": [
+        {"id": "bar_roadhouse", "name": "The Roadhouse", "kind": "holdout", "faction": "raiders", "place": "roadhouse", "count": 5, "against": "military", "againstCount": 5,
+         "text": "The bandits of the Barrens have made a fort of the roadhouse. A cordon patrol has orders to clear it."},
+        {"id": "bar_store", "name": "The Last Store", "kind": "horde", "faction": "infected", "place": "rural_store", "count": 9, "against": "survivors", "againstCount": 2,
+         "text": "The dead have gathered at the rural store. Two loners went in for supplies an hour ago and have not come out."}
+      ],
+      "random": ["pack", "scavengers", "survivor", "looters"]
+    }
+  }
+}

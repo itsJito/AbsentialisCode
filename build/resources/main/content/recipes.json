@@ -1,0 +1,39 @@
+{
+  // Combining (field, inventory) and crafting (hideout facility). Inputs are consumed atomically.
+  "recipes": [
+    {"id": "field_dressing", "name": "Field dressing", "where": "field", "inputs": [["mat.cloth", 2], ["mat.antiseptic", 1]], "output": ["med.bandage", 2], "time": 4},
+    {"id": "splint_improv", "name": "Improvised splint", "where": "field", "inputs": [["mat.scrap", 1], ["mat.duct_tape", 1]], "output": ["med.splint", 1], "time": 5},
+    {"id": "pipe_bomb", "name": "Pipe bomb", "where": "workbench:1", "inputs": [["mat.scrap", 2], ["mat.gunpowder_s", 1], ["mat.duct_tape", 1]], "output": ["grenade.pipe", 1], "time": 0},
+    {"id": "noisemaker", "name": "Noise maker", "where": "field", "inputs": [["mat.electronics", 1], ["mat.duct_tape", 1]], "output": ["tool.noisemaker", 2], "time": 6},
+    {"id": "repair_kit", "name": "Weapon repair kit", "where": "workbench:2", "inputs": [["mat.weapon_parts", 1], ["mat.bolts", 4], ["mat.duct_tape", 1]], "output": ["kit.repair", 1], "time": 0},
+    {"id": "medkit", "name": "Field medkit", "where": "medical:1", "inputs": [["med.bandage", 2], ["mat.antiseptic", 1], ["med.painkillers", 1]], "output": ["med.medkit", 1], "time": 0},
+    {"id": "antirad", "name": "Anti-rad injector", "where": "medical:2", "inputs": [["mat.chemicals", 2]], "output": ["med.antirad", 1], "time": 0},
+    {"id": "spray", "name": "First-aid spray", "where": "medical:2", "inputs": [["mat.antiseptic", 1], ["mat.chemicals", 1]], "output": ["med.spray", 1], "time": 0},
+    {"id": "purify", "name": "Purify water", "where": "kitchen:1", "inputs": [["drink.dirty", 2]], "output": ["drink.water", 2], "time": 0},
+    {"id": "cook", "name": "Cook meat stew", "where": "kitchen:1", "inputs": [["food.meat", 2], ["drink.water", 1]], "output": ["food.canned", 2], "time": 0},
+    {"id": "electrical", "name": "Rebuild electrical parts", "where": "workbench:3", "inputs": [["mat.electronics", 2], ["mat.wires", 3]], "output": ["mat.electrical", 1], "time": 0},
+    {"id": "flare", "name": "Signal flare", "where": "workbench:2", "inputs": [["mat.chemicals", 1], ["mat.gunpowder_s", 1]], "output": ["signal.flare", 1], "time": 0},
+    {"id": "gun_oil", "name": "Render gun oil", "where": "workbench:1", "inputs": [["mat.chemicals", 1]], "output": ["mat.gun_oil", 3], "time": 0},
+
+    // ---- v0.3: herbs
+    {"id": "herb_gg", "name": "Mix herbs (G+G)", "where": "field", "inputs": [["herb.green", 2]], "output": ["herb.mixed_gg", 1], "time": 2},
+    {"id": "herb_gr", "name": "Mix herbs (G+R)", "where": "field", "inputs": [["herb.green", 1], ["herb.red", 1]], "output": ["herb.mixed_gr", 1], "time": 2},
+    // ---- 0.7: gunpowder comes in three weights - light, standard and heavy - and every round is two piles of it
+    {"id": "gp_handgun", "name": "Handgun Ammo", "where": "field", "inputs": [["mat.gunpowder_s", 2]], "output": ["ammo.handgun", 12], "time": 3},
+    {"id": "gp_shells", "name": "Shotgun Shells", "where": "field", "inputs": [["mat.gunpowder_s", 1], ["mat.gunpowder_l", 1]], "output": ["ammo.shells", 6], "time": 3},
+    {"id": "gp_smg", "name": "SMG Ammo", "where": "field", "inputs": [["mat.gunpowder_s", 1], ["mat.gunpowder_m", 1]], "output": ["ammo.smg", 40], "time": 3},
+    {"id": "gp_rifle", "name": "Rifle Ammo", "where": "field", "inputs": [["mat.gunpowder_m", 2]], "output": ["ammo.rifle", 6], "time": 3},
+    {"id": "gp_assault", "name": "Assault Rifle Ammo", "where": "field", "inputs": [["mat.gunpowder_m", 1], ["mat.gunpowder_l", 1]], "output": ["ammo.assault", 15], "time": 3},
+    {"id": "gp_magnum", "name": "Magnum Ammo", "where": "field", "inputs": [["mat.gunpowder_l", 2]], "output": ["ammo.magnum", 3], "time": 4},
+    {"id": "gp_bolt", "name": "Bolts", "where": "field", "inputs": [["mat.plank", 1], ["mat.gunpowder_s", 1]], "output": ["ammo.bolt", 4], "time": 4},
+    {"id": "gr_incendiary", "name": "Grenade (Incendiary)", "where": "field", "inputs": [["mat.grenade_casing", 1], ["mat.gunpowder_l", 1]], "output": ["grenade.incendiary", 1], "time": 5},
+    {"id": "gr_flash", "name": "Grenade (Flash)", "where": "field", "inputs": [["mat.grenade_casing", 1], ["mat.gunpowder_s", 1]], "output": ["grenade.flash", 1], "time": 5},
+    {"id": "gr_frag", "name": "Grenade", "where": "field", "inputs": [["mat.grenade_casing", 1], ["mat.gunpowder_m", 1]], "output": ["grenade.frag", 1], "time": 5},
+    {"id": "knife", "name": "Knife", "where": "field", "inputs": [["mat.scrap_small", 3]], "output": ["melee.knife", 1], "time": 5},
+    // ---- v0.3: treasures. Gems socket into settings for far more than the parts are worth.
+    {"id": "survey_map", "name": "Join survey map", "where": "treasure", "inputs": [["treasure.map_a", 1], ["treasure.map_b", 1]], "output": ["treasure.survey_map", 1], "time": 0},
+    {"id": "chalice_ruby", "name": "Set ruby in chalice", "where": "treasure", "inputs": [["treasure.chalice", 1], ["treasure.ruby", 1]], "output": ["treasure.chalice_jeweled", 1], "time": 0},
+    {"id": "chalice_emerald", "name": "Set emerald in chalice", "where": "treasure", "inputs": [["treasure.chalice", 1], ["treasure.emerald", 1]], "output": ["treasure.chalice_emerald", 1], "time": 0},
+    {"id": "crown", "name": "Socket the crown (ruby, emerald, diamond)", "where": "treasure", "inputs": [["treasure.crown", 1], ["treasure.ruby", 1], ["treasure.emerald", 1], ["treasure.diamond", 1]], "output": ["treasure.crown_jeweled", 1], "time": 0}
+  ]
+}

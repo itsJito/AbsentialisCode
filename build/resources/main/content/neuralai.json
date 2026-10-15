@@ -1,0 +1,72 @@
+{
+  "_doc": "NeuralAI tuning (0.8: every NPC - people and infected - thinks in this engine). Tables: 'bodies' is what each archetype's body can do (speed m/s, health, blow damage, sight in metres - 0 means no eyes - hearing multiplier, cosine of the far half field of view); the rest as in 0.7: 'tuning' overrides any public number of neuralai.runtime.NeuralConfig by its field name; 'profiles' is the personality of each side (ai-profiles); 'roles' is how suited each archetype is to each squad role (squad-roles). Search weights are the w* keys under tuning (search-weights). All of it is calibration for this game - see docs/neuralai-tuning-guide.md.",
+
+  "tuning": {
+    "visionHz": 15, "beliefHz": 10, "decisionHz": 5, "rolesHz": 2, "searchHz": 2,
+
+    "gainPerSecond": 0.8, "decayPerSecond": 0.22,
+    "lookAt": 0.2, "investigate": 0.5, "confirm": 1.0,
+    "lookAtDown": 0.1, "investigateDown": 0.35, "confirmDown": 0.8,
+    "nearDistance": 4, "farDistance": 26, "nearHalfAngleDeg": 105, "farHalfAngleDeg": 55, "closeSense": 2.2,
+    "crouchExposure": 0.65, "proneExposure": 0.38, "stillExposure": 0.8, "movingExposure": 1.2, "sprintExposure": 1.45,
+    "foliagePerCell": 0.55, "darkFloor": 0.3, "alertMultiplier": 2.4, "combatMultiplier": 3.2,
+
+    "hearErrorPerMetre": 0.14, "hearUnambiguous": 5, "threatSoundAlert": 0.8, "quietSoundAlert": 0.3,
+
+    "assumedTargetSpeed": 2.4, "maxUncertainty": 34, "visibleRadius": 0.4, "lostAfter": 4.5, "forgetAfter": 75, "reportExpiry": 22,
+
+    "cell": 4, "searchRadius": 26,
+    "wLikelihood": 3, "wConcealment": 2, "wInfoGain": 2, "wPathCost": 1, "wReservation": 3,
+    "emptyFactor": 0.12, "diffusion": 0.22, "reservationTtl": 14, "inspectSeconds": 2.2, "searchPatienceSeconds": 55,
+
+    "wProtection": 3, "wFiringAngle": 2, "wFlank": 1.5, "wTravel": 1, "wExposure": 2.5,
+    "coverRadius": 16, "coverTtl": 7, "pinnedRelocate": 5,
+
+    "maxFlankPerSide": 1, "maxSuppress": 2, "roleSeconds": 8, "switchingCost": 0.35, "flankStale": 14, "flankDistance": 12,
+
+    "commitSeconds": 1.1, "hysteresis": 0.18, "grenadeRadius": 7.5,
+
+    "shoutRange": 26, "shoutDelay": 0.45, "radioDelay": 1.1, "radioRange": 260, "signalRange": 30, "signalDelay": 0.2,
+
+    "burstMin": 2, "burstMax": 5, "peekSeconds": 2.0, "hideSeconds": 1.5, "suppressSeconds": 7, "speculativeError": 2.4,
+
+    "followBehind": 2.4, "followSpacing": 1.5, "followLeash": 26, "holdLeash": 6, "moveLeash": 40, "sprintToCatchUp": 9,
+
+    "fireRangeHandgun": 26, "fireRangeShotgun": 16, "fireRangeAuto": 44, "fireRangeRifle": 58, "fireRangeScoped": 105, "mateFireRange": 0.8,
+    "holdFireHitSeconds": 4, "holdFireCloseRange": 5,
+
+    "creatureGain": 1.9, "creatureLostAfter": 2.5, "creatureSearchSeconds": 14, "creatureNoticeSeconds": 0.7, "creatureNoticeSpread": 1.1,
+    "creatureLookSeconds": 9, "creatureUrgentConfidence": 0.45
+  },
+
+  "bodies": {
+    "rifleman":   {"speed": 1.6,  "runSpeed": 4.6, "hp": 100,  "melee": 0,  "sight": 70,  "hearing": 1.0, "fovCos": 0.45, "infected": false},
+    "marksman":   {"speed": 1.4,  "runSpeed": 4.2, "hp": 90,   "melee": 0,  "sight": 110, "hearing": 0.9, "fovCos": 0.6,  "infected": false},
+    "shotgunner": {"speed": 1.7,  "runSpeed": 4.8, "hp": 110,  "melee": 0,  "sight": 45,  "hearing": 1.0, "fovCos": 0.4,  "infected": false},
+    "walker":     {"speed": 0.9,  "runSpeed": 1.6, "hp": 90,   "melee": 14, "sight": 16,  "hearing": 1.3, "fovCos": 0.3,  "infected": true},
+    "sprinter":   {"speed": 1.4,  "runSpeed": 6.4, "hp": 55,   "melee": 10, "sight": 26,  "hearing": 1.4, "fovCos": 0.2,  "infected": true},
+    "bomber":     {"speed": 0.8,  "runSpeed": 1.3, "hp": 260,  "melee": 0,  "sight": 16,  "hearing": 1.0, "fovCos": 0.3,  "infected": true},
+    "spewer":     {"speed": 1.0,  "runSpeed": 2.8, "hp": 130,  "melee": 8,  "sight": 30,  "hearing": 1.2, "fovCos": 0.3,  "infected": true},
+    "tank":       {"speed": 1.2,  "runSpeed": 3.0, "hp": 1400, "melee": 48, "sight": 30,  "hearing": 0.9, "fovCos": 0.3,  "infected": true},
+    "gladiator":  {"speed": 0.75, "runSpeed": 7.0, "hp": 900,  "melee": 0,  "sight": 0,   "hearing": 2.4, "fovCos": 1.0,  "infected": true},
+    "butcher":    {"speed": 1.1,  "runSpeed": 5.4, "hp": 800,  "melee": 0,  "sight": 34,  "hearing": 1.0, "fovCos": 0.25, "infected": true},
+    "shambler":   {"speed": 0.7,  "runSpeed": 1.1, "hp": 230,  "melee": 22, "sight": 14,  "hearing": 1.2, "fovCos": 0.3,  "infected": true},
+    "screecher":  {"speed": 1.0,  "runSpeed": 2.0, "hp": 70,   "melee": 8,  "sight": 30,  "hearing": 1.6, "fovCos": 0.0,  "infected": true}
+  },
+
+  "profiles": {
+    "default":     {"aggression": 0.50, "caution": 0.50, "teamPreference": 0.50, "searchPatience": 1.00, "reactionLatency": 0.35, "radio": false, "preferredRange": 18},
+    "military":    {"aggression": 0.45, "caution": 0.65, "teamPreference": 0.90, "searchPatience": 1.00, "reactionLatency": 0.30, "radio": true,  "preferredRange": 22},
+    "mercenaries": {"aggression": 0.60, "caution": 0.55, "teamPreference": 0.95, "searchPatience": 1.30, "reactionLatency": 0.22, "radio": true,  "preferredRange": 18},
+    "raiders":     {"aggression": 0.80, "caution": 0.25, "teamPreference": 0.40, "searchPatience": 0.50, "reactionLatency": 0.45, "radio": false, "preferredRange": 11},
+    "survivors":   {"aggression": 0.25, "caution": 0.80, "teamPreference": 0.50, "searchPatience": 0.35, "reactionLatency": 0.55, "radio": false, "preferredRange": 16},
+    "player":      {"aggression": 0.50, "caution": 0.60, "teamPreference": 1.00, "searchPatience": 0.80, "reactionLatency": 0.25, "radio": true,  "preferredRange": 16},
+    "infected":    {"aggression": 1.00, "caution": 0.00, "teamPreference": 0.00, "searchPatience": 0.25, "reactionLatency": 0.05, "radio": false, "preferredRange": 1}
+  },
+
+  "roles": {
+    "rifleman":   {"HOLD": 0.2, "SUPPRESS": 0.6, "ADVANCE": 0.5, "FLANK_LEFT": 0.3, "FLANK_RIGHT": 0.3, "SEARCH": 0.3, "RETREAT": 0.0},
+    "marksman":   {"HOLD": 0.9, "SUPPRESS": 0.2, "ADVANCE": -0.8, "FLANK_LEFT": -0.9, "FLANK_RIGHT": -0.9, "SEARCH": -0.2, "RETREAT": 0.1},
+    "shotgunner": {"HOLD": -0.2, "SUPPRESS": -0.6, "ADVANCE": 0.8, "FLANK_LEFT": 0.7, "FLANK_RIGHT": 0.7, "SEARCH": 0.5, "RETREAT": -0.1}
+  }
+}

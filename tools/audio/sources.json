@@ -1,0 +1,44 @@
+{
+  "_doc": "Each weapon names the library's single-shot recordings of one firearm: near ('near distance, front of shooter' in the library's master sheet) become the close layers, mid ('mid distance') the distant layer. The library's burst recordings are not used: every round the game fires is built from single shots. Input to the audio pipeline (gradlew prepareAudio -> absentialis.tools.AudioPrep). Originals live under tools/audio/originals and are never modified; everything under assets/audio is generated from them and can be regenerated. Licences, authors and URLs for every source are in docs/audio/weapon_asset_manifest.md and ATTRIBUTION.md.",
+  "out": "assets/audio",
+  "weaponLibrary": "tools/audio/originals/Prepared SFX Library",
+  "crossoverHz": 1100,
+  "maxTakes": 5,
+  "weapons": [
+    {"profile": "ppq_9mm", "firearm": "Walther PPQ, 9 mm", "near": ["Walther PPQ/X_39P.wav"], "mid": ["Walther PPQ/X_31P.wav"]},
+    {"profile": "mk3_22", "firearm": "Ruger Mark III, .22", "near": ["Ruger Mark III/R_35P.wav"], "mid": ["Ruger Mark III/R_30P.wav"]},
+    {"profile": "sw642_38", "firearm": "Smith & Wesson 642, .38 Special", "near": ["Smith & Wesson 642/V_27P.wav"], "mid": ["Smith & Wesson 642/V_22P.wav"]},
+    {"profile": "m1911_45", "firearm": "1911, .45", "near": ["1911/A_42P.wav"], "mid": ["1911/A_34P.wav"]},
+    {"profile": "bersa_380", "firearm": "Bersa, .380", "near": ["Bersa/F_47P.wav"], "mid": ["Bersa/F_41P.wav"]},
+    {"profile": "cd_12", "firearm": "Charles Daly pump-action, 12 gauge", "near": ["CD/H_21P.wav"], "mid": ["CD/H_16P.wav"]},
+    {"profile": "nova_12", "firearm": "Benelli Nova pump-action, 12 gauge", "near": ["Nova/O_21P.wav"], "mid": ["Nova/O_17P.wav"]},
+    {"profile": "model12_12", "firearm": "Winchester Model 12 pump-action, 12 gauge", "near": ["Model 12/K_22P.wav"], "mid": ["Model 12/K_17P.wav"]},
+    {"profile": "mosin_762r", "firearm": "Mosin-Nagant, 7.62x54", "near": ["Mosin Nagant/M_21P.wav"], "mid": ["Mosin Nagant/M_26P.wav"]},
+    {"profile": "ar15_556", "firearm": "AR-15, .223 / 5.56x45", "near": ["AR-15/D_32P.wav"], "mid": ["AR-15/D_24P.wav"]},
+    {"profile": "ak47_762", "firearm": "AK-47, 7.62x39", "near": ["AK-47/C_28P.wav"], "mid": ["AK-47/C_31P.wav"]},
+    {"profile": "m1894", "firearm": "Winchester Model 1894 lever-action, .32 Winchester Special", "near": ["Model 1894/L_23P.wav"], "mid": ["Model 1894/L_17P.wav"]},
+    {"profile": "marlin336", "firearm": "Marlin 336 lever-action, .30-30", "near": ["Marlin 336/I_22P.wav"], "mid": ["Marlin 336/I_17P.wav"]},
+    {"profile": "m1917", "firearm": "Springfield 1917 bolt-action, .30-06", "near": ["1917/B_24P.wav"], "mid": ["1917/B_16P.wav"]},
+    {"profile": "m45_9mm", "firearm": "Carl Gustav M45, 9 mm", "near": ["Carl Gustav M45/G_31P.wav"], "mid": ["Carl Gustav M45/G_20P.wav"]},
+    {"profile": "ppsh_762t", "firearm": "PPSh, 7.62x25 Tokarev", "near": ["PPSh/P_30P.wav"], "mid": ["PPSh/P_16P.wav"]}
+  ],
+  "handling": [
+    {"name": "rifle_reload", "file": "tools/audio/originals/reload/assaultriflereload1.wav", "threshold": 0.2, "gap": 0.16, "maxSeconds": 0.5},
+    {"name": "pistol_reload", "file": "tools/audio/originals/reload/gunreload1.wav", "threshold": 0.2, "gap": 0.16, "maxSeconds": 0.5},
+    {"name": "pump", "file": "tools/audio/originals/reload/shotguncock.wav", "threshold": 0.25, "gap": 0.12, "maxSeconds": 0.45},
+    {"name": "mag_a", "file": "tools/audio/originals/reload/clipload1.wav", "threshold": 0.3, "gap": 0.3, "maxSeconds": 0.5},
+    {"name": "mag_b", "file": "tools/audio/originals/reload/clipload2.wav", "threshold": 0.3, "gap": 0.3, "maxSeconds": 0.5},
+    {"name": "round", "file": "tools/audio/originals/reload/singlebullet1.wav", "threshold": 0.3, "gap": 0.3, "maxSeconds": 0.5}
+  ],
+  "footsteps": [
+    {"surface": "concrete", "dir": "tools/audio/originals/footsteps/boots"},
+    {"surface": "wood", "dir": "tools/audio/originals/footsteps/wood"},
+    {"surface": "metal", "dir": "tools/audio/originals/footsteps/metal"},
+    {"surface": "grass", "dir": "tools/audio/originals/footsteps/grass"},
+    {"surface": "gravel", "dir": "tools/audio/originals/footsteps/gravel"},
+    {"surface": "tile", "dir": "tools/audio/originals/footsteps/tile"},
+    {"surface": "water", "dir": "tools/audio/originals/footsteps/water"},
+    {"surface": "asphalt", "dir": "tools/audio/originals/footsteps/boots", "lowpassHz": 3200, "rate": 0.93, "gain": 0.9, "blendDir": "tools/audio/originals/footsteps/gravel", "blendGain": 0.10},
+    {"surface": "dirt", "dir": "tools/audio/originals/footsteps/grass", "lowpassHz": 2400, "rate": 0.9, "blendDir": "tools/audio/originals/footsteps/gravel", "blendGain": 0.22}
+  ]
+}

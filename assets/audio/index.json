@@ -1,0 +1,913 @@
+{
+  "generated": "2026-10-10",
+  "weapons": {
+    "ppq_9mm": {
+      "firearm": "Walther PPQ, 9 mm",
+      "takes": 3,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Walther PPQ/X_39P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 15.7,
+          "shots": 3,
+          "clippedSamples": 293,
+          "directness": 141.76,
+          "use": "close"
+        },
+        {
+          "file": "Walther PPQ/X_31P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.5,
+          "shots": 2,
+          "clippedSamples": 329,
+          "directness": 33.85,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Walther PPQ/X_39P.wav",
+          "at": 1.4,
+          "sourcePeak": 0.56
+        },
+        {
+          "n": 2,
+          "source": "Walther PPQ/X_39P.wav",
+          "at": 6.44,
+          "sourcePeak": 0.67
+        },
+        {
+          "n": 3,
+          "source": "Walther PPQ/X_39P.wav",
+          "at": 10.66,
+          "sourcePeak": 0.72
+        }
+      ]
+    },
+    "mk3_22": {
+      "firearm": "Ruger Mark III, .22",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Ruger Mark III/R_35P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7.6,
+          "shots": 2,
+          "clippedSamples": 537,
+          "directness": 4.73,
+          "use": "close"
+        },
+        {
+          "file": "Ruger Mark III/R_30P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7.7,
+          "shots": 2,
+          "clippedSamples": 285,
+          "directness": 11.86,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Ruger Mark III/R_35P.wav",
+          "at": 0.48,
+          "sourcePeak": 0.88
+        },
+        {
+          "n": 2,
+          "source": "Ruger Mark III/R_35P.wav",
+          "at": 4.48,
+          "sourcePeak": 1
+        }
+      ]
+    },
+    "sw642_38": {
+      "firearm": "Smith & Wesson 642, .38 Special",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Smith & Wesson 642/V_27P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 10.5,
+          "shots": 2,
+          "clippedSamples": 148,
+          "directness": 211.93,
+          "use": "close"
+        },
+        {
+          "file": "Smith & Wesson 642/V_22P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.5,
+          "shots": 2,
+          "clippedSamples": 390,
+          "directness": 0.42,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Smith & Wesson 642/V_27P.wav",
+          "at": 0.8,
+          "sourcePeak": 0.78
+        },
+        {
+          "n": 2,
+          "source": "Smith & Wesson 642/V_27P.wav",
+          "at": 6.22,
+          "sourcePeak": 0.88
+        }
+      ]
+    },
+    "m1911_45": {
+      "firearm": "1911, .45",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "1911/A_42P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.5,
+          "shots": 2,
+          "clippedSamples": 387,
+          "directness": 63.54,
+          "use": "close"
+        },
+        {
+          "file": "1911/A_34P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.9,
+          "shots": 2,
+          "clippedSamples": 527,
+          "directness": 0.36,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "1911/A_42P.wav",
+          "at": 0.94,
+          "sourcePeak": 1
+        },
+        {
+          "n": 2,
+          "source": "1911/A_42P.wav",
+          "at": 5,
+          "sourcePeak": 1
+        }
+      ]
+    },
+    "bersa_380": {
+      "firearm": "Bersa, .380",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Bersa/F_47P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7.6,
+          "shots": 2,
+          "clippedSamples": 573,
+          "directness": 16.74,
+          "use": "close"
+        },
+        {
+          "file": "Bersa/F_41P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 8.4,
+          "shots": 2,
+          "clippedSamples": 282,
+          "directness": 0.78,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Bersa/F_47P.wav",
+          "at": 0.33,
+          "sourcePeak": 1
+        },
+        {
+          "n": 2,
+          "source": "Bersa/F_47P.wav",
+          "at": 4.41,
+          "sourcePeak": 1
+        }
+      ]
+    },
+    "cd_12": {
+      "firearm": "Charles Daly pump-action, 12 gauge",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "CD/H_21P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 6,
+          "shots": 2,
+          "clippedSamples": 302,
+          "directness": 102.48,
+          "use": "close"
+        },
+        {
+          "file": "CD/H_16P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7.6,
+          "shots": 2,
+          "clippedSamples": 392,
+          "directness": 1.11,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "CD/H_21P.wav",
+          "at": 0.46,
+          "sourcePeak": 0.92
+        },
+        {
+          "n": 2,
+          "source": "CD/H_21P.wav",
+          "at": 3.07,
+          "sourcePeak": 0.83
+        }
+      ]
+    },
+    "nova_12": {
+      "firearm": "Benelli Nova pump-action, 12 gauge",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Nova/O_21P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 6.8,
+          "shots": 2,
+          "clippedSamples": 307,
+          "directness": 66.12,
+          "use": "close"
+        },
+        {
+          "file": "Nova/O_17P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 6.6,
+          "shots": 2,
+          "clippedSamples": 620,
+          "directness": 2.27,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Nova/O_21P.wav",
+          "at": 0.43,
+          "sourcePeak": 0.95
+        },
+        {
+          "n": 2,
+          "source": "Nova/O_21P.wav",
+          "at": 3.46,
+          "sourcePeak": 0.91
+        }
+      ]
+    },
+    "model12_12": {
+      "firearm": "Winchester Model 12 pump-action, 12 gauge",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Model 12/K_22P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 10.7,
+          "shots": 2,
+          "clippedSamples": 482,
+          "directness": 35.49,
+          "use": "close"
+        },
+        {
+          "file": "Model 12/K_17P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 10.3,
+          "shots": 2,
+          "clippedSamples": 395,
+          "directness": 2.03,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Model 12/K_22P.wav",
+          "at": 0.84,
+          "sourcePeak": 0.94
+        },
+        {
+          "n": 2,
+          "source": "Model 12/K_22P.wav",
+          "at": 7.44,
+          "sourcePeak": 1
+        }
+      ]
+    },
+    "mosin_762r": {
+      "firearm": "Mosin-Nagant, 7.62x54",
+      "takes": 4,
+      "distant": 3,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Mosin Nagant/M_21P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 17.1,
+          "shots": 4,
+          "clippedSamples": 353,
+          "directness": 98.3,
+          "use": "close"
+        },
+        {
+          "file": "Mosin Nagant/M_26P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 15.4,
+          "shots": 3,
+          "clippedSamples": 1283,
+          "directness": 3.41,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Mosin Nagant/M_21P.wav",
+          "at": 1.03,
+          "sourcePeak": 0.58
+        },
+        {
+          "n": 2,
+          "source": "Mosin Nagant/M_21P.wav",
+          "at": 5.02,
+          "sourcePeak": 0.61
+        },
+        {
+          "n": 3,
+          "source": "Mosin Nagant/M_21P.wav",
+          "at": 9.15,
+          "sourcePeak": 0.6
+        },
+        {
+          "n": 4,
+          "source": "Mosin Nagant/M_21P.wav",
+          "at": 14.13,
+          "sourcePeak": 0.58
+        }
+      ]
+    },
+    "ar15_556": {
+      "firearm": "AR-15, .223 / 5.56x45",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "AR-15/D_32P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 10.2,
+          "shots": 2,
+          "clippedSamples": 383,
+          "directness": 26.51,
+          "use": "close"
+        },
+        {
+          "file": "AR-15/D_24P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 6.5,
+          "shots": 2,
+          "clippedSamples": 323,
+          "directness": 0.31,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "AR-15/D_32P.wav",
+          "at": 0.7,
+          "sourcePeak": 0.95
+        },
+        {
+          "n": 2,
+          "source": "AR-15/D_32P.wav",
+          "at": 5.64,
+          "sourcePeak": 0.99
+        }
+      ]
+    },
+    "ak47_762": {
+      "firearm": "AK-47, 7.62x39",
+      "takes": 4,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "AK-47/C_28P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 12.5,
+          "shots": 4,
+          "clippedSamples": 561,
+          "directness": 65.18,
+          "use": "close"
+        },
+        {
+          "file": "AK-47/C_31P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 8.8,
+          "shots": 2,
+          "clippedSamples": 170,
+          "directness": 1.77,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "AK-47/C_28P.wav",
+          "at": 0.61,
+          "sourcePeak": 0.74
+        },
+        {
+          "n": 2,
+          "source": "AK-47/C_28P.wav",
+          "at": 3.25,
+          "sourcePeak": 0.89
+        },
+        {
+          "n": 3,
+          "source": "AK-47/C_28P.wav",
+          "at": 6.02,
+          "sourcePeak": 0.83
+        },
+        {
+          "n": 4,
+          "source": "AK-47/C_28P.wav",
+          "at": 9.15,
+          "sourcePeak": 0.77
+        }
+      ]
+    },
+    "m1894": {
+      "firearm": "Winchester Model 1894 lever-action, .32 Winchester Special",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Model 1894/L_23P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7,
+          "shots": 2,
+          "clippedSamples": 482,
+          "directness": 49.4,
+          "use": "close"
+        },
+        {
+          "file": "Model 1894/L_17P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 7.9,
+          "shots": 2,
+          "clippedSamples": 656,
+          "directness": 10.89,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Model 1894/L_23P.wav",
+          "at": 0.57,
+          "sourcePeak": 0.95
+        },
+        {
+          "n": 2,
+          "source": "Model 1894/L_23P.wav",
+          "at": 4.12,
+          "sourcePeak": 1
+        }
+      ]
+    },
+    "marlin336": {
+      "firearm": "Marlin 336 lever-action, .30-30",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Marlin 336/I_22P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 12.2,
+          "shots": 2,
+          "clippedSamples": 192,
+          "directness": 73,
+          "use": "close"
+        },
+        {
+          "file": "Marlin 336/I_17P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 11.2,
+          "shots": 2,
+          "clippedSamples": 296,
+          "directness": 0.9,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Marlin 336/I_22P.wav",
+          "at": 0.74,
+          "sourcePeak": 0.68
+        },
+        {
+          "n": 2,
+          "source": "Marlin 336/I_22P.wav",
+          "at": 7,
+          "sourcePeak": 0.6
+        }
+      ]
+    },
+    "m1917": {
+      "firearm": "Springfield 1917 bolt-action, .30-06",
+      "takes": 2,
+      "distant": 2,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "1917/B_24P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 11.5,
+          "shots": 2,
+          "clippedSamples": 490,
+          "directness": 1.25,
+          "use": "close"
+        },
+        {
+          "file": "1917/B_16P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.8,
+          "shots": 2,
+          "clippedSamples": 447,
+          "directness": 0.17,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "1917/B_24P.wav",
+          "at": 1.31,
+          "sourcePeak": 0.71
+        },
+        {
+          "n": 2,
+          "source": "1917/B_24P.wav",
+          "at": 6.73,
+          "sourcePeak": 0.64
+        }
+      ]
+    },
+    "m45_9mm": {
+      "firearm": "Carl Gustav M45, 9 mm",
+      "takes": 3,
+      "distant": 3,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "Carl Gustav M45/G_31P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 9.2,
+          "shots": 3,
+          "clippedSamples": 330,
+          "directness": 68.72,
+          "use": "close"
+        },
+        {
+          "file": "Carl Gustav M45/G_20P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 8.9,
+          "shots": 3,
+          "clippedSamples": 598,
+          "directness": 7.06,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "Carl Gustav M45/G_31P.wav",
+          "at": 0.31,
+          "sourcePeak": 0.77
+        },
+        {
+          "n": 2,
+          "source": "Carl Gustav M45/G_31P.wav",
+          "at": 3.5,
+          "sourcePeak": 0.78
+        },
+        {
+          "n": 3,
+          "source": "Carl Gustav M45/G_31P.wav",
+          "at": 6.73,
+          "sourcePeak": 0.74
+        }
+      ]
+    },
+    "ppsh_762t": {
+      "firearm": "PPSh, 7.62x25 Tokarev",
+      "takes": 5,
+      "distant": 4,
+      "distantDerived": false,
+      "rejectedTakes": 0,
+      "sources": [
+        {
+          "file": "PPSh/P_30P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 18.3,
+          "shots": 5,
+          "clippedSamples": 536,
+          "directness": 63.28,
+          "use": "close"
+        },
+        {
+          "file": "PPSh/P_16P.wav",
+          "rate": 96000,
+          "channels": 2,
+          "bits": 24,
+          "seconds": 16.4,
+          "shots": 4,
+          "clippedSamples": 1507,
+          "directness": 0.37,
+          "use": "distant"
+        }
+      ],
+      "shots": [
+        {
+          "n": 1,
+          "source": "PPSh/P_30P.wav",
+          "at": 0.97,
+          "sourcePeak": 0.59
+        },
+        {
+          "n": 2,
+          "source": "PPSh/P_30P.wav",
+          "at": 4.38,
+          "sourcePeak": 0.54
+        },
+        {
+          "n": 3,
+          "source": "PPSh/P_30P.wav",
+          "at": 8.24,
+          "sourcePeak": 0.58
+        },
+        {
+          "n": 4,
+          "source": "PPSh/P_30P.wav",
+          "at": 11.42,
+          "sourcePeak": 0.58
+        },
+        {
+          "n": 5,
+          "source": "PPSh/P_30P.wav",
+          "at": 15.09,
+          "sourcePeak": 0.53
+        }
+      ]
+    }
+  },
+  "handling": {
+    "rifle_reload": {
+      "source": "tools/audio/originals/reload/assaultriflereload1.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.27,
+          "seconds": 0.5
+        },
+        {
+          "n": 2,
+          "at": 1.04,
+          "seconds": 0.11
+        },
+        {
+          "n": 3,
+          "at": 1.21,
+          "seconds": 0.35
+        }
+      ]
+    },
+    "pistol_reload": {
+      "source": "tools/audio/originals/reload/gunreload1.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.13,
+          "seconds": 0.5
+        },
+        {
+          "n": 2,
+          "at": 1.28,
+          "seconds": 0.3
+        }
+      ]
+    },
+    "pump": {
+      "source": "tools/audio/originals/reload/shotguncock.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.05,
+          "seconds": 0.07
+        },
+        {
+          "n": 2,
+          "at": 0.17,
+          "seconds": 0.07
+        },
+        {
+          "n": 3,
+          "at": 0.3,
+          "seconds": 0.18
+        }
+      ]
+    },
+    "mag_a": {
+      "source": "tools/audio/originals/reload/clipload1.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.09,
+          "seconds": 0.17
+        }
+      ]
+    },
+    "mag_b": {
+      "source": "tools/audio/originals/reload/clipload2.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.07,
+          "seconds": 0.14
+        }
+      ]
+    },
+    "round": {
+      "source": "tools/audio/originals/reload/singlebullet1.wav",
+      "events": [
+        {
+          "n": 1,
+          "at": 0.13,
+          "seconds": 0.17
+        }
+      ]
+    }
+  },
+  "footsteps": {
+    "concrete": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/boots",
+      "derived": false
+    },
+    "wood": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/wood",
+      "derived": false
+    },
+    "metal": {
+      "count": 8,
+      "source": "tools/audio/originals/footsteps/metal",
+      "derived": false
+    },
+    "grass": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/grass",
+      "derived": false
+    },
+    "gravel": {
+      "count": 10,
+      "source": "tools/audio/originals/footsteps/gravel",
+      "derived": false
+    },
+    "tile": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/tile",
+      "derived": false
+    },
+    "water": {
+      "count": 5,
+      "source": "tools/audio/originals/footsteps/water",
+      "derived": false
+    },
+    "asphalt": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/boots",
+      "derived": true
+    },
+    "dirt": {
+      "count": 9,
+      "source": "tools/audio/originals/footsteps/grass",
+      "derived": true
+    }
+  }
+}

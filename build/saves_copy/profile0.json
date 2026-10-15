@@ -1,0 +1,348 @@
+{
+  "version": 3,
+  "slot": 0,
+  "name": "Are",
+  "armVariant": 4,
+  "skin": 1,
+  "outfit": 0,
+  "tagColor": 0,
+  "appearance": {
+    "head": "head.weathered",
+    "hair": "hair.bald",
+    "facial_hair": "facial_hair.chops",
+    "torso": "torso.flannel",
+    "sleeves": "sleeves.short",
+    "legs": "legs.cargo",
+    "hands": "hands.bare",
+    "feet": "feet.jungle",
+    "skin": "skin.tone2",
+    "hair_color": "hair_color.tone1"
+  },
+  "facePaint": true,
+  "scrip": "1500",
+  "seed": "1337",
+  "nextUid": "1384",
+  "stashH": 24,
+  "stash": [
+    {
+      "uid": "1184",
+      "def": "ammo.545",
+      "qty": 60,
+      "origin": "starter",
+      "x": 8,
+      "y": 0
+    },
+    {
+      "uid": "1186",
+      "def": "mag.pm9",
+      "rounds": 12,
+      "ammo": "ammo.9x19",
+      "origin": "starter",
+      "x": 8,
+      "y": 1
+    },
+    {
+      "uid": "1187",
+      "def": "ammo.9x19",
+      "qty": 40,
+      "origin": "starter",
+      "x": 3,
+      "y": 2
+    },
+    {
+      "uid": "1188",
+      "def": "melee.knife",
+      "origin": "starter",
+      "x": 5,
+      "y": 2
+    },
+    {
+      "uid": "1189",
+      "def": "med.bandage",
+      "origin": "starter",
+      "x": 9,
+      "y": 1
+    },
+    {
+      "uid": "1190",
+      "def": "med.bandage",
+      "origin": "starter",
+      "x": 7,
+      "y": 2
+    },
+    {
+      "uid": "1191",
+      "def": "med.painkillers",
+      "qty": 2,
+      "origin": "starter",
+      "x": 8,
+      "y": 2
+    },
+    {
+      "uid": "1192",
+      "def": "food.crackers",
+      "origin": "starter",
+      "x": 9,
+      "y": 2
+    },
+    {
+      "uid": "1193",
+      "def": "drink.water",
+      "origin": "starter",
+      "x": 3,
+      "y": 3
+    },
+    {
+      "uid": "1194",
+      "def": "armor.vest_soft",
+      "dur": 45,
+      "maxDur": 45,
+      "origin": "starter",
+      "x": 4,
+      "y": 3
+    },
+    {
+      "uid": "1195",
+      "def": "helmet.cap",
+      "origin": "starter",
+      "x": 7,
+      "y": 3
+    },
+    {
+      "uid": "1196",
+      "def": "mat.gun_oil",
+      "qty": 2,
+      "origin": "starter",
+      "x": 9,
+      "y": 3
+    },
+    {
+      "uid": "1198",
+      "def": "tool.noisemaker",
+      "origin": "starter",
+      "x": 1,
+      "y": 4
+    },
+    {
+      "uid": "1199",
+      "def": "charm.rabbit",
+      "origin": "starter",
+      "x": 2,
+      "y": 4
+    },
+    {
+      "uid": "1185",
+      "def": "weapon.pm9",
+      "origin": "starter",
+      "x": 0,
+      "y": 0,
+      "att": {
+        "optic": {
+          "uid": "1197",
+          "def": "att.reddot",
+          "origin": "starter",
+          "x": 0,
+          "y": 0
+        }
+      }
+    },
+    {
+      "uid": "1182",
+      "def": "mag.akr",
+      "rounds": 30,
+      "ammo": "ammo.545",
+      "origin": "starter",
+      "x": 3,
+      "y": 0
+    }
+  ],
+  "loadout": {
+    "caseW": 12,
+    "caseH": 16,
+    "slots": {},
+    "case": [],
+    "charms": [null, null, null],
+    "quick": ["0", "0", "0", "0"],
+    "treasures": [],
+    "keys": [],
+    "craft": [],
+    "documents": []
+  },
+  "progression": {
+    "cycleXp": "945",
+    "lifetimeXp": "945",
+    "prestige": 0,
+    "tokens": 0,
+    "tokenUnlocks": [],
+    "cosmetics": [],
+    "mastery": {
+      "weapon.akr": "120"
+    }
+  },
+  "rep": {
+    "military": 0,
+    "raiders": -20,
+    "survivors": 0,
+    "mercenaries": -10
+  },
+  "hideout": {
+    "workbench": 1,
+    "medical": 1,
+    "kitchen": 1,
+    "radio": 0,
+    "case": 0,
+    "stash": 0
+  },
+  "contracts": {
+    "board": [
+      {
+        "id": "c2",
+        "title": "Paper trail",
+        "desc": "Recover and read 2 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "INDUSTRIAL",
+        "kind": "INTEL",
+        "need": 2,
+        "have": 0,
+        "scrip": 540,
+        "xp": 4507,
+        "rep": 3
+      },
+      {
+        "id": "c3",
+        "title": "Paper trail",
+        "desc": "Recover and read 1 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "CIVIC",
+        "kind": "INTEL",
+        "need": 1,
+        "have": 0,
+        "scrip": 350,
+        "xp": 3985,
+        "rep": 5
+      },
+      {
+        "id": "c4",
+        "title": "Thin the herd: Industrial",
+        "desc": "Kill 4 infected in the Industrial. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "INDUSTRIAL",
+        "kind": "CULL",
+        "need": 4,
+        "have": 0,
+        "scrip": 458,
+        "xp": 5703,
+        "rep": 4
+      },
+      {
+        "id": "c5",
+        "title": "Paper trail",
+        "desc": "Recover and read 2 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "MARKET",
+        "kind": "INTEL",
+        "need": 2,
+        "have": 0,
+        "scrip": 473,
+        "xp": 4924,
+        "rep": 5
+      },
+      {
+        "id": "c6",
+        "title": "Survey the Downtown",
+        "desc": "Map 55 new map cells of the Downtown and extract with the data.",
+        "giver": "military",
+        "target": "explore",
+        "district": "OLD_QUARTER",
+        "kind": "RECON",
+        "need": 55,
+        "have": 0,
+        "scrip": 2572,
+        "xp": 37579,
+        "rep": 2
+      }
+    ],
+    "active": [
+      {
+        "id": "c1",
+        "title": "Thin the herd: Untamed",
+        "desc": "Kill 9 infected in the Untamed. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "REDLINE",
+        "kind": "CULL",
+        "need": 9,
+        "have": 0,
+        "scrip": 696,
+        "xp": 8291,
+        "rep": 4
+      }
+    ],
+    "completed": [],
+    "serial": 6
+  },
+  "zone": {
+    "influence": {
+      "WILDERNESS": [0.09614473581314087, 0.10062115639448166, 0.12145774811506271, 0.04385799542069435],
+      "OLD_QUARTER": [0.24063514173030853, 0.10270734876394272, 0.14741133153438568, 0.4388580024242401],
+      "INDUSTRIAL": [0.07690726965665817, 0.47941985726356506, 0.07784542441368103, 0.30400317907333374],
+      "MARKET": [0.09965444356203079, 0.15522578358650208, 0.5119847059249878, 0.05605042353272438],
+      "REDLINE": [0.08400949835777283, 0.07676179707050323, 0.05929258465766907, 0.05523442104458809],
+      "CIVIC": [0.6821431517601013, 0.04309786483645439, 0.05879296734929085, 0.11797726154327393]
+    },
+    "supply": {
+      "WILDERNESS": [1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738],
+      "OLD_QUARTER": [1.0079998970031738, 1.0079998970031738, 1.0109999179840088, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0139998197555542],
+      "INDUSTRIAL": [0.9899998903274536, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 0.998999834060669, 1.0079998970031738, 1.0079998970031738],
+      "MARKET": [1.0079998970031738, 1.0079998970031738, 1.0179998874664307, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738],
+      "REDLINE": [1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738],
+      "CIVIC": [1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738, 1.0079998970031738]
+    },
+    "infected": {
+      "WILDERNESS": 0.10590864717960358,
+      "OLD_QUARTER": 0.9839743375778198,
+      "INDUSTRIAL": 0.11309533566236496,
+      "MARKET": 0.12607429921627045,
+      "REDLINE": 0.10237598419189453,
+      "CIVIC": 0.09859899431467056
+    },
+    "power": {
+      "WILDERNESS": false,
+      "OLD_QUARTER": false,
+      "INDUSTRIAL": false,
+      "MARKET": false,
+      "REDLINE": false,
+      "CIVIC": true
+    },
+    "hour": 11,
+    "day": 1,
+    "rain": 0.12124253809452057,
+    "news": [],
+    "contamination": [0, 7.760000228881836, 0, 0, 0, 0],
+    "corpses": [0, 12, 2.429999828338623, 7.199999809265137, 0, 0],
+    "squads": ["1;military;5;4;2", "2;raiders;2;4;2", "3;survivors;1;3;1", "4;mercenaries;1;4;1", "5;military;5;4;2", "6;raiders;2;4;3", "7;survivors;3;4;1", "8;mercenaries;1;3;1"],
+    "log": ["1;11;overrun;OLD_QUARTER;299;250;mercenaries;infected;Infected mauled a Mercenaries squad in the Downtown", "1;11;overrun;OLD_QUARTER;357;169;survivors;infected;Infected mauled a Loners squad in the Downtown", "1;10;noise;OLD_QUARTER;174;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;141;217;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;175;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;176;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;169;191;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;146;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;146;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;134;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;169;191;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;180;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;132;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;169;191;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;131;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;144;200;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;151;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;MARKET;148;277;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;OLD_QUARTER;164;249;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;150;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;149;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;144;200;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;MARKET;152;280;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;OLD_QUARTER;144;200;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;145;202;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;162;250;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;168;189;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;145;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;142;203;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;149;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;MARKET;154;283;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;MARKET;155;283;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;OLD_QUARTER;144;200;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;144;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;144;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;141;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;163;253;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;163;253;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;168;189;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;146;202;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;191;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;143;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;MARKET;158;286;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;OLD_QUARTER;143;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;143;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;141;206;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;141;206;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;133;200;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;168;189;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;145;205;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;145;201;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;147;204;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;191;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;167;241;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;145;202;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;MARKET;170;305;survivors;survivors;Sustained gunfire in the Residential - Loners responded", "1;10;noise;OLD_QUARTER;167;240;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;167;240;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;191;247;mercenaries;;Sustained gunfire in the Downtown", "1;10;noise;OLD_QUARTER;140;201;mercenaries;;Sustained gunfire in the Downtown"],
+    "nextSquadId": "9"
+  },
+  "discovered": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAwB8AAAAAAAAAAADgfwAAAAAAAAAAAOB/AAAAAAAAAAAA8P8AAAAAAAAAAADw/wAAAAAAAAAAAPh/AAAAAAAAAAAA+H8AAAAAAAAAAAD4EwAAAAAAAAAAAPAHAAAAAAAAAAAA8AMAAAAAAAAAAADgAwAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADAAAAAAAAAAAAwA8AAAAAAAAAAADADwAAAAAAAAAAAOAfAAAAAAAAAAAA4A8AAAAAAAAAAAD4DwAAAAAAAAAAAPgPAAAAAAAAAAAA/B8AAAAAAAAAAAD4DwAAAAAAAAAAAPgPAAAAAAAAAAAA4AM=",
+  "stats": {
+    "deaths": 2,
+    "raids": 2,
+    "cells": 126,
+    "containers": 0,
+    "documents": 0,
+    "kills_infected": 1,
+    "kills_boomer": 1
+  },
+  "recentSales": {},
+  "presets": [],
+  "health": 60,
+  "energy": 55,
+  "hydration": 55,
+  "lastFallbackDay": "-10",
+  "lastDebrief": "+555 XP (halved: failed raid)\nLost 0 carried items (~0 scrip of gear)"
+}

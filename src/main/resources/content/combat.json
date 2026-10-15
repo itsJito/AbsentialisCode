@@ -1,0 +1,51 @@
+{
+  "_doc": "Combat and casualty tuning (0.5). Every threshold, timer and chance of the health-condition, incapacitation, rescue, hit-feedback and killfeed systems lives here; no code compares health against a literal.",
+  "health": {
+    "_doc": "Conditions by fraction of maximum health. A character is FINE above caution, CAUTION above injured, INJURED above critical, CRITICAL below. Per condition, in that order: movement speed multiplier, whether sprinting is possible, aim-error multiplier, how quickly locomotion blends respond (1 = normal), strength of the injury animation layer.",
+    "caution": 0.70, "injured": 0.45, "critical": 0.22,
+    "speed": [1.0, 0.92, 0.76, 0.52],
+    "sprint": [true, true, true, false],
+    "sprintSpeed": [1.0, 0.95, 0.80, 0.0],
+    "aimError": [1.0, 1.08, 1.25, 1.55],
+    "blendRate": [1.0, 0.85, 0.65, 0.48],
+    "animation": [0.0, 0.34, 0.68, 1.0],
+    "colors": ["7DBA5C", "E0C040", "E08A30", "D8483A"]
+  },
+  "maxHealth": {"_doc": "Yellow Herbs raise maximum health permanently, to a cap. The upgrade is stored on the profile and survives prestige.", "base": 100, "perHerb": 10, "cap": 200},
+  "downed": {
+    "_doc": "Incapacitation is rare and only for humans. chance: probability that otherwise-lethal damage downs instead of kills, per kind of character. overkill: damage beyond zero health, as a fraction of maximum health, above which the hit is simply fatal. types: multiplier on the chance by how the damage was delivered (0 = always fatal). Fatal regions bypass incapacitation altogether.",
+    "chance": 0.20, "chancePlayer": 0.45, "chanceMate": 0.60,
+    "overkill": 0.55,
+    "fatalRegions": ["head"],
+    "types": {"bullet": 1.0, "melee": 0.8, "blunt": 0.7, "blast": 0.35, "vehicle": 0.3, "burn": 0.0, "bleed": 0.0},
+    "bleedOut": 20.0,
+    "health": 34,
+    "crawlSpeed": 0.55,
+    "sidearmError": 2.2, "sidearmCooldown": 1.6,
+    "helpCallEvery": 6.0
+  },
+  "revive": {
+    "_doc": "A rescuer within range holds on the casualty for time seconds. Taking a hit, moving off or being pinned interrupts it and the casualty is DOWNED again with whatever time was left. Revival restores health to the given fraction of maximum - critical, not healed.",
+    "time": 4.0, "range": 1.9, "health": 0.18,
+    "ai": {"_doc": "Weights of the rescue decision (brief 5.5). A rescuer goes only when the total is above threshold.", "urgency": 1.6, "distance": 0.045, "pressure": 1.8, "exposure": 1.2, "cover": 0.6, "ownHealth": 1.4, "roleCost": 0.5, "threshold": 0.15, "maxDistance": 34, "abortSuppression": 0.75}
+  },
+  "hitmarker": {"_doc": "Centre-screen confirmation. life seconds; size in UI pixels at scale 1.", "life": 0.28, "lifeKill": 0.5, "size": 9, "gap": 5, "colors": ["FFFFFF", "F2D43A", "E23B2E"]},
+  "killfeed": {"life": 6.5, "fade": 0.6, "slide": 0.18, "max": 6},
+  "dialogue": {"_doc": "Speech bubbles over heads: seconds per line (plus per character), fade distance, wrap width in UI pixels.", "base": 2.2, "perChar": 0.045, "maxDistance": 30, "fadeFrom": 20, "wrap": 190, "maxVisible": 6},
+  "decapitation": {
+    "_doc": "0.6. What a killing head shot does to the head, by weapon family. never: this family cannot. Otherwise the chance is (force - chanceFrom) / chanceSpan, capped at max, and only at or above minForce (force = the damage of the killing hit after the head multiplier). closeRange/closeChance: inside this many metres the chance is closeChance outright. Blast always can.",
+    "default": {"minForce": 85, "chanceFrom": 70, "chanceSpan": 120, "max": 0.9},
+    "handgun": {"never": true},
+    "auto":    {"minForce": 130, "chanceFrom": 120, "chanceSpan": 220, "max": 0.2},
+    "rifle":   {"minForce": 85, "chanceFrom": 70, "chanceSpan": 120, "max": 0.9},
+    "magnum":  {"minForce": 80, "chanceFrom": 60, "chanceSpan": 110, "max": 0.9},
+    "special": {"never": true},
+    "shotgun": {"minForce": 99999, "chanceFrom": 0, "chanceSpan": 1, "max": 0, "closeRange": 3.5, "closeChance": 1.0}
+  },
+  "perception": {"_doc": "0.6. How characters see and hear. edgeOfVision: how fast something at the edge of the field of view registers compared with something looked straight at (1 = no difference). verticalDegrees: how steeply above or below itself an unalerted watcher notices things. throughFog: the share of the fog bank's closing distance anyone can see through (nobody sees or shoots from beyond it). throughAFloor: what a floor between leaves of a sound that is not gunfire. alertHearing: how much further the alerted hear.", "edgeOfVision": 0.45, "verticalDegrees": 52, "throughFog": 0.9, "throughAFloor": 0.65, "alertHearing": 1.18},
+  "feeding": {"_doc": "0.6. The infected eat human corpses, which visibly waste away and are finally gone (what the body carried is left on the ground). seconds: how long one infected takes to finish a body alone (several are proportionally quicker); reach: how near it must be to start; seek: how far the walking dead drift toward a body.", "seconds": 50, "reach": 1.5, "seek": 26},
+  "fog": {"_doc": "0.6. The fog bank. The world begins to dissolve at start metres and is gone by end (kept inside the 260 m draw distance, so nothing ever pops in). haze multiplies the ordinary near haze; sky is how much of the bank hangs overhead (1 = no sky at all); night and rain bring the bank nearer by these factors. 0.9: 'mist' is how many times thicker the haze is at the mistiest hour (just after first light; the night holds 70% of it, the afternoon none) and 'mistWall' how near the bank then stands (1 = unmoved).", "start": 14, "end": 118, "haze": 2.5, "sky": 0.72, "night": 0.8, "rain": 0.78, "indoor": 0.22, "indoorDaylight": 0.05, "mist": 2.2, "mistWall": 0.6},
+  "shotgun": {"_doc": "0.6. Shotguns hit harder: damageMul on every pellet, and closeBonus more inside closeRange metres (the charge has not spread).", "damageMul": 1.4, "closeRange": 8, "closeBonus": 1.35},
+  "nametag": {"_doc": "0.6. Names over heads: metres within which a stranger in view is named, the same for the infected, how far a squadmate's name carries (always shown, dimmer through walls), and the text size in UI pixels.", "range": 18, "infectedRange": 9, "squadRange": 160, "size": 12},
+  "cover": {"_doc": "Player contextual cover: how close to an obstacle and how slow before the body settles against it; lean offsets in metres.", "reach": 0.62, "maxSpeed": 1.4, "lean": 0.42, "aiLean": 0.46}
+}

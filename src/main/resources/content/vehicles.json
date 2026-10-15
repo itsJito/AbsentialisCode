@@ -1,0 +1,88 @@
+{
+  // Vehicle handling data (see vehicle.CarHandlingData for every parameter's unit, range and default).
+  // All cars share one simulation; a family's character is only the numbers below.
+  // Omitted values take their defaults. "wheels" may be listed as four [x, y, z] points (FL, FR, RL, RR);
+  // otherwise they are derived from "track" and "wheelbase", and their height from the suspension so that the
+  // car's origin rests on the ground.
+  "vehicles": [
+    {"id": "car.sprite", "profile": "compact", "model": "coupe", "name": "Sprite 2-Door", "family": "2-Door", "price": 18000, "rank": 3,
+     "mass": 1050, "width": 1.66, "length": 3.8, "height": 1.38, "comY": 0.45, "comZ": 0.12,
+     "engineAcceleration": 5.0, "maxVelocity": 38, "maxReverseVelocity": 8, "gears": 5, "drive": "F", "engineType": "petrol",
+     "firstGearBoost": 1.5, "secondGearBoost": 1.2,
+     "tractionMultiplier": 1.0, "tractionLoss": 0.82, "tractionBias": 0.52, "steeringLock": 36,
+     "brakeDeceleration": 10, "brakeBias": 0.64,
+     "suspensionForce": 1.5, "suspensionDamping": 0.30, "suspensionUpper": 0.24, "suspensionLower": -0.14, "suspensionBias": 0.52, "antiDive": 0.35,
+     "wheelRadius": 0.30, "track": 1.42, "wheelbase": 2.40,
+     "paints": ["B8322A", "D8C04A", "3A6EA8", "E0DCD0", "2A2C30"]},
+
+    {"id": "car.volna", "profile": "sedan", "model": "sedan", "name": "Volna 4-Door", "family": "4-Door", "price": 24000, "rank": 4,
+     "mass": 1420, "width": 1.80, "length": 4.5, "height": 1.45, "comY": 0.50, "comZ": 0.05,
+     "engineAcceleration": 4.4, "maxVelocity": 37, "maxReverseVelocity": 8, "gears": 5, "drive": "R", "engineType": "petrol",
+     "firstGearBoost": 1.5, "secondGearBoost": 1.2,
+     "tractionMultiplier": 1.0, "tractionLoss": 0.80, "tractionBias": 0.50, "steeringLock": 34,
+     "brakeDeceleration": 9.5, "brakeBias": 0.62,
+     "suspensionForce": 1.4, "suspensionDamping": 0.28, "suspensionUpper": 0.27, "suspensionLower": -0.16, "antiDive": 0.3,
+     "wheelRadius": 0.33, "track": 1.54, "wheelbase": 2.72,
+     "paints": ["6A7078", "8A8478", "2E3E5A", "5A2A26", "C8C4B8", "1E2022"]},
+
+    {"id": "car.hauler", "profile": "pickup", "model": "pickup", "name": "Hauler Pickup", "family": "Pickup Trucks", "price": 32000, "rank": 7,
+     "mass": 2000, "width": 1.95, "length": 5.3, "height": 1.80, "comY": 0.66, "comZ": 0.35,
+     "engineAcceleration": 4.3, "maxVelocity": 34, "maxReverseVelocity": 8, "gears": 4, "drive": "R", "engineType": "diesel",
+     "firstGearBoost": 1.7, "secondGearBoost": 1.3,
+     "tractionMultiplier": 0.98, "tractionLoss": 0.80, "tractionBias": 0.53, "steeringLock": 35,
+     "brakeDeceleration": 8.5, "brakeBias": 0.66,
+     "suspensionForce": 1.25, "suspensionDamping": 0.27, "suspensionUpper": 0.32, "suspensionLower": -0.22, "suspensionBias": 0.54, "antiDive": 0.25,
+     "wheelRadius": 0.40, "wheelScale": 1.1, "track": 1.66, "wheelbase": 3.30, "collisionDamage": 0.8,
+     "paints": ["7A3A22", "3E5A3A", "8A8C8E", "2A3A52", "D0CCC0"]},
+
+    {"id": "car.courier", "profile": "van", "model": "van", "name": "Courier Van", "family": "Vans", "price": 30000, "rank": 6,
+     "mass": 2300, "width": 1.96, "length": 5.2, "height": 2.20, "comY": 0.86, "comZ": 0.10,
+     "engineAcceleration": 3.2, "maxVelocity": 30, "maxReverseVelocity": 7, "gears": 4, "drive": "F", "engineType": "diesel",
+     "firstGearBoost": 1.7, "secondGearBoost": 1.3,
+     "tractionMultiplier": 0.94, "tractionLoss": 0.78, "tractionBias": 0.51, "steeringLock": 37,
+     "brakeDeceleration": 8, "brakeBias": 0.64,
+     "suspensionForce": 1.5, "suspensionDamping": 0.24, "suspensionUpper": 0.28, "suspensionLower": -0.18, "antiDive": 0.2,
+     "wheelRadius": 0.36, "track": 1.68, "wheelbase": 3.20, "collisionDamage": 0.85,
+     "paints": ["D8D4C8", "5A6068", "3A5A7A", "8A6A3A"]},
+
+    {"id": "car.kolos", "profile": "suv", "model": "suv", "name": "Kolos SUV", "family": "SUVs", "price": 42000, "rank": 10,
+     "mass": 2100, "width": 1.95, "length": 4.7, "height": 1.80, "comY": 0.68, "comZ": 0.05,
+     "engineAcceleration": 4.3, "maxVelocity": 36, "maxReverseVelocity": 8, "gears": 5, "drive": "4", "engineType": "petrol",
+     "firstGearBoost": 1.6, "secondGearBoost": 1.25,
+     "tractionMultiplier": 1.02, "tractionLoss": 0.82, "tractionBias": 0.50, "steeringLock": 33,
+     "brakeDeceleration": 9, "brakeBias": 0.62,
+     "suspensionForce": 1.3, "suspensionDamping": 0.30, "suspensionUpper": 0.30, "suspensionLower": -0.20, "antiDive": 0.3,
+     "wheelRadius": 0.39, "wheelScale": 1.08, "track": 1.66, "wheelbase": 2.85, "collisionDamage": 0.8,
+     "paints": ["2A2C30", "4A4E46", "6A2A26", "C0BCB0", "34485E"]},
+
+    {"id": "car.ural", "profile": "offroad", "model": "offroad", "name": "Ural 4x4", "family": "Off-road", "price": 48000, "rank": 14,
+     "mass": 1700, "width": 1.86, "length": 4.0, "height": 1.88, "comY": 0.72, "comZ": 0.0,
+     "engineAcceleration": 4.6, "maxVelocity": 30, "maxReverseVelocity": 9, "gears": 4, "drive": "4", "engineType": "diesel",
+     "firstGearBoost": 1.9, "secondGearBoost": 1.4,
+     "tractionMultiplier": 1.06, "tractionLoss": 0.86, "tractionBias": 0.50, "steeringLock": 38,
+     "brakeDeceleration": 8.5, "brakeBias": 0.60,
+     "suspensionForce": 1.1, "suspensionDamping": 0.26, "suspensionUpper": 0.36, "suspensionLower": -0.30, "antiDive": 0.2,
+     "wheelRadius": 0.44, "wheelScale": 1.2, "track": 1.60, "wheelbase": 2.45, "collisionDamage": 0.6, "improvedSand": true,
+     "paints": ["5A6238", "8A7A52", "4A4A46", "9A3A22"]},
+
+    {"id": "car.medic", "profile": "ambulance", "model": "ambulance", "name": "Medic Unit", "family": "Emergency, Rescue & Government", "price": 38000, "rank": 9,
+     "mass": 2700, "width": 2.0, "length": 5.5, "height": 2.35, "comY": 0.90, "comZ": 0.05,
+     "engineAcceleration": 3.6, "maxVelocity": 33, "maxReverseVelocity": 7, "gears": 4, "drive": "R", "engineType": "diesel",
+     "firstGearBoost": 1.7, "secondGearBoost": 1.3,
+     "tractionMultiplier": 0.96, "tractionLoss": 0.78, "tractionBias": 0.51, "steeringLock": 36,
+     "brakeDeceleration": 8.5, "brakeBias": 0.64,
+     "suspensionForce": 1.55, "suspensionDamping": 0.26, "suspensionUpper": 0.28, "suspensionLower": -0.18, "antiDive": 0.25,
+     "wheelRadius": 0.37, "track": 1.70, "wheelbase": 3.40, "collisionDamage": 0.8,
+     "paints": ["E4E0D6"]},
+
+    {"id": "car.patrol", "profile": "patrol", "model": "patrol", "name": "Patrol Cruiser", "family": "Emergency, Rescue & Government", "price": 52000, "rank": 18,
+     "mass": 1680, "width": 1.86, "length": 4.8, "height": 1.50, "comY": 0.50, "comZ": 0.08,
+     "engineAcceleration": 5.6, "maxVelocity": 44, "maxReverseVelocity": 9, "gears": 5, "drive": "R", "engineType": "petrol",
+     "firstGearBoost": 1.5, "secondGearBoost": 1.25,
+     "tractionMultiplier": 1.08, "tractionLoss": 0.84, "tractionBias": 0.50, "steeringLock": 34,
+     "brakeDeceleration": 11, "brakeBias": 0.62,
+     "suspensionForce": 1.6, "suspensionDamping": 0.32, "suspensionUpper": 0.25, "suspensionLower": -0.15, "antiDive": 0.4,
+     "wheelRadius": 0.34, "track": 1.60, "wheelbase": 2.90, "collisionDamage": 0.75,
+     "paints": ["1E2228"]}
+  ]
+}

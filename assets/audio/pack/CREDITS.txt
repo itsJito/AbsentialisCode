@@ -1,0 +1,195 @@
+Sound pack - sources (0.8, completed in 0.9)
+===========================================
+
+Supplied by the creator ('sound effects to add', 298 files): every other file in this folder.
+
+Found online, all Creative Commons 0 (public domain dedication), from Freesound (HQ previews):
+
+  fs_340663_4959511.mp3    "Chainsaw_Idle.wav" by mickyman5000 - https://freesound.org/s/340663/ - CC0 1.0
+  fs_505192_8644110.mp3    "RevvingChainsaw.wav" by shelbyshark - https://freesound.org/s/505192/ - CC0 1.0
+  fs_340629_4959511.mp3    "Chainsaw_Stop.wav" by mickyman5000 - https://freesound.org/s/340629/ - CC0 1.0
+  fs_60007_71257.mp3       "Swipe Whoosh" by qubodup - https://freesound.org/s/60007/ - CC0 1.0
+  fs_786514_16837477.mp3   "swoosh_v2" by migoreng1 - https://freesound.org/s/786514/ - CC0 1.0
+  fs_412595_8033188.mp3    "Fast swipe.wav" by ParadoxTheSock - https://freesound.org/s/412595/ - CC0 1.0
+  fs_488901_9453283.mp3    "Metal scrape on concrete.mp3" by Rvgerxini - https://freesound.org/s/488901/ - CC0 1.0
+  fs_530075_11537497.mp3   "Metal Scrape" by magnuswaker - https://freesound.org/s/530075/ - CC0 1.0
+  fs_707864_14714586.mp3   "Hammer on Wood" by L.i.Z.e.L.l.E_K.r.u.g.e.r - https://freesound.org/s/707864/ - CC0 1.0
+  fs_773860_15468302.mp3   "12 guage shotgun shell drop" by MrGungus - https://freesound.org/s/773860/ - CC0 1.0
+  fs_564481_11870622.mp3   "Shotgun Shell Drop sfx" by lumikon - https://freesound.org/s/564481/ - CC0 1.0
+  fs_457030_9159316.mp3    "Spray sound" by Breviceps - https://freesound.org/s/457030/ - CC0 1.0
+  fs_546759_9250976.mp3    "Ambiance_Wind_Trees_Leaves_Moderate_Loop_Stereo.wav" by Nox_Sound - https://freesound.org/s/546759/ - CC0 1.0
+  fs_167034_2328971.mp3    "Light Rain" by soundrecorder7 - https://freesound.org/s/167034/ - CC0 1.0
+  fs_734602_13973196.mp3   "Perfume - Spray" by Vrymaa - https://freesound.org/s/734602/ - CC0 1.0
+  fs_209578_2558531.mp3    "Cash Register Purchase" by Zott820 - https://freesound.org/s/209578/ - CC0 1.0
+  fs_537737_11976230.mp3   "Closet Door Close 01.wav" by steeltowngaming - https://freesound.org/s/537737/ - CC0 1.0
+  fs_642877_7811934.mp3    "closet locked.ogg" by Kneeling - https://freesound.org/s/642877/ - CC0 1.0
+  fs_659460_11206457.mp3   "Kick Drum or Punch - car door slam.wav" by diogorusso - https://freesound.org/s/659460/ - CC0 1.0
+  fs_346694_2104797.mp3    "Body fall_02.wav" by deleted_user_2104797 - https://freesound.org/s/346694/ - CC0 1.0
+  fs_737233_71257.mp3      "Small Water Splash" by qubodup - https://freesound.org/s/737233/ - CC0 1.0
+  fs_797714_16786392.mp3   "Zip Up" by Ultra-Edward - https://freesound.org/s/797714/ - CC0 1.0
+  fs_496461_9855691.mp3    "Grab_From_Bag.wav" by Harrisando - https://freesound.org/s/496461/ - CC0 1.0
+  fs_718668_15554378.mp3   "Wrapping cloth" by ChuckleNutsDev - https://freesound.org/s/718668/ - CC0 1.0
+  fs_654242_10435241.mp3   "Taking a drink.wav" by njjjjjjjjjjjjjjjjjjjjjjjj - https://freesound.org/s/654242/ - CC0 1.0
+  fs_718593_11865776.mp3   "Crispy bite" by JoMungus - https://freesound.org/s/718593/ - CC0 1.0
+  fs_537150_10761583.mp3   "Male cough" by dastudiospr - https://freesound.org/s/537150/ - CC0 1.0
+  fs_22417_120830.mp3      "Single Heartbeat HQ_BeatSmith.wav" by Lunardrive - https://freesound.org/s/22417/ - CC0 1.0
+  fs_592388_11537497.mp3   "Car Crash (with Glass)" by magnuswaker - https://freesound.org/s/592388/ - CC0 1.0
+  fs_437039_2845145.mp3    "Car door close" by Frederik_Sunne - https://freesound.org/s/437039/ - CC0 1.0
+  fs_123020_367313.mp3     "cardooropen_2.wav" by j1987 - https://freesound.org/s/123020/ - CC0 1.0
+  fs_674568_7157894.mp3    "9mm Handgun Being Dry Fired" by serøutōnin--deprivəd - https://freesound.org/s/674568/ - CC0 1.0
+  fs_840618_15468302.mp3   "bloody_jab_squelch" by MrGungus - https://freesound.org/s/840618/ - CC0 1.0
+  fs_256552_4775373.mp3    "Attention Whistle.wav" by Skiggz - https://freesound.org/s/256552/ - CC0 1.0
+  fs_266525_3474310.mp3    "Bells_distant_in_town.wav" by ivolipa - https://freesound.org/s/266525/ - CC0 1.0
+  fs_425426_7193358.mp3    "AMB_City_Night.wav" by AnthonyRamirez - https://freesound.org/s/425426/ - CC0 1.0
+  fs_609149_2282212.mp3    "Dark Planet - Dark Horror Thriller Atmo Drone Sound Amb Surround.wav" by szegvari - https://freesound.org/s/609149/ - CC0 1.0
+  fs_761024_9616576.mp3    "Very Quiet Indoor Roomtone" by IENBA - https://freesound.org/s/761024/ - CC0 1.0
+  fs_269594_4965320.mp3    "Industrial/Factory Fans" by IanStarGem - https://freesound.org/s/269594/ - CC0 1.0
+  fs_787683_735966.mp3     "Pain suppressors injected" by Lyubomir_Ikonomov - https://freesound.org/s/787683/ - CC0 1.0
+  fs_740045_14398276.mp3   "Syringe Pop" by Chaos-Kid - https://freesound.org/s/740045/ - CC0 1.0
+  fs_188383_3501487.mp3    "Medium Electronic Beep" by wubitog - https://freesound.org/s/188383/ - CC0 1.0
+  fs_546279_4937681.mp3    "Single drip - dripping" by Mega-X-stream - https://freesound.org/s/546279/ - CC0 1.0
+  fs_792932_71257.mp3      "Slow Single Water Drop Splash" by qubodup - https://freesound.org/s/792932/ - CC0 1.0
+  fs_636075_3320549.mp3    "Ship Horn - Fog Horn - Cruise Ship Grand Princess" by coalcon - https://freesound.org/s/636075/ - CC0 1.0
+  fs_647668_14219512.mp3   "Train Horn passenger - long blast (InterCity Express).wav" by JotrainG - https://freesound.org/s/647668/ - CC0 1.0
+  fs_620928_6493174.mp3    "22 bolt action rifle cycle" by Metrolynn - https://freesound.org/s/620928/ - CC0 1.0
+  fs_204204_3310361.mp3    "22 Bolt.wav" by Danwardvs - https://freesound.org/s/204204/ - CC0 1.0
+  fs_104409_61794.mp3      "Slide pull.wav" by Nanashi - https://freesound.org/s/104409/ - CC0 1.0
+  fs_151067_2732486.mp3    "Beretta M9 slide release" by vabadus - https://freesound.org/s/151067/ - CC0 1.0
+  fs_233320_4216178.mp3    "Pistol slide release.mp3" by ngphil22 - https://freesound.org/s/233320/ - CC0 1.0
+  fs_386854_5937039.mp3    "Bullet Crack.wav" by morganpurkis - https://freesound.org/s/386854/ - CC0 1.0
+  fs_789222_15956618.mp3   "Fly-by whiz SFX (subsonic)" by modusmogulus - https://freesound.org/s/789222/ - CC0 1.0
+  fs_195954_2467357.mp3    "death_blood_splatter.mp3" by minian89 - https://freesound.org/s/195954/ - CC0 1.0
+  fs_406582_6068748.mp3    "Blood Spatter_Squelch_Near_Mono" by _stubb - https://freesound.org/s/406582/ - CC0 1.0
+  fs_337242_3221261.mp3    "Distant Three Round Burst" by adrilahan - https://freesound.org/s/337242/ - CC0 1.0
+  fs_854635_71257.mp3      "Distant Machine Gun Firing" by qubodup - https://freesound.org/s/854635/ - CC0 1.0
+  fs_384717_5937039.mp3    "Distant Gunshot 1.wav" by morganpurkis - https://freesound.org/s/384717/ - CC0 1.0
+  fs_384715_5937039.mp3    "Distant Gunshot 3.wav" by morganpurkis - https://freesound.org/s/384715/ - CC0 1.0
+  fs_541164_9662992.mp3    "Distant Gunshot" by Resaural - https://freesound.org/s/541164/ - CC0 1.0
+  fs_332056_71257.mp3      "Fast Collision" by qubodup - https://freesound.org/s/332056/ - CC0 1.0
+  fs_340539_4959511.mp3    "Car_Door_Hit.wav" by mickyman5000 - https://freesound.org/s/340539/ - CC0 1.0
+  fs_32417_276701.mp3      "car_horn.wav" by KRAFTWERK2K1 - https://freesound.org/s/32417/ - CC0 1.0
+  fs_278139_3832191.mp3    "MetalScrapeLoop1.wav" by warrenXG - https://freesound.org/s/278139/ - CC0 1.0
+  fs_536422_4921277.mp3    "Setting Electronic Timer 1 Beep" by Rudmer_Rotteveel - https://freesound.org/s/536422/ - CC0 1.0
+  fs_752211_15867640.mp3   "Crossbow Fire XI" by DUDE_X-SoundLab - https://freesound.org/s/752211/ - CC0 1.0
+  fs_246015_4517415.mp3    "Crossbow - Ballesta.wav" by Lunevix - https://freesound.org/s/246015/ - CC0 1.0
+  fs_632682_13504080.mp3   "Deep rumbling drone" by xkeril - https://freesound.org/s/632682/ - CC0 1.0
+  fs_271945_4709749.mp3    "Stingers and Stabs 001.wav" by OverlookHotelRecords - https://freesound.org/s/271945/ - CC0 1.0
+  fs_408585_7673623.mp3    "49.Door_smashed.wav" by miguelab1998 - https://freesound.org/s/408585/ - CC0 1.0
+  fs_66780_242154.mp3      "Crate Break 4.wav" by kevinkace - https://freesound.org/s/66780/ - CC0 1.0
+  fs_244425_2326086.mp3    "creaking-door-open01.flac" by Aiyumi - https://freesound.org/s/244425/ - CC0 1.0
+  fs_547024_11531251.mp3   "Door_handle_opening_creak.wav" by bouncyballblue - https://freesound.org/s/547024/ - CC0 1.0
+  fs_705386_12024110.mp3   "Diesel engine idling" by chungus43A - https://freesound.org/s/705386/ - CC0 1.0
+  fs_369053_1535801.mp3    "car_idle_loop.wav" by AndrewAlexander - https://freesound.org/s/369053/ - CC0 1.0
+  fs_401558_5820033.mp3    "SFX_Car_Engine_Outside_Start.wav" by GiocoSound - https://freesound.org/s/401558/ - CC0 1.0
+  fs_578863_7663691.mp3    "Turning off the engine.wav" by PappaBert - https://freesound.org/s/578863/ - CC0 1.0
+  fs_329365_3046293.mp3    "Unsheath knife.wav" by bassoonrckr - https://freesound.org/s/329365/ - CC0 1.0
+  fs_688765_71257.mp3      "Unholster Gun" by qubodup - https://freesound.org/s/688765/ - CC0 1.0
+  fs_784753_15107322.mp3   "Rifle_Equip1" by BaggoNotes - https://freesound.org/s/784753/ - CC0 1.0
+  fs_717771_11611892.mp3   "victory chime" by 1bob - https://freesound.org/s/717771/ - CC0 1.0
+  fs_668355_3271378.mp3    "single-tick.wav" by DeltaCode - https://freesound.org/s/668355/ - CC0 1.0
+  fs_431174_6512859.mp3    "Fireball Explosion.wav" by Blankened - https://freesound.org/s/431174/ - CC0 1.0
+  fs_739487_71257.mp3      "Fire Trap" by qubodup - https://freesound.org/s/739487/ - CC0 1.0
+  fs_348766_299928.mp3     "ROAD FLARE.wav" by frankelmedico - https://freesound.org/s/348766/ - CC0 1.0
+  fs_30931_15696.mp3       "rip_tear FLESH!.wav" by aust_paul - https://freesound.org/s/30931/ - CC0 1.0
+  fs_530618_9271584.mp3    "Backpack Shake" by Lukeo135 - https://freesound.org/s/530618/ - CC0 1.0
+  fs_118243_1860801.mp3    "Column Gear Select Up (mono).wav" by E-Audio - https://freesound.org/s/118243/ - CC0 1.0
+  fs_482748_2524442.mp3    "R11-44-Radiation Geiger Counter.wav" by craigsmith - https://freesound.org/s/482748/ - CC0 1.0
+  fs_495118_2723982.mp3    "Wet Splat 1.mp3" by nebulasnails - https://freesound.org/s/495118/ - CC0 1.0
+  fs_147017_758593.mp3     "Splat" by JustInvoke - https://freesound.org/s/147017/ - CC0 1.0
+  fs_411671_5218537.mp3    "BloodSquish.wav" by deoking - https://freesound.org/s/411671/ - CC0 1.0
+  fs_641046_11537497.mp3   "Gore Impact - "LOT OF HEART"" by magnuswaker - https://freesound.org/s/641046/ - CC0 1.0
+  fs_667271_2531187.mp3    "Cloth Grab" by alegemaate - https://freesound.org/s/667271/ - CC0 1.0
+  fs_609569_13355471.mp3   "GrabItemCloth.wav" by CJspellsfish - https://freesound.org/s/609569/ - CC0 1.0
+  fs_173007_773642.mp3     "Handbrake.wav" by ninebilly - https://freesound.org/s/173007/ - CC0 1.0
+  fs_187678_71257.mp3      "Helicopter Loop.flac" by qubodup - https://freesound.org/s/187678/ - CC0 1.0
+  fs_672574_1343912.mp3    "Water Bullet 2.wav" by Teaganbear - https://freesound.org/s/672574/ - CC0 1.0
+  fs_737234_71257.mp3      "Water Splash" by qubodup - https://freesound.org/s/737234/ - CC0 1.0
+  fs_540985_11537497.mp3   "Heartbeat (Dumpf-Dumpf)" by magnuswaker - https://freesound.org/s/540985/ - CC0 1.0
+  fs_555059_11537497.mp3   "Chik-Chak 2" by magnuswaker - https://freesound.org/s/555059/ - CC0 1.0
+  fs_493505_9961300.mp3    "Clothes Rustling Movement 13_22" by Joao_Janz - https://freesound.org/s/493505/ - CC0 1.0
+  fs_507730_9875501.mp3    "EffortNoise.wav" by Keskaowl - https://freesound.org/s/507730/ - CC0 1.0
+  fs_464681_7358035.mp3    "MaleGrunt1.wav" by BranndyBottle - https://freesound.org/s/464681/ - CC0 1.0
+  fs_444402_7231443.mp3    "Magazine Hitting Surface.wav" by MootMcnoodles - https://freesound.org/s/444402/ - CC0 1.0
+  fs_379977_5937039.mp3    "Inserting Magazine.wav" by morganpurkis - https://freesound.org/s/379977/ - CC0 1.0
+  fs_379978_5937039.mp3    "Ejecting Magazine.wav" by morganpurkis - https://freesound.org/s/379978/ - CC0 1.0
+  fs_812592_71257.mp3      "Clang" by qubodup - https://freesound.org/s/812592/ - CC0 1.0
+  fs_842171_13307919.mp3   "Basic Metal Clang Free" by AardsReal - https://freesound.org/s/842171/ - CC0 1.0
+  fs_822565_71257.mp3      "Picking Up A Small Item" by qubodup - https://freesound.org/s/822565/ - CC0 1.0
+  fs_240478_1662097.mp3    "velcro.wav" by Godowan - https://freesound.org/s/240478/ - CC0 1.0
+  fs_524205_9561949.mp3    "Radio Sign Off / Squelch" by JovianSounds - https://freesound.org/s/524205/ - CC0 1.0
+  fs_701330_15203576.mp3   "Walkie Talkie radio static" by SEF7 - https://freesound.org/s/701330/ - CC0 1.0
+  fs_108793_1553758.mp3    "shell load.ogg" by CeebFrack - https://freesound.org/s/108793/ - CC0 1.0
+  fs_528702_11703637.mp3   "shotGun-loading2.wav" by Kazz200722 - https://freesound.org/s/528702/ - CC0 1.0
+  fs_740788_6525386.mp3    "Shout" by Beussa - https://freesound.org/s/740788/ - CC0 1.0
+  fs_509885_9238038.mp3    "male_shout_01.wav" by slamaxu - https://freesound.org/s/509885/ - CC0 1.0
+  fs_607382_13349052.mp3   "Long Air Raid Siren.wav" by JalynCatbtg - https://freesound.org/s/607382/ - CC0 1.0
+  fs_504383_9961300.mp3    "Boots Gravel Feet Slide  1_5" by Joao_Janz - https://freesound.org/s/504383/ - CC0 1.0
+  fs_630008_13805381.mp3   "SLIDING ON GRAVEL.wav" by trexlasso - https://freesound.org/s/630008/ - CC0 1.0
+  fs_737232_71257.mp3      "Short Water Squish" by qubodup - https://freesound.org/s/737232/ - CC0 1.0
+  fs_488079_4763661.mp3    "Footsteps_Pavement_Scuff_01.wav" by BenDrain - https://freesound.org/s/488079/ - CC0 1.0
+  fs_843637_14469752.mp3   "SFX_footstep_walk_carpet_dry_0_v3" by kevinklang - https://freesound.org/s/843637/ - CC0 1.0
+  fs_447930_9159316.mp3    "Step on a slug (Splat!) 2" by Breviceps - https://freesound.org/s/447930/ - CC0 1.0
+  fs_488082_4763661.mp3    "Footsteps_Mud_Single_03.wav" by BenDrain - https://freesound.org/s/488082/ - CC0 1.0
+  fs_488077_4763661.mp3    "Footsteps_Mud_Single_01.wav" by BenDrain - https://freesound.org/s/488077/ - CC0 1.0
+  fs_778603_8927049.mp3    "Glass_Shards_Crunching_10" by BlondPanda - https://freesound.org/s/778603/ - CC0 1.0
+  fs_223152_2792951.mp3    "glass footstep 1" by Yoyodaman234 - https://freesound.org/s/223152/ - CC0 1.0
+  fs_733165_13889437.mp3   "Foot stomp 3" by locky_Y - https://freesound.org/s/733165/ - CC0 1.0
+  fs_529245_2927958.mp3    "FX - Footstep Strong" by bolkmar - https://freesound.org/s/529245/ - CC0 1.0
+  fs_397807_1431924.mp3    "SqueekCar.wav" by tec_studio - https://freesound.org/s/397807/ - CC0 1.0
+  fs_436794_3206727.mp3    "Thunder Clap2" by roboroo - https://freesound.org/s/436794/ - CC0 1.0
+  fs_338090_4535165.mp3    "Thunder Clap 2" by jzielke011 - https://freesound.org/s/338090/ - CC0 1.0
+  fs_847350_18549149.mp3   "handful-of-coins-007" by ilyaShevelev - https://freesound.org/s/847350/ - CC0 1.0
+  fs_82121_303507.mp3      "Balloon-Burst-07.wav" by Gniffelbaf - https://freesound.org/s/82121/ - CC0 1.0
+  fs_251661_3719168.mp3    "Tires on Gravel Road 1" by OBXJohn - https://freesound.org/s/251661/ - CC0 1.0
+  fs_495795_8972317.mp3    "Car driving ambience" by priesjensen - https://freesound.org/s/495795/ - CC0 1.0
+  fs_536769_1415754.mp3    "Tire.ogg" by egomassive - https://freesound.org/s/536769/ - CC0 1.0
+  fs_419023_215268.mp3     "acess denied buzz" by Jacco18 - https://freesound.org/s/419023/ - CC0 1.0
+  fs_565131_1038806.mp3    "UI_Hover" by unfa - https://freesound.org/s/565131/ - CC0 1.0
+  fs_541029_8698658.mp3    "Very low frequency impact.wav" by AudioPapkin - https://freesound.org/s/541029/ - CC0 1.0
+  fs_384187_6712901.mp3    "Click Tick.wav" by malle99 - https://freesound.org/s/384187/ - CC0 1.0
+  fs_442943_71257.mp3      "Level Up" by qubodup - https://freesound.org/s/442943/ - CC0 1.0
+  fs_257449_4801784.mp3    "Calm and Cold Space" by MrPork - https://freesound.org/s/257449/ - CC0 1.0
+  fs_871722_413687.mp3     "TRUBBLE - Horror Tension Drone" by zawert - https://freesound.org/s/871722/ - CC0 1.0
+  fs_345431_4038846.mp3    "Male_Heyyy_01" by Artmasterrich - https://freesound.org/s/345431/ - CC0 1.0
+  fs_818158_5287430.mp3    "Sadiquecat MKE600 - Hesitant - Huh" by Sadiquecat - https://freesound.org/s/818158/ - CC0 1.0
+  fs_391967_6450069.mp3    "huh? - male voice" by ssierra1202 - https://freesound.org/s/391967/ - CC0 1.0
+  fs_132685_2424331.mp3    "lets go.wav" by ashjenx - https://freesound.org/s/132685/ - CC0 1.0
+  fs_464485_4814007.mp3    "Male Attack Grunt" by elynch0901 - https://freesound.org/s/464485/ - CC0 1.0
+  fs_795468_13691143.mp3   "Grunt 3" by aulix24 - https://freesound.org/s/795468/ - CC0 1.0
+  fs_220818_3559284.mp3    "Man frightened yelling.wav" by EricSueiro - https://freesound.org/s/220818/ - CC0 1.0
+  fs_818157_5287430.mp3    "Sadiquecat MKE600 - Hesitant - Hmm suspicious" by Sadiquecat - https://freesound.org/s/818157/ - CC0 1.0
+  fs_867879_18606270.mp3   "Hmm RTS Select Male NPC" by VSE00 - https://freesound.org/s/867879/ - CC0 1.0
+  fs_519112_8351379.mp3    "approving hm.wav" by trimono - https://freesound.org/s/519112/ - CC0 1.0
+  fs_844416_6512859.mp3    "Reload_01" by Blankened - https://freesound.org/s/844416/ - CC0 1.0
+  fs_529115_10119156.mp3   "help me" by Feed_ - https://freesound.org/s/529115/ - CC0 1.0
+  fs_386802_7236624.mp3    "go_go.wav" by RichieMcMullen - https://freesound.org/s/386802/ - CC0 1.0
+  fs_389182_7268131.mp3    "Male Voice - Alright.wav" by akennedybrewer - https://freesound.org/s/389182/ - CC0 1.0
+  fs_857085_71257.mp3      "Yea Right Short Laugh Low Quality" by qubodup - https://freesound.org/s/857085/ - CC0 1.0
+  fs_547209_129727.mp3     "Voice_AdultMale_PainGrunts_09.wav" by MrFossy - https://freesound.org/s/547209/ - CC0 1.0
+  fs_464486_4814007.mp3    "Male Grunting In Pain" by elynch0901 - https://freesound.org/s/464486/ - CC0 1.0
+  fs_413186_8090574.mp3    "male_hurt9.ogg" by micahlg - https://freesound.org/s/413186/ - CC0 1.0
+
+  fs_163459_2965892.mp3    "LBS_FX DOG Small Alert Bark001.wav" by LittleBigSounds - https://freesound.org/s/163459/ - CC0 1.0
+  fs_386766_5768130.mp3    "Dog_Barking.wav" by ken788 - https://freesound.org/s/386766/ - CC0 1.0
+  fs_231762_1934467.mp3    "FX_Dog Barking.wav" by davidmenke - https://freesound.org/s/231762/ - CC0 1.0
+  fs_332176_3474310.mp3    "Dog_Bark_Agressive.wav" by ivolipa - https://freesound.org/s/332176/ - CC0 1.0
+  fs_350593_6433555.mp3    "Chihuahua Puppy Whine" by AustinXYZ - https://freesound.org/s/350593/ - CC0 1.0
+  fs_118970_1990695.mp3    "Dog Whine 5.wav" by esperri - https://freesound.org/s/118970/ - CC0 1.0
+  fs_155322_60285.mp3      "Dog single howl" by Jace - https://freesound.org/s/155322/ - CC0 1.0
+  fs_511319_562829.mp3     "Dog Panting" by onehugeeye - https://freesound.org/s/511319/ - CC0 1.0
+  fs_442815_71257.mp3      "Goblin Snarl" by qubodup - https://freesound.org/s/442815/ - CC0 1.0
+  fs_442816_71257.mp3      "Goblin Scream" by qubodup - https://freesound.org/s/442816/ - CC0 1.0
+  fs_361470_6512973.mp3    "Crow Caw" by Jofae - https://freesound.org/s/361470/ - CC0 1.0
+  fs_536732_1415754.mp3    "Caw.ogg" by egomassive - https://freesound.org/s/536732/ - CC0 1.0
+  fs_607902_9789704.mp3    "SquawkSFX.mp3" by JackWilDesign - https://freesound.org/s/607902/ - CC0 1.0
+  fs_389634_6068748.mp3    "Wing Flap 1.wav" by _stubb - https://freesound.org/s/389634/ - CC0 1.0
+  fs_386706_5798760.mp3    "wings flapping.wav" by tommy_mooney - https://freesound.org/s/386706/ - CC0 1.0
+  fs_445958_9159316.mp3    "Cartoon - Bat / Mouse Squeak" by Breviceps - https://freesound.org/s/445958/ - CC0 1.0
+  fs_316920_4921277.mp3    "Chicken Single Alarm Call" by Rudmer_Rotteveel - https://freesound.org/s/316920/ - CC0 1.0
+  fs_170808_377731.mp3     "Chicken imitation" by esperar - https://freesound.org/s/170808/ - CC0 1.0
+  fs_170807_377731.mp3     "Angry chicken imitation" by esperar - https://freesound.org/s/170807/ - CC0 1.0
+  fs_673255_14693005.mp3   "Bwack.mp3" by Preacher13 - https://freesound.org/s/673255/ - CC0 1.0
+  fs_760827_13999124.mp3   "Universal Studios Monster Sound #6 Hiss" by Mastersoundboy2005 - https://freesound.org/s/760827/ - CC0 1.0
+  fs_874259_15895934.mp3   "House Cats - Hiss, Medium Perspective" by TheKingOfGeeks360 - https://freesound.org/s/874259/ - CC0 1.0
+
+What each file is used for is in src/main/resources/content/soundpack.json.

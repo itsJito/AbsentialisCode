@@ -1,0 +1,9 @@
+ABSENTIALIS 0.9 crash on Java 21.0.12.1 at 2026-10-13T05:22:05
+java.lang.NullPointerException: Cannot read field "x" because "raid.insertion" is null
+	at absentialis.scene.ChainDirector.<init>(ChainDirector.java:48)
+	at absentialis.scene.Raid.<init>(Raid.java:359)
+	at absentialis.scene.GameApp.startRaid(GameApp.java:609)
+	at absentialis.scene.GameApp.loadingFrame(GameApp.java:603)
+	at absentialis.scene.GameApp.frame(GameApp.java:296)
+	at absentialis.scene.GameApp.run(GameApp.java:91)
+	at absentialis.Main.main(Main.java:67)

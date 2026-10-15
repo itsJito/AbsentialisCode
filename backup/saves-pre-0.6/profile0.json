@@ -1,0 +1,548 @@
+{
+  "version": 5,
+  "game": "0.5",
+  "slot": 0,
+  "name": "Jito",
+  "armVariant": 4,
+  "skin": 1,
+  "outfit": 0,
+  "tagColor": 0,
+  "appearance": {
+    "head": "head.gaunt",
+    "hair": "hair.curly",
+    "facial_hair": "facial_hair.none",
+    "torso": "torso.leather",
+    "sleeves": "sleeves.jacket",
+    "legs": "legs.leather",
+    "hands": "hands.bare",
+    "feet": "feet.combat",
+    "skin": "skin.tone3",
+    "hair_color": "hair_color.tone4"
+  },
+  "ironman": false,
+  "garage": [],
+  "deployVehicle": "",
+  "build": "0.5",
+  "facePaint": true,
+  "scrip": "2678",
+  "seed": "1337",
+  "nextUid": "2916",
+  "stashH": 28,
+  "stash": [
+    {
+      "uid": "1732",
+      "def": "ammo.handgun",
+      "qty": 50,
+      "origin": "starter",
+      "rot": true,
+      "x": 4,
+      "y": 0
+    },
+    {
+      "uid": "1733",
+      "def": "ammo.handgun",
+      "qty": 20,
+      "origin": "starter",
+      "rot": true,
+      "x": 5,
+      "y": 0
+    },
+    {
+      "uid": "1734",
+      "def": "melee.knife",
+      "origin": "starter",
+      "rot": true,
+      "x": 3,
+      "y": 0
+    },
+    {
+      "uid": "1737",
+      "def": "med.bandage",
+      "origin": "starter",
+      "x": 8,
+      "y": 0
+    },
+    {
+      "uid": "1739",
+      "def": "med.painkillers",
+      "qty": 2,
+      "origin": "starter",
+      "x": 9,
+      "y": 0
+    },
+    {
+      "uid": "1740",
+      "def": "food.beans",
+      "origin": "starter",
+      "x": 7,
+      "y": 0
+    },
+    {
+      "uid": "1742",
+      "def": "armor.vest_soft",
+      "dur": 45,
+      "maxDur": 45,
+      "origin": "starter",
+      "x": 0,
+      "y": 0
+    },
+    {
+      "uid": "1746",
+      "def": "grenade.frag",
+      "origin": "starter",
+      "x": 6,
+      "y": 0
+    }
+  ],
+  "loadout": {
+    "caseW": 13,
+    "caseH": 9,
+    "slots": {},
+    "case": [],
+    "charms": [null, null, null],
+    "quick": ["0", "0", "0", "0"],
+    "treasures": [],
+    "keys": [],
+    "craft": [],
+    "documents": []
+  },
+  "progression": {
+    "cycleXp": "1061527",
+    "lifetimeXp": "1061527",
+    "prestige": 0,
+    "bestRank": 46,
+    "unlockTokens": 45,
+    "tokenSpent": [],
+    "lastCycleSpent": 0,
+    "permTokens": 0,
+    "permanent": [],
+    "awardPending": false,
+    "extraClasses": 0,
+    "cosmetics": [],
+    "mastery": {
+      "weapon.smg": "10200",
+      "weapon.pump12": "900",
+      "weapon.r45": "600",
+      "weapon.pm9": "300"
+    },
+    "weaponPrestige": {}
+  },
+  "rep": {
+    "military": -96.9000015258789,
+    "raiders": 1.6000027656555176,
+    "survivors": -7.700001239776611,
+    "mercenaries": -3.200000762939453
+  },
+  "hideout": {
+    "workbench": 1,
+    "medical": 1,
+    "kitchen": 1,
+    "radio": 0,
+    "case": 0,
+    "stash": 0
+  },
+  "contracts": {
+    "board": [
+      {
+        "id": "c5",
+        "title": "Paper trail",
+        "desc": "Recover and read 2 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "MARKET",
+        "kind": "INTEL",
+        "need": 2,
+        "have": 0,
+        "scrip": 473,
+        "xp": 4924,
+        "rep": 5
+      },
+      {
+        "id": "c6",
+        "title": "Thin the herd: Industrial",
+        "desc": "Kill 4 infected in the Industrial. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "INDUSTRIAL",
+        "kind": "CULL",
+        "need": 4,
+        "have": 0,
+        "scrip": 1463,
+        "xp": 17778,
+        "rep": 4
+      },
+      {
+        "id": "c7",
+        "title": "Paper trail",
+        "desc": "Recover and read 1 document(s) anywhere in the Zone.",
+        "giver": "military",
+        "target": "document",
+        "district": "MARKET",
+        "kind": "INTEL",
+        "need": 1,
+        "have": 0,
+        "scrip": 872,
+        "xp": 8912,
+        "rep": 5
+      },
+      {
+        "id": "c8",
+        "title": "Thin the herd: Downtown",
+        "desc": "Kill 9 infected in the Downtown. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "OLD_QUARTER",
+        "kind": "CULL",
+        "need": 9,
+        "have": 0,
+        "scrip": 2104,
+        "xp": 25452,
+        "rep": 5
+      },
+      {
+        "id": "c9",
+        "title": "Thin the herd: Downtown",
+        "desc": "Kill 7 infected in the Downtown. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "OLD_QUARTER",
+        "kind": "CULL",
+        "need": 7,
+        "have": 0,
+        "scrip": 1840,
+        "xp": 21226,
+        "rep": 4
+      }
+    ],
+    "active": [
+      {
+        "id": "c4",
+        "title": "Thin the herd: Industrial",
+        "desc": "Kill 4 infected in the Industrial. Lowers infected pressure there.",
+        "giver": "survivors",
+        "target": "infected",
+        "district": "INDUSTRIAL",
+        "kind": "CULL",
+        "need": 4,
+        "have": 3,
+        "scrip": 458,
+        "xp": 5703,
+        "rep": 4
+      }
+    ],
+    "completed": ["c1"],
+    "serial": 9
+  },
+  "zone": {
+    "influence": {
+      "WILDERNESS": [0.13925698399543762, 0.0921730101108551, 0.11419840157032013, 0.04241562262177467],
+      "OLD_QUARTER": [0.08805250376462936, 0.025567982345819473, 0.21458058059215546, 0.6942989826202393],
+      "INDUSTRIAL": [0.03649057447910309, 0.3926621973514557, 0.08675847947597504, 0.29876279830932617],
+      "MARKET": [0.129489004611969, 0.11073026806116104, 0.5783987045288086, 0.04035245627164841],
+      "REDLINE": [0.05163126811385155, 0.17003895342350006, 0.2751564383506775, 0.022404611110687256],
+      "CIVIC": [0.1382482349872589, 0.05418337136507034, 0.022371213883161545, 0.12922045588493347]
+    },
+    "supply": {
+      "WILDERNESS": [1.0679991245269775, 1.0679991245269775, 1.0679991245269775, 1.0579991340637207, 1.0679991245269775, 1.0579991340637207, 1.0679991245269775],
+      "OLD_QUARTER": [0.9959999322891235, 1.0679991245269775, 1.1279995441436768, 1.0679991245269775, 1.0139987468719482, 1.0579992532730103, 1.1639978885650635],
+      "INDUSTRIAL": [0.9529995918273926, 1.0679991245269775, 1.0679991245269775, 1.0679991245269775, 1.0199989080429077, 1.0679991245269775, 1.0679991245269775],
+      "MARKET": [1.0099996328353882, 1.0579991340637207, 1.1559993028640747, 1.0579991340637207, 1.036998987197876, 1.0079997777938843, 1.0479991436004639],
+      "REDLINE": [1.048999309539795, 1.0679991245269775, 1.047999382019043, 1.0679991245269775, 1.0559990406036377, 1.047999382019043, 1.0679991245269775],
+      "CIVIC": [1.04599928855896, 1.0579992532730103, 1.0479991436004639, 1.0479992628097534, 1.0489991903305054, 1.0179998874664307, 0.9580001831054688]
+    },
+    "infected": {
+      "WILDERNESS": 0.1473310887813568,
+      "OLD_QUARTER": 0.7878056764602661,
+      "INDUSTRIAL": 0.8929967880249023,
+      "MARKET": 0.17944318056106567,
+      "REDLINE": 0.193813294172287,
+      "CIVIC": 0.23318758606910706
+    },
+    "power": {
+      "WILDERNESS": false,
+      "OLD_QUARTER": false,
+      "INDUSTRIAL": false,
+      "MARKET": false,
+      "REDLINE": false,
+      "CIVIC": true
+    },
+    "hour": 2,
+    "day": 2,
+    "rain": 0.34795045852661133,
+    "news": ["Day 2 00:00 - Bandits squad wiped out in the Downtown", "Day 1 23:00 - Military squad wiped out in the Industrial", "Day 1 23:00 - Bandits squad wiped out in the Downtown", "Day 1 22:00 - Bandits squad wiped out in the Residential", "Day 1 22:00 - Loners squad wiped out in the Downtown", "Day 1 21:00 - Bandits squad wiped out in the Residential", "Day 1 20:00 - Bandits squad wiped out in the Downtown", "Day 1 18:00 - Military squad wiped out in the Downtown", "Day 1 13:00 - Bandits squad wiped out in the Downtown"],
+    "contamination": [1.3744852542877197, 4.914031028747559, 0.7602311968803406, 2.8765199184417725, 4.914031028747559, 5.674263000488281],
+    "corpses": [3.4195170402526855, 10.457999229431152, 8.549858093261719, 5.89563512802124, 2.223623037338257, 5.079511642456055],
+    "squads": ["4;mercenaries;1;2;1", "7;survivors;3;3;3", "8;mercenaries;1;1;1", "9;military;5;3;5", "11;survivors;3;4;3", "12;mercenaries;1;4;1", "14;military;5;4;5", "17;raiders;5;2;5", "18;survivors;1;4;1", "19;military;0;4;5", "20;raiders;4;4;4", "21;raiders;1;4;1"],
+    "log": ["2;1;overrun;OLD_QUARTER;351;354;survivors;infected;Infected mauled a Loners squad in the Downtown", "2;0;battle;MARKET;104;424;survivors;infected;Loners ambushed Infected in the Residential (1 dead)", "2;0;noise;OLD_QUARTER;300;405;player;;Sustained gunfire in the Downtown", "2;0;noise;OLD_QUARTER;324;405;player;;Sustained gunfire in the Downtown", "2;0;noise;OLD_QUARTER;341;391;player;;Sustained gunfire in the Downtown", "2;0;noise;OLD_QUARTER;340;383;player;;Sustained gunfire in the Downtown", "2;0;noise;OLD_QUARTER;392;375;player;;Sustained gunfire in the Downtown", "2;0;battle;OLD_QUARTER;357;353;mercenaries;raiders;Mercenaries beat Bandits in the Downtown (1 dead)", "1;23;overrun;INDUSTRIAL;514;181;raiders;infected;Infected mauled a Bandits squad in the Industrial", "1;23;battle;OLD_QUARTER;356;315;mercenaries;raiders;Mercenaries beat Bandits in the Downtown (1 dead)", "1;23;battle;INDUSTRIAL;562;152;raiders;military;Bandits beat Military in the Industrial (2 dead)", "1;23;battle;OLD_QUARTER;355;352;mercenaries;raiders;Mercenaries beat Bandits in the Downtown (1 dead)", "1;22;noise;INDUSTRIAL;520;188;raiders;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;198;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;201;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;521;204;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;521;192;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;521;192;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;521;204;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;521;194;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;206;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;522;198;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;522;204;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;522;200;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;522;201;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;523;204;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;523;206;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;523;207;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;523;208;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;543;223;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;544;224;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;547;225;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;532;234;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;547;229;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;532;234;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;549;231;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;552;229;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;558;239;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;559;239;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;561;241;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;528;234;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;527;235;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;519;281;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;523;236;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;564;267;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;519;253;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;519;254;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;258;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;261;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;264;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;264;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;263;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;265;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;266;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;268;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;558;300;player;;Sustained gunfire in the Industrial", "1;22;noise;INDUSTRIAL;520;278;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;520;280;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;520;282;player;raiders;Sustained gunfire in the Industrial - Bandits responded", "1;22;noise;INDUSTRIAL;554;318;player;;Sustained gunfire in the Industrial"],
+    "nextSquadId": "22"
+  },
+  "discovered": "AAAAAAAAAIB/AAAAAAAAAAAAgH8AAAAAAAAAAGDAPwAAAAAAAAAA+Mt/AAAAAAAAAAD4/z8AAAAAAAAAAPz/PwAAAAAAAAAA/P8fAAAAAAAAAAD8/wcAAAAAAAAAAPz/AwAAAAAAAABA//oDAAAAAMABAPB//AMAAAAA8AcA8P/8AQAAAADwBwD4f/4BAAAAAPyfAfj//gAAAADA//8H+H/+AAAAAPD//y/4f/4AAAAA8P////wffwAAAAD4/////gf+AAAAAPj/////D/4AAAAA+P////8P/gAAAAD8/////w/+AAAAAPz/////B/wDAAAA/v////8P/A8AAAD+/////w/4HwAAAPz/////B/gfAAAAfDL+//8H4D8AAAAQAID//wPgPwAAAAAAAP7/B8B/AAAAAAAA/v8DwP8CAAAAAgD4/wMA/w8AAIAPAOD/AwD/DwAAgA8AgP0B4P8fAADAHwAM+AH4/z8AAMAfAD/4B/z/PwAAgA8AP/Af/P9/AACAD4B/8B/+/z8AAAACAH/4v///PwAAAABg//y///8PAAAQAPj//v///w8AAHwA/P//////AwAAfvD//////38AAAD+/P//////HwAAAP////////8HAAAA/////////wcAAAD+////////BwAAAP7///////8HAAAA/v///////wMAAAD+/wP6////AwAAAP7rA8D///8DAAAA/PMHgP///wMAAAD84QeA////AwAAAPDxDwD+//8BAAAAQPAPAOD//wEAAAAA/AcAwP//AAAAAAD8BwCA//8BAAAAAP8BAID//wcAAAAAfwAAAP7/BwAAAIB/AAAA/v8PAAAAgJ8BAED8/w8AAADA/wcA8P3/DwAAAMD/DwD4+/8PAAAAgP8PgP///w8AAACA/x/+////DwAAAAD/n/////8HAAAAAP+//////wcAAAAA/P//////3wEAAAD8//////v/BwAAAPj//5//8/8HAAAA+P//D/7w/w8AAADg//8PAOD/BwAAAOD//wcAwP8HAAAAgP//BwDA/wcAAAAA8v8BAMD/BwAAAAD4XwAA4P8DAAAAAPgDAADg/wMAAAAA8AMAAMCfAAAAAADwAQAAwAcAAAAAAEAAAAAAAQ==",
+  "stats": {
+    "mastery_weapon.mosin": 1,
+    "mastery_weapon.pm9": 1,
+    "deaths": 4,
+    "raids": 5,
+    "cells": 2744,
+    "containers": 51,
+    "documents": 0,
+    "kills_infected": 93,
+    "kills_walker": 60,
+    "kills_sprinter": 27,
+    "kills_boomer": 6,
+    "kills_mercenaries": 8,
+    "kills_military": 37,
+    "mastery_weapon.pump12": 2,
+    "extracts": 1,
+    "kills_raiders": 18,
+    "kills_survivors": 6,
+    "mastery_weapon.smg": 8,
+    "mastery_weapon.yellow9": 1
+  },
+  "recentSales": {},
+  "presets": [],
+  "health": 60,
+  "herbs": 0,
+  "energy": 55,
+  "hydration": 55,
+  "lastFallbackDay": "-10",
+  "lastDebrief": "+2308 XP (halved: failed raid)\nBohdan \"Wren\": Private First Class 4 -> Private First Class 5\nPavel \"Brick\": Private 3 -> Private First Class 4\nSquad: 8 of 8 walked out\nLost 9 carried items (~₡42,998 of gear)\nInfected are massing in the Downtown (+10% pressure)\nInfected are massing in the Residential (+8% pressure)\nInfected are massing in the Outskirts (+9% pressure)\nInfected are massing in the Governmental (+12% pressure)\nMarket reacts: medicine prices down (bandage 40 -> 39 coins)\nNEWS: Day 2 00:00 - Bandits squad wiped out in the Downtown\nNEWS: Day 1 23:00 - Military squad wiped out in the Industrial",
+  "builds": {
+    "weapon.mosin": [null, null, null, null, null],
+    "weapon.smg": [
+      [],
+      [],
+      [],
+      null,
+      null
+    ]
+  },
+  "squad": {
+    "nextId": "10",
+    "mates": [
+      {
+        "id": "1",
+        "name": "Mila \"Brick\"",
+        "look": {
+          "head": "head.freckles",
+          "hair": "hair.bob",
+          "facial_hair": "facial_hair.moustache",
+          "torso": "torso.hoodie",
+          "sleeves": "sleeves.camo",
+          "legs": "legs.leather",
+          "hands": "hands.mittens",
+          "feet": "feet.hightop",
+          "skin": "skin.tone0",
+          "hair_color": "hair_color.tone0"
+        },
+        "xp": "15927",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "red",
+        "active": true,
+        "kills": 12,
+        "raids": 5,
+        "downs": 3
+      },
+      {
+        "id": "2",
+        "name": "Bohdan \"Tally\"",
+        "look": {
+          "head": "head.eyepatch",
+          "hair": "hair.buzz",
+          "facial_hair": "facial_hair.vandyke",
+          "torso": "torso.leather",
+          "sleeves": "sleeves.threequarter",
+          "legs": "legs.shorts",
+          "hands": "hands.wraps",
+          "feet": "feet.valenki",
+          "skin": "skin.tone0",
+          "hair_color": "hair_color.tone1"
+        },
+        "xp": "11727",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "blue",
+        "active": true,
+        "kills": 5,
+        "raids": 5,
+        "downs": 2
+      },
+      {
+        "id": "3",
+        "name": "Sergei \"Quill\"",
+        "look": {
+          "head": "head.weathered",
+          "hair": "hair.curly",
+          "facial_hair": "facial_hair.none",
+          "torso": "torso.telnyashka",
+          "sleeves": "sleeves.camo",
+          "legs": "legs.track",
+          "hands": "hands.leather",
+          "feet": "feet.rubber",
+          "skin": "skin.tone11",
+          "hair_color": "hair_color.tone2"
+        },
+        "xp": "27927",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "red",
+        "active": true,
+        "kills": 34,
+        "raids": 5,
+        "downs": 2
+      },
+      {
+        "id": "4",
+        "name": "Bohdan \"Wren\"",
+        "look": {
+          "head": "head.plain",
+          "hair": "hair.undercut",
+          "facial_hair": "facial_hair.moustache",
+          "torso": "torso.field",
+          "sleeves": "sleeves.bare",
+          "legs": "legs.track",
+          "hands": "hands.work",
+          "feet": "feet.jungle",
+          "skin": "skin.tone6",
+          "hair_color": "hair_color.tone6"
+        },
+        "xp": "18627",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "blue",
+        "active": true,
+        "kills": 24,
+        "raids": 5,
+        "downs": 1
+      },
+      {
+        "id": "5",
+        "name": "Zoya \"Rook\"",
+        "look": {
+          "head": "head.aged",
+          "hair": "hair.mohawk",
+          "facial_hair": "facial_hair.goatee",
+          "torso": "torso.telnyashka",
+          "sleeves": "sleeves.bare",
+          "legs": "legs.patched",
+          "hands": "hands.mittens",
+          "feet": "feet.jungle",
+          "skin": "skin.tone6",
+          "hair_color": "hair_color.tone4"
+        },
+        "xp": "16551",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "red",
+        "active": true,
+        "kills": 14,
+        "raids": 4,
+        "downs": 2
+      },
+      {
+        "id": "6",
+        "name": "Mila \"Vesper\"",
+        "look": {
+          "head": "head.plain",
+          "hair": "hair.buzz",
+          "facial_hair": "facial_hair.short",
+          "torso": "torso.tee",
+          "sleeves": "sleeves.ink",
+          "legs": "legs.camo",
+          "hands": "hands.wraps",
+          "feet": "feet.trainer",
+          "skin": "skin.tone5",
+          "hair_color": "hair_color.tone3"
+        },
+        "xp": "11151",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "blue",
+        "active": true,
+        "kills": 3,
+        "raids": 4,
+        "downs": 1
+      },
+      {
+        "id": "7",
+        "name": "Pavel \"Brick\"",
+        "look": {
+          "head": "head.gaunt",
+          "hair": "hair.slick",
+          "facial_hair": "facial_hair.soulpatch",
+          "torso": "torso.hoodie",
+          "sleeves": "sleeves.armband",
+          "legs": "legs.sweats",
+          "hands": "hands.paracord",
+          "feet": "feet.work",
+          "skin": "skin.tone10",
+          "hair_color": "hair_color.tone1"
+        },
+        "xp": "13251",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "red",
+        "active": true,
+        "kills": 8,
+        "raids": 4,
+        "downs": 2
+      },
+      {
+        "id": "8",
+        "name": "Bohdan \"Moth\"",
+        "look": {
+          "head": "head.round",
+          "hair": "hair.buzz",
+          "facial_hair": "facial_hair.soulpatch",
+          "torso": "torso.tee",
+          "sleeves": "sleeves.wraps",
+          "legs": "legs.camo",
+          "hands": "hands.mittens",
+          "feet": "feet.work",
+          "skin": "skin.tone4",
+          "hair_color": "hair_color.tone3"
+        },
+        "xp": "16551",
+        "weapon": "weapon.tommy",
+        "build": [],
+        "team": "blue",
+        "active": true,
+        "kills": 16,
+        "raids": 4,
+        "downs": 1
+      },
+      {
+        "id": "9",
+        "name": "Pavel \"Harrow\"",
+        "look": {
+          "head": "head.aged",
+          "hair": "hair.crew",
+          "facial_hair": "facial_hair.long",
+          "torso": "torso.leather",
+          "sleeves": "sleeves.striped",
+          "legs": "legs.track",
+          "hands": "hands.wraps",
+          "feet": "feet.hightop",
+          "skin": "skin.tone5",
+          "hair_color": "hair_color.tone1"
+        },
+        "xp": "0",
+        "weapon": "weapon.striker",
+        "build": [],
+        "team": "red",
+        "active": false,
+        "kills": 0,
+        "raids": 0,
+        "downs": 0
+      }
+    ]
+  },
+  "agents": {
+    "nextId": "461",
+    "deaths": 391,
+    "encounters": 2,
+    "hours": 16.25,
+    "baseline": [319, 58, 38, 31, 14],
+    "agents": ["3;infected;wander;26;117;21;83;100;77;24;94;0;0;0", "4;infected;wander;26;117;9;81;100;66;28;94;0;0;0", "5;survivors;scavenge;26;115;27;116;42;53;0;61;0;5002;0", "7;infected;wander;26;115;35;177;100;86;11;94;0;0;0", "9;raiders;patrol;95;104;99;141;100;65;51;62;1;9001;0", "21;survivors;scavenge;30;434;31;435;100;44;23;59;0;21002;0", "24;infected;wander;233;458;100;559;100;86;20;95;0;0;0", "25;infected;wander;143;553;24;560;100;93;26;95;0;0;0", "26;infected;wander;96;600;10;635;100;102;2;96;0;0;0", "27;infected;wander;143;553;25;627;100;104;18;96;0;0;0", "28;military;patrol;101;558;93;603;100;48;54;100;1;28000;0", "29;raiders;patrol;102;540;14;586;100;73;53;65;1;29001;0", "30;infected;wander;96;605;8;650;100;111;1;96;0;0;0", "31;infected;wander;143;553;51;688;100;106;3;96;0;0;0", "34;raiders;patrol;120;14;120;15;100;49;0;62;0;34001;0", "38;military;guard;94;124;94;124;100;62;0;92;0;38000;0", "39;military;guard;93;126;93;125;100;38;41;92;1;38000;0", "40;military;guard;92;122;93;122;100;66;0;92;0;38000;0", "41;infected;wander;94;124;100;163;100;83;25;93;0;0;0", "44;military;guard;92;186;92;186;100;67;0;92;0;43000;0", "45;military;patrol;91;187;92;187;100;38;0;92;0;43000;0", "62;survivors;guard;124;356;125;355;71;61;0;60;0;62002;0", "64;infected;wander;124;356;98;413;100;56;25;93;0;0;0", "67;survivors;guard;107;429;107;426;95;44;29;70;1;67002;1", "73;survivors;scavenge;96;495;97;494;77;26;3;59;0;73002;0", "74;survivors;scavenge;99;497;98;497;100;36;0;59;0;73002;0", "79;infected;wander;96;605;94;605;100;106;19;96;0;0;0", "80;infected;wander;143;553;95;689;100;91;11;96;0;0;0", "81;infected;wander;96;605;110;681;100;102;27;95;0;0;0", "82;raiders;patrol;95;604;85;687;100;73;56;96;1;82001;0", "89;military;guard;189;93;188;94;100;68;0;98;0;88000;0", "109;survivors;guard;179;337;179;336;100;62;0;57;0;109002;0", "110;survivors;guard;180;337;179;338;100;82;0;57;0;109002;0", "115;survivors;scavenge;161;386;160;387;70;34;0;57;0;115002;0", "116;survivors;scavenge;161;390;161;389;89;26;0;57;0;115002;0", "123;survivors;scavenge;143;554;142;554;100;26;13;59;0;123002;0", "126;infected;wander;143;553;153;700;100;88;26;95;0;0;0", "139;military;patrol;207;174;207;173;78;34;0;92;0;139000;0", "163;survivors;scavenge;231;457;232;457;100;61;0;56;0;163002;0", "177;infected;wander;143;553;207;685;100;75;16;95;0;0;0", "229;military;guard;377;93;378;93;55;30;0;93;0;229000;0", "230;military;guard;380;96;380;95;100;31;0;93;0;229000;0", "278;survivors;scavenge;401;100;400;99;100;40;0;57;0;278002;0", "281;military;guard;402;91;442;91;100;65;34;90;1;281000;0", "282;military;guard;411;100;440;93;85;66;0;90;0;281000;0", "283;military;guard;441;89;443;90;100;32;0;90;0;281000;0", "284;military;guard;413;92;440;91;49;75;35;90;1;281000;0", "293;military;patrol;373;178;384;230;46;72;47;92;1;293000;0", "294;military;patrol;388;232;387;233;100;35;0;92;0;293000;0", "322;survivors;scavenge;389;699;389;698;100;46;0;68;0;322002;0", "324;infected;wander;593;152;505;30;100;101;9;96;0;0;0", "331;raiders;patrol;446;119;463;191;100;61;33;60;1;331001;0", "365;infected;wander;545;28;568;5;100;108;4;97;0;0;0", "367;raiders;patrol;545;28;544;29;100;41;0;62;0;367001;0", "404;raiders;patrol;532;502;532;501;73;65;0;62;0;404001;0", "410;military;guard;574;611;573;610;100;50;0;92;0;410000;0", "413;raiders;patrol;558;603;539;683;100;66;49;62;1;413001;0", "419;infected;wander;592;152;585;154;100;105;19;96;0;0;0", "420;infected;wander;594;167;587;127;75;93;25;95;0;0;0", "422;survivors;scavenge;603;141;602;143;100;23;58;58;1;422002;0", "429;infected;wander;444;293;601;387;100;71;22;92;0;0;0", "439;infected;wander;601;143;693;22;100;74;16;96;0;0;0", "440;infected;wander;444;268;687;22;100;105;6;96;0;0;0", "441;infected;wander;408;265;700;108;100;108;23;96;0;0;0", "442;infected;wander;596;144;607;100;100;108;16;96;0;0;0", "443;infected;wander;578;156;689;105;100;97;14;96;0;0;0", "444;infected;wander;601;139;607;192;100;76;1;96;0;0;0", "455;survivors;scavenge;601;541;602;542;100;56;0;57;0;455002;0", "458;survivors;scavenge;672;628;673;627;100;47;0;57;0;458002;0"]
+  }
+}

@@ -1,0 +1,95 @@
+plugins {
+    id 'application'
+}
+
+group = 'absentialis'
+version = '1.2.0'
+
+def lwjglVersion = '3.3.3'
+def lwjglNatives = 'natives-windows'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation platform("org.lwjgl:lwjgl-bom:$lwjglVersion")
+    implementation 'org.lwjgl:lwjgl'
+    implementation 'org.lwjgl:lwjgl-glfw'
+    implementation 'org.lwjgl:lwjgl-opengl'
+    implementation 'org.lwjgl:lwjgl-stb'
+    // 0.8, UltraEngine: MP3 decoding (pure Java, LGPL). WAV and Ogg Vorbis need nothing extra.
+    implementation 'javazoom:jlayer:1.0.1'
+    runtimeOnly "org.lwjgl:lwjgl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-glfw::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-opengl::$lwjglNatives"
+    runtimeOnly "org.lwjgl:lwjgl-stb::$lwjglNatives"
+}
+
+// P0: LWJGL 3.3.3 does not support Java 24 (Unsupported JNI version). Compile AND run on a Java 21
+// toolchain regardless of the JDK on PATH; Gradle provisions one automatically if none is installed.
+java {
+    toolchain { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+
+application {
+    mainClass = 'absentialis.Main'
+    applicationDefaultJvmArgs = ['-Xms1g', '-Xmx3g', '-XX:+UseG1GC', '-Dfile.encoding=UTF-8', '--enable-native-access=ALL-UNNAMED']
+}
+
+tasks.named('run') {
+    workingDir = rootProject.projectDir
+    standardInput = System.in
+    // Pass through ABS_* test environment variables (inventory/extraction/noise/soak/autoshot)
+    environment System.getenv().findAll { it.key.startsWith('ABS_') }
+}
+
+// Quality gate run without a window: gradlew selftest
+tasks.register('selftest', JavaExec) {
+    group = 'verification'
+    description = 'Runs the GDD 22.5 / addendum quality gates (no window).'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'absentialis.Main'
+    workingDir = rootProject.projectDir
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+    jvmArgs = ['-Xmx3g', '--enable-native-access=ALL-UNNAMED']
+    environment 'ABS_SELFTEST', System.getenv('ABS_SELFTEST') ?: 'all'
+    environment System.getenv().findAll { it.key.startsWith('ABS_') && it.key != 'ABS_SELFTEST' }
+}
+
+// Audio pipeline: cuts, layers and converts the original recordings under tools/audio/originals into assets/audio
+// (see tools/audio/sources.json and docs/audio/audio_architecture.md). Originals are never modified.
+tasks.register('prepareAudio', JavaExec) {
+    group = 'build'
+    description = 'Regenerates assets/audio from the original recordings.'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'absentialis.tools.AudioPrep'
+    workingDir = rootProject.projectDir
+    args rootProject.projectDir.absolutePath
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+    jvmArgs = ['-Xmx2g', '--enable-native-access=ALL-UNNAMED']
+}
+
+// 0.9: prints the length and loudness envelope of recordings, for choosing and cutting them without hearing them.
+tasks.register('audioProbe', JavaExec) {
+    group = 'verification'
+    description = 'Prints length, peak and envelope of audio files: --args="<dir or file> [name filter] [slice ms]".'
+    classpath = sourceSets.main.runtimeClasspath
+    mainClass = 'absentialis.tools.AudioProbe'
+    workingDir = rootProject.projectDir
+    javaLauncher = javaToolchains.launcherFor { languageVersion = JavaLanguageVersion.of(21) }
+}
+
+// 1.2, Astratto Engine: builds the native core (astratto/native -> astratto/bin/astratto.dll) and runs its own self-test.
+// Not part of the ordinary build: the game runs without the library (route searches then stay in Java) and the library
+// is committed alongside the source. Run this after changing anything under astratto/native.
+tasks.register('buildNative', Exec) {
+    group = 'build'
+    description = 'Builds the Astratto native core with the Visual C++ compiler and runs its self-test.'
+    workingDir = rootProject.projectDir
+    commandLine 'cmd', '/c', new File(rootProject.projectDir, 'astratto/native/build.bat').absolutePath
+}

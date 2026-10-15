@@ -1,0 +1,197 @@
+{
+  "_doc": "Group Rivalry System (0.6). Every number the rivalry engine uses is here: doctrine weights, leader trait modifiers and their bounds, what each kind of event does to a relationship, favor statuses and milestones, alliance terms, strategic actions with their costs, risks and cooldowns, and the adaptation rules. rivalry.RivalryEngine reads this once; nothing below is repeated as a literal in code. Factions are keyed by the rivalry names (mercenaries, government, loners, bandits); gameKey is the faction key the rest of the game uses.",
+
+  "world": {
+    "groupsPerFaction": 2, "minSize": 10, "maxSize": 50,
+    "hoursPerTick": 6, "logCap": 400, "memoryCap": 40, "pivotalSalience": 0.75, "aggregateBelow": 0.35,
+    "rumourHops": 2, "rumourDelayTicks": 2, "rumourConfidence": 0.6, "rumourMinSalience": 0.4, "rumoursPerTick": 6,
+    "relationDecayPerTick": 0.35, "hostilityDecayPerTick": 0.5, "fearDecayPerTick": 0.6,
+    "factionRepShare": 0.15, "firstImpressionShare": 0.25,
+    "topActions": 3, "choiceSharpness": 2.0,
+    "encountersPerRaid": 2, "encounterCooldownTicks": 3, "encounterTravelPerTick": 1,
+    "repeatDiminish": 0.7, "repeatFloor": 0.2
+  },
+
+  "considerations": ["profit", "security", "survival", "loot", "order", "reputation", "revenge", "bonds"],
+
+  "status": [
+    {"name": "Hated", "min": -100, "max": -51, "text": "Hunt, deny service, attack when feasible"},
+    {"name": "Hostile", "min": -50, "max": -11, "text": "Threats, refusal, suspicion; possible truce talks"},
+    {"name": "Neutral", "min": -10, "max": 19, "text": "Cautious contact, basic trade or small tasks"},
+    {"name": "Accepted", "min": 20, "max": 49, "text": "Better trade, information, safe passage, routine jobs"},
+    {"name": "Trusted", "min": 50, "max": 74, "text": "Special jobs, limited support, access to protected areas"},
+    {"name": "Alliance-eligible", "min": 75, "max": 100, "text": "Can negotiate a formal alliance if prerequisites hold"}
+  ],
+  "milestones": [
+    {"favor": 20, "name": "Accepted", "grants": "safe passage and routine jobs"},
+    {"favor": 50, "name": "Trusted", "grants": "special jobs, limited support, protected areas"},
+    {"favor": 75, "name": "Alliance-eligible", "grants": "a formal alliance can be negotiated"}
+  ],
+
+  "alliance": {"favor": 75, "trust": 40, "betrayalMemoryTicks": 160, "reviewTicks": 28, "maxMissed": 2, "truceFavor": -45, "truceCost": 600, "truceTicks": 20},
+
+  "events": {
+    "_doc": "salience 0..1; then what a group that KNOWS of the event feels toward its actor when the group was the target ('to') - favor, trust, respect, fear, hostility, debt - before faction and leader modifiers. 'ally' is what a group feels when the target was its enemy; 'tags' are what the memory is filed under (dialogue and adaptations read tags).",
+    "ATTACK":           {"salience": 0.45, "to": {"favor": -6, "trust": -4, "hostility": 9, "fear": 1},              "ally": {"favor": 1.5, "respect": 1},        "tags": ["attacked_us"]},
+    "DEFEAT":           {"salience": 0.70, "to": {"favor": -8, "trust": -3, "hostility": 8, "fear": 8, "respect": 6}, "ally": {"favor": 3, "respect": 3},         "tags": ["beat_us"]},
+    "KILL_MEMBER":      {"salience": 0.60, "to": {"favor": -9, "trust": -5, "hostility": 12, "fear": 2},             "ally": {"favor": 2, "respect": 1.5},        "tags": ["killed_our_people"]},
+    "KILL_LEADER":      {"salience": 1.00, "to": {"favor": -22, "trust": -14, "hostility": 28, "fear": 10, "respect": 4}, "ally": {"favor": 9, "respect": 7},    "tags": ["killed_our_leader"]},
+    "SPARE":            {"salience": 0.75, "to": {"favor": 7, "trust": 5, "respect": 9, "hostility": -8, "debt": 6},  "ally": {"favor": -2, "trust": -1},          "tags": ["spared_us"]},
+    "CAPTURE":          {"salience": 0.80, "to": {"favor": -12, "trust": -8, "hostility": 14, "fear": 9},            "ally": {"favor": 4, "respect": 3},          "tags": ["took_ours_prisoner"]},
+    "ESCAPE":           {"salience": 0.55, "to": {"respect": -3, "fear": -4, "hostility": 2},                        "ally": {},                                   "tags": ["ran_from_us"]},
+    "BETRAY":           {"salience": 1.00, "to": {"favor": -40, "trust": -45, "hostility": 30, "respect": -10},      "ally": {"trust": -6, "favor": 2},           "tags": ["betrayed_us"]},
+    "TRADE":            {"salience": 0.20, "to": {"favor": 1.5, "trust": 1},                                         "ally": {},                                   "tags": ["traded_with_us"]},
+    "GIFT":             {"salience": 0.40, "to": {"favor": 5, "trust": 2, "debt": 3},                                "ally": {"favor": -1},                        "tags": ["gave_to_us"]},
+    "HEAL":             {"salience": 0.60, "to": {"favor": 7, "trust": 6, "debt": 5, "hostility": -4},               "ally": {"favor": -1.5},                      "tags": ["healed_ours"]},
+    "RESCUE":           {"salience": 0.85, "to": {"favor": 12, "trust": 10, "respect": 5, "debt": 10, "hostility": -8}, "ally": {"favor": -3, "trust": -2},        "tags": ["rescued_ours"]},
+    "COMPLETE_JOB":     {"salience": 0.65, "to": {"favor": 9, "trust": 7, "respect": 3},                             "ally": {"favor": -1},                        "tags": ["did_our_work"]},
+    "BREAK_PROMISE":    {"salience": 0.80, "to": {"favor": -14, "trust": -20, "hostility": 6, "respect": -5},        "ally": {},                                   "tags": ["broke_word"]},
+    "DEFEND_TERRITORY": {"salience": 0.75, "to": {"favor": 10, "trust": 7, "respect": 6, "debt": 6},                 "ally": {"favor": -2},                        "tags": ["stood_with_us"]},
+    "AID_RIVAL":        {"salience": 0.60, "to": {"favor": -7, "trust": -8, "hostility": 5},                         "ally": {},                                   "tags": ["helped_our_enemies"]},
+    "MAKE_TREATY":      {"salience": 0.90, "to": {"favor": 6, "trust": 8, "respect": 3},                             "ally": {"trust": -3, "favor": -2},          "tags": ["signed_with_us"]},
+    "INTIMIDATE":       {"salience": 0.50, "to": {"favor": -4, "trust": -5, "fear": 9, "hostility": 5},              "ally": {},                                   "tags": ["threatened_us"]},
+    "BRIBE":            {"salience": 0.35, "to": {"favor": 4, "trust": -1, "hostility": -5},                         "ally": {},                                   "tags": ["paid_us_off"]},
+    "INTEL":            {"salience": 0.45, "to": {"favor": 4, "trust": 4},                                           "ally": {"favor": -2},                        "tags": ["told_us_things"]},
+    "MEDIATE":          {"salience": 0.70, "to": {"favor": 5, "trust": 5, "respect": 4},                             "ally": {},                                   "tags": ["made_peace"]},
+    "TRESPASS":         {"salience": 0.40, "to": {"favor": -3, "trust": -3, "hostility": 4},                         "ally": {},                                   "tags": ["trespassed"]},
+    "PAY_TRIBUTE":      {"salience": 0.40, "to": {"favor": 2, "respect": -4, "fear": -3, "hostility": -6},           "ally": {},                                   "tags": ["paid_tribute"]},
+    "GROUP_RAID":       {"salience": 0.60, "to": {"favor": -8, "trust": -4, "hostility": 12, "fear": 3},             "ally": {"favor": 2},                         "tags": ["raided_us"]},
+    "GROUP_AID":        {"salience": 0.50, "to": {"favor": 6, "trust": 5, "debt": 4},                                "ally": {},                                   "tags": ["helped_us"]},
+    "SUCCESSION":       {"salience": 0.70, "to": {},                                                                  "ally": {},                                   "tags": ["new_leader"]},
+    "ADAPT":            {"salience": 0.30, "to": {},                                                                  "ally": {},                                   "tags": ["adapted"]}
+  },
+
+  "factions": {
+    "mercenaries": {
+      "gameKey": "mercenaries", "question": "Is it worth the cost?", "risk": 0.50, "leaderRange": 0.35, "colour": "5A6470",
+      "weights": {"profit": 1.5, "security": 0.7, "survival": 0.9, "loot": 0.3, "order": 0.2, "reputation": 1.2, "revenge": 0.25, "bonds": 0.3},
+      "actions": ["patrol", "defend", "recruit", "trade", "negotiate", "pursue_contract", "retaliate", "contest", "relocate", "withdraw"],
+      "neutral": "evaluate", "withdraw": "organized", "combat": "flank",
+      "reaction": {"ATTACK": 0.8, "KILL_MEMBER": 0.9, "GIFT": 0.6, "BRIBE": 1.5, "COMPLETE_JOB": 1.5, "BREAK_PROMISE": 1.6, "TRADE": 1.3, "INTIMIDATE": 0.6, "SPARE": 0.8, "RESCUE": 0.9},
+      "state": {"contract": 0.5, "payout": 0.5, "losses": 0},
+      "groupNames": ["Ironside Contracting", "Halberd Group", "Meridian Security", "Blackwater Lane", "Cinder Company", "Sterling Risk", "Northgate Associates", "Pale Horse Logistics"],
+      "titles": ["Captain", "Director", "Chief", "Major"],
+      "ambitions": ["the Zone's biggest contract", "a clean exit with the books in the black", "to buy out a rival outfit", "a reputation nobody undercuts"],
+      "alliance": {"name": "Retainer agreement", "tribute": 1800, "terms": ["nonaggression", "discounted contracts", "hired backup on request", "intel for payment"], "obligations": ["pay the retainer each review", "do not work against their client"], "breach": ["attack their people", "miss two retainers"]},
+      "jobs": ["escort", "eliminate", "recover"],
+      "barks": {"greet_hostile": "You cost us money last time.", "greet_neutral": "State your business. Time is billed.", "greet_friendly": "Our favourite client. What do you need?", "greet_allied": "Retainer's good. We're with you."}
+    },
+    "government": {
+      "gameKey": "military", "question": "Does it threaten control?", "risk": 0.35, "leaderRange": 0.25, "colour": "5E7448",
+      "weights": {"profit": 0.2, "security": 1.5, "survival": 0.8, "loot": 0.1, "order": 1.6, "reputation": 0.7, "revenge": 0.4, "bonds": 0.4},
+      "actions": ["patrol", "defend", "recruit", "negotiate", "inspect", "retaliate", "contest", "lockdown", "withdraw"],
+      "neutral": "challenge", "withdraw": "controlled", "combat": "line",
+      "reaction": {"TRESPASS": 1.8, "ATTACK": 1.2, "KILL_MEMBER": 1.2, "BRIBE": 0.3, "GIFT": 0.6, "INTEL": 1.5, "DEFEND_TERRITORY": 1.4, "INTIMIDATE": 1.4, "COMPLETE_JOB": 1.1},
+      "state": {"alert": 0.2, "violations": 0, "control": 0.7, "reserves": 0.6},
+      "groupNames": ["3rd Cordon Battalion", "Garrison North", "Checkpoint Command", "Quarantine Task Force", "Airfield Security Detachment", "Provost Company", "Engineer Detachment 9", "Signal Post Echo"],
+      "titles": ["Colonel", "Major", "Captain", "Commandant"],
+      "ambitions": ["to hold the cordon to the letter", "to reopen the district under order", "a transfer out of the Zone", "no more losses on this watch"],
+      "alliance": {"name": "Operating permit", "tribute": 900, "terms": ["nonaggression", "safe passage through checkpoints", "patrol support", "access to controlled zones"], "obligations": ["submit to inspection", "report hostile movement each review"], "breach": ["fire on a patrol", "enter a locked-down zone"]},
+      "jobs": ["patrol", "eliminate", "report"],
+      "barks": {"greet_hostile": "You are known to this command. Hands up.", "greet_neutral": "Identify yourself and state your route.", "greet_friendly": "Papers are in order. Carry on.", "greet_allied": "Permit holder. You have our patrols if you need them."}
+    },
+    "loners": {
+      "gameKey": "survivors", "question": "Is it worth the risk?", "risk": 0.20, "leaderRange": 0.40, "colour": "8A7A52",
+      "weights": {"profit": 0.5, "security": 0.9, "survival": 1.6, "loot": 0.6, "order": 0.2, "reputation": 0.4, "revenge": 0.3, "bonds": 1.4},
+      "actions": ["patrol", "defend", "recruit", "trade", "negotiate", "scavenge", "retaliate", "relocate", "withdraw"],
+      "neutral": "observe", "withdraw": "early", "combat": "improvise",
+      "reaction": {"HEAL": 1.6, "RESCUE": 1.5, "GIFT": 1.4, "TRADE": 1.2, "KILL_MEMBER": 1.3, "INTIMIDATE": 1.5, "BRIBE": 0.6, "SPARE": 1.2, "DEFEND_TERRITORY": 1.3},
+      "state": {"shelter": 0.6, "bonds": 0.6, "hunger": 0.3},
+      "groupNames": ["The Mill Street Families", "Lantern House", "The Orchard Lot", "Canal Row", "The Night School", "Saint Agnes Shelter", "The Allotment", "Bricklayers' Yard"],
+      "titles": ["Elder", "Warden", "Mother", "Foreman"],
+      "ambitions": ["to get everyone through the winter", "a shelter nobody can find", "to find the ones who went missing", "to trade instead of hide"],
+      "alliance": {"name": "Mutual aid", "tribute": 0, "terms": ["nonaggression", "shelter", "scavenging leads", "informal escorts"], "obligations": ["bring supplies each review", "come when they are attacked"], "breach": ["harm one of theirs", "lead trouble to the shelter"]},
+      "jobs": ["supply", "rescue", "escort"],
+      "barks": {"greet_hostile": "Not you. Stay back from the house.", "greet_neutral": "We don't want trouble. Keep your hands where we can see them.", "greet_friendly": "Good to see a friendly face. Come in out of the street.", "greet_allied": "You're one of ours. The door's open."}
+    },
+    "bandits": {
+      "gameKey": "raiders", "question": "Can we exploit it?", "risk": 0.75, "leaderRange": 0.40, "colour": "7E4A3C",
+      "weights": {"profit": 1.0, "security": 0.4, "survival": 0.9, "loot": 1.6, "order": 0.0, "reputation": 0.8, "revenge": 0.9, "bonds": 0.2},
+      "actions": ["patrol", "defend", "recruit", "trade", "negotiate", "raid", "extort", "ambush", "retaliate", "contest", "relocate", "withdraw"],
+      "neutral": "assess", "withdraw": "scatter", "combat": "rush",
+      "reaction": {"PAY_TRIBUTE": 1.5, "BRIBE": 1.4, "INTIMIDATE": 0.5, "DEFEAT": 1.4, "SPARE": 0.6, "GIFT": 0.8, "KILL_MEMBER": 0.8, "COMPLETE_JOB": 1.2, "RESCUE": 0.8},
+      "state": {"loot": 0.4, "heat": 0.2, "prey": 0.5},
+      "groupNames": ["The Rail Yard Crew", "Kerosene Boys", "The Toll Takers", "Blackmoor Lifers", "The Scrap Kings", "Ditch Dogs", "The Collectors", "Northside Wolves"],
+      "titles": ["Boss", "Big", "King", "Chief"],
+      "ambitions": ["every road in the district paying toll", "the lab's stores", "to settle a score", "to be the name nobody says out loud"],
+      "alliance": {"name": "Protection pact", "tribute": 1200, "terms": ["nonaggression", "shared spoils", "smuggling routes", "coordinated raids"], "obligations": ["pay the cut each review", "look the other way"], "breach": ["hit their take", "look weak"]},
+      "jobs": ["raid", "eliminate", "smuggle"],
+      "barks": {"greet_hostile": "Look who walked back in. You owe.", "greet_neutral": "Nice kit. Be a shame if you had to carry it all yourself.", "greet_friendly": "This one's good. Leave him be.", "greet_allied": "Pact holds. Your enemies are bad for business."}
+    }
+  },
+
+  "traits": {
+    "_doc": "Leader temperament. weights multiply the faction's doctrine weights, clamped to 1 +- the faction's leaderRange: a leader bends the doctrine, never replaces it. risk shifts risk tolerance by at most +-0.2.",
+    "aggressive":  {"weights": {"revenge": 1.35, "loot": 1.25, "survival": 0.80, "security": 0.90}, "risk": 0.15, "text": "takes the fight"},
+    "cautious":    {"weights": {"survival": 1.35, "security": 1.25, "loot": 0.80, "revenge": 0.75}, "risk": -0.18, "text": "counts the cost first"},
+    "charismatic": {"weights": {"bonds": 1.35, "reputation": 1.30, "profit": 1.05}, "risk": 0.0, "text": "people follow"},
+    "vengeful":    {"weights": {"revenge": 1.40, "bonds": 1.10, "profit": 0.85}, "risk": 0.08, "text": "does not forget"},
+    "pragmatic":   {"weights": {"profit": 1.25, "revenge": 0.70, "order": 1.05}, "risk": -0.05, "text": "deals with whoever pays"},
+    "paranoid":    {"weights": {"security": 1.40, "bonds": 0.80, "profit": 0.90}, "risk": -0.10, "text": "trusts nobody twice"},
+    "honorable":   {"weights": {"reputation": 1.35, "bonds": 1.20, "loot": 0.70}, "risk": 0.0, "text": "keeps a word given"},
+    "greedy":      {"weights": {"profit": 1.35, "loot": 1.30, "bonds": 0.80}, "risk": 0.10, "text": "wants more"}
+  },
+  "skills": ["marksman", "tactician", "negotiator", "scout", "medic", "quartermaster", "engineer", "interrogator"],
+  "fears": ["fire", "the infected", "being surrounded", "the dark", "losing people", "explosives", "going hungry", "being forgotten"],
+  "weaknesses": ["slow to decide", "old wound", "drinks", "reckless", "over-trusting", "poor shot", "holds grudges", "hoards supplies"],
+  "voices": ["gravel", "clipped", "soft", "booming", "dry", "weary"],
+
+  "actions": {
+    "_doc": "values: what the action is worth to each consideration at full context (context multipliers are computed from the group's situation in RivalryEngine.context). risk 0..1, cost in resources, cooldown in ticks, intent = what the combat AI is told the group is doing.",
+    "patrol":          {"values": {"security": 0.5, "order": 0.6, "reputation": 0.1},  "risk": 0.10, "cost": {"supplies": 1},            "cooldown": 0, "intent": "patrol"},
+    "defend":          {"values": {"security": 0.9, "survival": 0.7, "order": 0.3},    "risk": 0.05, "cost": {"supplies": 1},            "cooldown": 0, "intent": "hold"},
+    "recruit":         {"values": {"security": 0.6, "bonds": 0.5, "reputation": 0.2},  "risk": 0.05, "cost": {"supplies": 3, "coins": 2}, "cooldown": 3, "intent": "hold"},
+    "trade":           {"values": {"profit": 0.8, "survival": 0.4, "bonds": 0.2},      "risk": 0.10, "cost": {"gear": 1},                "cooldown": 1, "intent": "patrol"},
+    "negotiate":       {"values": {"security": 0.4, "reputation": 0.5, "bonds": 0.4, "profit": 0.3}, "risk": 0.05, "cost": {"coins": 1}, "cooldown": 4, "intent": "hold"},
+    "scavenge":        {"values": {"survival": 0.8, "loot": 0.6},                      "risk": 0.20, "cost": {"supplies": 1},            "cooldown": 1, "intent": "patrol"},
+    "pursue_contract": {"values": {"profit": 1.0, "reputation": 0.6},                  "risk": 0.35, "cost": {"supplies": 2, "ammo": 2}, "cooldown": 2, "intent": "escort"},
+    "inspect":         {"values": {"order": 0.9, "security": 0.5},                     "risk": 0.15, "cost": {"supplies": 1},            "cooldown": 1, "intent": "patrol"},
+    "lockdown":        {"values": {"order": 1.0, "security": 0.9},                     "risk": 0.20, "cost": {"supplies": 3, "ammo": 1}, "cooldown": 6, "intent": "hold"},
+    "raid":            {"values": {"loot": 1.0, "profit": 0.5, "reputation": 0.3},     "risk": 0.55, "cost": {"ammo": 3, "supplies": 1}, "cooldown": 3, "intent": "raid"},
+    "extort":          {"values": {"loot": 0.7, "profit": 0.6, "reputation": 0.2},     "risk": 0.30, "cost": {"supplies": 1},            "cooldown": 2, "intent": "patrol"},
+    "ambush":          {"values": {"loot": 0.8, "revenge": 0.4},                       "risk": 0.40, "cost": {"ammo": 2},                "cooldown": 2, "intent": "raid"},
+    "retaliate":       {"values": {"revenge": 1.0, "reputation": 0.4, "security": 0.2}, "risk": 0.60, "cost": {"ammo": 3, "supplies": 1}, "cooldown": 4, "intent": "raid"},
+    "contest":         {"values": {"security": 0.5, "loot": 0.5, "order": 0.5, "profit": 0.3}, "risk": 0.65, "cost": {"ammo": 4, "supplies": 2}, "cooldown": 6, "intent": "raid"},
+    "relocate":        {"values": {"survival": 0.9, "security": 0.3},                  "risk": 0.25, "cost": {"supplies": 3},            "cooldown": 8, "intent": "withdraw"},
+    "withdraw":        {"values": {"survival": 1.0},                                   "risk": 0.05, "cost": {},                          "cooldown": 2, "intent": "withdraw"}
+  },
+
+  "adaptations": [
+    {"id": "blast_discipline", "name": "Blast discipline", "trigger": {"method": "explosive", "types": ["ATTACK", "KILL_MEMBER", "DEFEAT"], "count": 2}, "cost": {"gear": 4}, "max": 2, "cooldown": 6,
+     "effect": "members keep five metres apart and wear blast padding (explosive damage x0.8 per level)", "tradeoff": "a spread squad concentrates its fire more slowly", "bark": "Spread out - they use explosives."},
+    {"id": "helmets", "name": "Helmets issued", "trigger": {"method": "headshot", "types": ["KILL_MEMBER", "DEFEAT"], "count": 3}, "cost": {"gear": 5}, "max": 1, "cooldown": 8,
+     "effect": "every member wears a helmet", "tradeoff": "heavier kit: members move 5% slower", "bark": "Helmets on. That one aims for the head."},
+    {"id": "night_watch", "name": "Night watch", "trigger": {"method": "night", "types": ["ATTACK", "KILL_MEMBER", "TRESPASS"], "count": 2}, "cost": {"supplies": 4}, "max": 1, "cooldown": 6,
+     "effect": "sentries stay awake and carry lights after dark", "tradeoff": "a tired group: morale recovers more slowly", "bark": "Double the watch. They come at night."},
+    {"id": "paired_sentries", "name": "Paired sentries", "trigger": {"method": "stealth", "types": ["KILL_MEMBER"], "count": 2}, "cost": {"supplies": 2}, "max": 1, "cooldown": 5,
+     "effect": "nobody stands guard alone", "tradeoff": "fewer posts are covered", "bark": "Nobody stands alone. We keep losing people quietly."},
+    {"id": "road_blocks", "name": "Road blocks", "trigger": {"method": "vehicle", "types": ["ATTACK", "KILL_MEMBER", "ESCAPE"], "count": 2}, "cost": {"gear": 3, "supplies": 2}, "max": 1, "cooldown": 8,
+     "effect": "barricades on the approaches to the group's ground", "tradeoff": "the group's own patrols move more slowly", "bark": "Block the road. They came through in a car."},
+    {"id": "marksmen", "name": "Marksmen posted", "trigger": {"method": "long_range", "types": ["KILL_MEMBER", "DEFEAT"], "count": 2}, "cost": {"gear": 4, "ammo": 2}, "max": 1, "cooldown": 8,
+     "effect": "one member in four carries a scoped rifle", "tradeoff": "fewer weapons for close work", "bark": "Get glass on those rooftops."},
+    {"id": "wariness", "name": "Wary of the player", "trigger": {"types": ["DEFEAT"], "count": 2}, "cost": {}, "max": 2, "cooldown": 4,
+     "effect": "the group withdraws sooner when the player is in the fight (break point +0.1 per level)", "tradeoff": "it gives ground it could have held", "bark": "It's that one again. Don't get close."},
+    {"id": "hunting_party", "name": "Hunting party", "trigger": {"types": ["KILL_LEADER", "BETRAY"], "count": 1}, "cost": {"ammo": 4, "supplies": 2}, "max": 1, "cooldown": 12,
+     "effect": "a picked squad looks for the player in any district the group can reach", "tradeoff": "the group's own ground is thinly held while it is out", "bark": "Find them. I don't care what it costs."},
+    {"id": "open_door", "name": "Open door", "trigger": {"types": ["RESCUE", "HEAL", "DEFEND_TERRITORY"], "count": 2, "positive": true}, "cost": {}, "max": 1, "cooldown": 6,
+     "effect": "members greet the player and share what they know of the district", "tradeoff": "a traitor would be let straight in", "bark": "That one is welcome here. Pass the word."},
+    {"id": "medics", "name": "Field medics", "trigger": {"types": ["DEFEAT", "GROUP_RAID"], "count": 3}, "cost": {"medicine": 4}, "max": 1, "cooldown": 8,
+     "effect": "the wounded are treated on the spot (members regain health between fights)", "tradeoff": "medicine is spent that would have been traded", "bark": "Patch them up here. We can't keep carrying people home."}
+  ],
+
+  "interactions": {
+    "_doc": "What the player can do with any group, and what it costs. Availability and price bend with faction and favor in RivalryEngine.",
+    "talk":      {"minFavor": -50, "text": "Speak with the leader"},
+    "trade":     {"minFavor": -10, "text": "Buy and sell; prices follow favor"},
+    "gift":      {"minFavor": -100, "cost": 400, "text": "Deliver supplies"},
+    "bribe":     {"minFavor": -100, "cost": 900, "text": "Pay to cool things down"},
+    "intel":     {"minFavor": -10, "text": "Tell them what you know of their rivals"},
+    "intimidate": {"minFavor": -100, "text": "Lean on them"},
+    "job":       {"minFavor": -10, "text": "Take the work they offer"},
+    "truce":     {"minFavor": -100, "text": "Negotiate a truce"},
+    "alliance":  {"minFavor": 75, "text": "Negotiate a formal alliance"},
+    "aid":       {"minFavor": 50, "text": "Ask for help on your next operation"},
+    "mediate":   {"minFavor": 20, "cost": 700, "text": "Broker peace with one of their enemies"},
+    "betray":    {"minFavor": -100, "text": "Break your agreement"}
+  }
+}

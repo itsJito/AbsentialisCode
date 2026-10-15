@@ -1,0 +1,70 @@
+package absentialis.sim;
+
+import absentialis.engine.util.Rng;
+
+/**
+ * Generated names (0.6). Every stranger, squadmate, recruit and group leader in the Zone is named from these
+ * tables: American given names by sex and American family names. Through 0.5 the tables were Ukrainian and
+ * Russian; names a player typed themselves are never touched.
+ *
+ * A name is a pure function of an id, so the same individual has the same name every time it is brought into the
+ * world, and whether that individual is a man or a woman comes from the same id - the body
+ * ({@link absentialis.character.Appearance#female}) and the name always agree.
+ */
+public final class Names {
+    private Names() {}
+
+    public static final String[] MALE = {
+            "James", "John", "Robert", "Michael", "William", "David", "Richard", "Joseph", "Thomas", "Charles", "Daniel", "Matthew", "Anthony", "Mark", "Donald", "Steven",
+            "Paul", "Andrew", "Joshua", "Kenneth", "Kevin", "Brian", "George", "Edward", "Ronald", "Timothy", "Jason", "Jeffrey", "Ryan", "Jacob", "Gary", "Nicholas",
+            "Eric", "Jonathan", "Stephen", "Larry", "Justin", "Scott", "Brandon", "Benjamin", "Samuel", "Gregory", "Frank", "Raymond", "Patrick", "Jack", "Dennis", "Jerry",
+            "Tyler", "Aaron", "Henry", "Douglas", "Peter", "Adam", "Nathan", "Zachary", "Walter", "Kyle", "Harold", "Carl", "Marcus", "Wayne", "Roy", "Dale"};
+    public static final String[] FEMALE = {
+            "Mary", "Patricia", "Jennifer", "Linda", "Elizabeth", "Barbara", "Susan", "Jessica", "Sarah", "Karen", "Nancy", "Lisa", "Margaret", "Betty", "Sandra", "Ashley",
+            "Dorothy", "Kimberly", "Emily", "Donna", "Michelle", "Carol", "Amanda", "Melissa", "Deborah", "Stephanie", "Rebecca", "Laura", "Sharon", "Cynthia", "Kathleen", "Amy",
+            "Shirley", "Angela", "Helen", "Anna", "Brenda", "Pamela", "Nicole", "Samantha", "Katherine", "Christine", "Rachel", "Carolyn", "Janet", "Catherine", "Heather", "Diane",
+            "Ruth", "Julie", "Olivia", "Joyce", "Virginia", "Victoria", "Kelly", "Lauren", "Megan", "Hannah", "Alice", "Grace", "Ruby", "Hazel", "Claire", "Tess"};
+    public static final String[] FAMILY = {
+            "Smith", "Johnson", "Williams", "Brown", "Jones", "Miller", "Davis", "Wilson", "Anderson", "Taylor", "Thomas", "Moore", "Jackson", "Martin", "Thompson", "White",
+            "Harris", "Clark", "Lewis", "Robinson", "Walker", "Young", "Allen", "King", "Wright", "Scott", "Hill", "Green", "Adams", "Nelson", "Baker", "Hall",
+            "Campbell", "Mitchell", "Carter", "Roberts", "Phillips", "Evans", "Turner", "Parker", "Collins", "Edwards", "Stewart", "Morris", "Murphy", "Cook", "Rogers", "Morgan",
+            "Peterson", "Cooper", "Reed", "Bailey", "Bell", "Howard", "Ward", "Cox", "Richardson", "Wood", "Watson", "Brooks", "Bennett", "Gray", "Hughes", "Price",
+            "Sanders", "Myers", "Long", "Ross", "Foster", "Powell", "Jenkins", "Perry", "Russell", "Sullivan", "Fisher", "Henderson", "Coleman", "Simmons", "Patterson", "Hayes"};
+    public static final String[] CALLSIGN = {"Kestrel", "Brick", "Wren", "Lantern", "Moth", "Anvil", "Sable", "Rook", "Tally", "Ember", "Flint", "Harrow", "Vesper", "Quill", "Garnet", "Bishop",
+            "Dakota", "Ranger", "Hatchet", "Juniper", "Copper", "Maverick", "Gunner", "Sparrow"};
+    /** Share of generated people who are women (the same figure the look generator uses). */
+    public static float femaleShare() { return absentialis.character.CharDefs.FEMALE_SHARE; }
+
+    private static long mix(long id, long salt) { long h = (id + salt) * 0x9E3779B97F4A7C15L; h ^= h >>> 29; h *= 0xBF58476D1CE4E5B9L; return h ^ (h >>> 32); }
+
+    /** Whether the individual with this id is a woman. */
+    public static boolean female(long id) { return (mix(id, 71) >>> 40) / (float) (1 << 24) < femaleShare(); }
+
+    public static String given(long id, boolean female) { String[] t = female ? FEMALE : MALE; return t[(int) Math.floorMod(mix(id, 13), (long) t.length)]; }
+    public static String family(long id) { return FAMILY[(int) Math.floorMod(mix(id, 29), (long) FAMILY.length)]; }
+
+    /** "Sarah Mitchell": the name of the individual with this id. */
+    public static String full(long id) { return given(id, female(id)) + " " + family(id); }
+
+    public static String full(long id, boolean female) { return given(id, female) + " " + family(id); }
+
+    /** A squadmate's generated name: given name and a callsign in quotes. */
+    public static String squad(Rng r, boolean female) {
+        String[] t = female ? FEMALE : MALE;
+        return t[r.nextInt(t.length)] + " \"" + CALLSIGN[r.nextInt(CALLSIGN.length)] + "\"";
+    }
+
+    private static final java.util.Set<String> OLD_GIVEN = java.util.Set.of("Anton", "Mila", "Dmitri", "Oksana", "Yuri", "Katya", "Pavel", "Irina", "Sergei", "Nadia", "Viktor", "Lena", "Taras", "Zoya", "Bohdan", "Vera");
+
+    /**
+     * A squadmate name generated by 0.5 or earlier (one of its sixteen given names followed by a quoted callsign),
+     * re-drawn from the American tables with the callsign kept. Anything else - a name the player typed - is
+     * returned unchanged.
+     */
+    public static String migrate(String name, long id, boolean female) {
+        if (name == null) return name;
+        int q = name.indexOf(" \"");
+        if (q <= 0 || !name.endsWith("\"") || !OLD_GIVEN.contains(name.substring(0, q))) return name;
+        return given(id * 977 + 3, female) + name.substring(q);
+    }
+}
